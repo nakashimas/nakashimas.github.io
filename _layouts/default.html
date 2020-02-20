@@ -27,8 +27,24 @@
         border-bottom: solid 5px #c8e7bb;
         border-radius: 0px 25px 25px 0px;
       }
+      a{
+        word-break: break-all;
+      }
+      .highlighter-rouge{
+        box-sizing: border-box;
+        background: #c8e7bb;
+        color: #000000;
+        overflow: auto;
+      }
+      hr{
+        border-top: 2px dashed #cc99ff;
+        box-shadow: 0;
+      }
       header{
         border-radius: 0px 0px 25px 25px;
+      }
+      #drawer{
+        border-radius: 0px 25px 0px 0px;
       }
     }
     @media screen and (max-width:1024px){
@@ -115,17 +131,32 @@
         <div id="main-content" class="mdc-layout-grid mdc-top-app-bar--fixed-adjust">
           <div class="drawer-content-panel content-panel mdc-elevation--z4">
             <h2> {{ page.title }} </h2>
+            <hr>
             <!--
               ここにmarkdownの内容が表示される
             -->
             <div>
              {{ content }}
             </div>
+            <hr>
           </div>
           <div class="other-content-panel content-panel mdc-elevation--z4">
             <div>
-              <h2 class="mdc-typography--headline6">other</h2>
+              <h2>other</h2>
+              <hr>
+              <hr>
             </div>
+          </div>
+          <div class="share-content-panel content-panel mdc-elevation--z4">
+            <a>something</a><br>
+            <a href="https://twitter.com/messages/compose?recipient_id=&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="@nasuayame" data-show-count="false">
+              Message @nasuayame
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="ref-content-panel content-panel mdc-elevation--z4">
+            <a>S. Nakashima</a><br>
+            <a>S. Nakashima</a><br>
           </div>
         </div>
       </div>
