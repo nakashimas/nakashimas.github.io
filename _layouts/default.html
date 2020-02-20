@@ -28,7 +28,7 @@
           <!--
             drawerを定義
           -->
-          <aside id="index-drawer" class="mdc-drawer mdc-drawer--modal index-drawer mdc-top-app-bar--fixed-adjust">
+          <aside id="drawer" class="mdc-drawer mdc-drawer--modal mdc-top-app-bar--fixed-adjust">
             <div class="mdc-drawer__content">
               <!--
                 drawerの中身
@@ -87,11 +87,12 @@
     // 初期化呪文
     mdc.autoInit();
     // ------------------------------------------------------------------------>
-    mdc.ripple.MDCRipple.attachTo(document.querySelector(".hoge-button"));
+
     // ------------------------------------------------------------------------>
-    // drawer(id: index-drawer)の設定
+    // listの設定
     const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
     list.wrapFocus = true;
+    // drawer(id: index-drawer)の設定
     const drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
     drawer.open = true;
     const topAppBar =  mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
