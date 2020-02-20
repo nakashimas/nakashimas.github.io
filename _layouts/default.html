@@ -16,7 +16,7 @@
         <header class="mdc-top-app-bar drawer-top-app-bar" data-mdc-auto-init="MDCTopAppBar">
           <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-              <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button>
+              <button id="nav-button" class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button>
               <span class="mdc-top-app-bar__title"></span>
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
@@ -74,7 +74,7 @@
           drawerで選択されるなどしたページの中身.
           "mdc-top-app-bar--fixed-adjust"がないとヘッダに埋もれる(呪文)
         -->
-        <div id="main-content" class="drawer-content-panel mdc-top-app-bar--fixed-adjust">
+        <div id="main-content" class="mdc-layout-grid drawer-content-panel mdc-top-app-bar--fixed-adjust">
           <div>
           {{ content }}
           </div>
@@ -94,12 +94,17 @@
     list.wrapFocus = true;
     // drawer(id: index-drawer)の設定
     const drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
-    drawer.open = true;
     const topAppBar =  mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
     topAppBar.setScrollTarget(document.getElementById('main-content'));
-    topAppBar.listen('MDCTopAppBar:nav', () => {
+    // ハンバーガーにイベントを付ける
+    var navbutton = document.getElementById("nav-button");
+    navbutton.addEventListener("click", function(){
+      // trueを代入すると開く
       drawer.open = !drawer.open;
-      console.log("")
-    });
+    })
+    // topAppBar.listen('MDCTopAppBar:nav', () => {
+    //   drawer.open = !drawer.open;
+    //   console.log("")
+    // });
   </script>
 </html>
