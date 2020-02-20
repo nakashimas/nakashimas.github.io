@@ -3,69 +3,73 @@ layout: default
 title: main page
 ---
 
-===========================================
-Crocus
-===========================================
 
-Analyzer of Music.
-===========================================
+### Crocus
 
-.. code-block:: powershell
-    :caption: Win
-
-# 1. Overview
+### 1. Overview
 
  |  This software is for editing quantitative-data of music.
  | Furthermore, it can support music analysis by
  | calculating simple statistics (e.g. summary statistics) and
  | frequent-pattern-matching, in interactively and graphically.
 
-# 2. Usage
+### 2. Usage
 
- 2-1. as Python module::
+ 2-1. as Python module
 
+ ```sh
   python -m crocusmodule *args
+ ```
 
- 2-2. as Windows app::
+ 2-2. as Windows app
 
+ ```sh
   coming soon...
+ ```
 
-# 3. Install
+### 3. Install
 
- 3-1. The way to install the latest version as Python module::
+ 3-1. The way to install the latest version as Python module
 
+ ```sh
   pip install git+https://github.com/nasneco/Crocus@master
+ ```
 
- Optional::
-
+ Optional
+ 
+ ```sh
   pip install git+https://github.com/nasneco/Crocus@develop
+ ```
 
  3-2. The way to install the latest version as app
  Windows::
 
+ ```sh
   coming soon...
+ ```
 
-# 4. Requirements
+### 4. Requirements
 
  | 4-1. Using as Python module
  |
  | Python 3.7.X
  |
- | - wxpython
- | - numpy
- | - beautifulsoup4
- | - lxml
- | - dill
- | - matplotlib
- | - scipy
- | - pandas
- | - dask version 0.16
+ | * wxpython
+ | * numpy
+ | * beautifulsoup4
+ | * lxml
+ | * dill
+ | * matplotlib
+ | * scipy
+ | * pandas
+ | * dask version 0.16
  |
  | 4-2. Using as Windows app
- |
- | coming soon...
- |
+ | 
+ | ```sh
+ |  coming soon...
+ | ```
 
-# 5. Author
+### 5. Author
 
  | nasneco
