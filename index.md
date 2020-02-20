@@ -48,28 +48,6 @@ title: main page
   coming soon...
  ```
 
-### 4. Requirements
-
- | 4-1. Using as Python module
- |
- | Python 3.7.X
- |
- | * wxpython
- | * numpy
- | * beautifulsoup4
- | * lxml
- | * dill
- | * matplotlib
- | * scipy
- | * pandas
- | * dask version 0.16
- |
- | 4-2. Using as Windows app
- | 
- | ```sh
- |  coming soon...
- | ```
-
-### 5. Author
+### 4. Author
 
  | nasneco
