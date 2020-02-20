@@ -10,11 +10,15 @@
   </head>
   <style>
     @media screen and (min-width:0px){
+      .drawer-content-panel{
+        margin: 10px;
+        padding: 10px;
+      }
+      h1, h2, h3, h4{
+        text-decoration: underline;
+      }
     }
     @media screen and (max-width:1024px){
-      body{
-        color: #cc99ff;
-      }
     }
   </style>
   <body class="mdc-typography">
@@ -25,10 +29,16 @@
         -->
         <header class="mdc-top-app-bar drawer-top-app-bar" data-mdc-auto-init="MDCTopAppBar">
           <div class="mdc-top-app-bar__row">
+            <!--
+              ヘッダの左端
+            -->
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
               <button id="nav-button" class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button>
               <span class="mdc-top-app-bar__title"></span>
             </section>
+            <!--
+              ヘッダの右端
+            -->
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
               <button id="share-button" class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Share">share</button>
               <button id="github-button" class="mdc-icon-button mdc-top-app-bar__action-item--unbounded" aria-label="GitHub" aria-hidden="true" aria-pressed="true">
@@ -89,9 +99,19 @@
           drawerで選択されるなどしたページの中身.
           "mdc-top-app-bar--fixed-adjust"がないとヘッダに埋もれる(呪文)
         -->
-        <div id="main-content" class="mdc-layout-grid drawer-content-panel mdc-top-app-bar--fixed-adjust">
-          <div>
-          {{ content }}
+        <div id="main-content" class="mdc-layout-grid mdc-top-app-bar--fixed-adjust">
+          <div class="drawer-content-panel mdc-elevation--z4">
+            <section>
+              <h1 class="mdc-typography--headline3"> {{ page.title }} </h1>
+              <div>
+               {{ content }}
+              </div>
+            </section>
+            <section>
+              <div>
+                <h2 class="mdc-typography--headline6">other</h2>
+              </div>
+            </section>
           </div>
         </div>
       </div>
