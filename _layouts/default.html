@@ -15,6 +15,7 @@
         --main-theme: #ff8080;
         --main-theme-dark: #321616;
         --main-theme-middle-right: #808080;
+        --main-theme-right-gray: #f9efef;
         --main-theme-right: #ffefef;
         /* mdc var */
         --mdc-theme-primary: var(--main-theme-dark);
@@ -59,7 +60,7 @@
       }
       .highlighter-rouge{
         box-sizing: border-box;
-        background: var(--main-theme-right);
+        background: var(--main-theme-right-gray);
         color: var(--main-theme-dark);
         overflow: auto;
       }
@@ -346,7 +347,7 @@
     let sub_page_addresses = [
       "https://nakashimas.github.io/",
       "",
-      "https://nakashimas.github.io/docs/testsubpage.md",
+      "docs/testsubpage.md",
       ""];
     let listitem = document.querySelectorAll('.mdc-list-item');
     for(i = 0; i < listitem.length; ++i){
