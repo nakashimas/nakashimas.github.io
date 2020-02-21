@@ -33,8 +33,8 @@
       .content-panel{
         margin: 10px;
         padding: 10px;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
         border-radius: 25px 25px 25px 25px;
       }
       h1, h2, h3, h4{
@@ -234,28 +234,28 @@
                 drawerの中身
               -->
               <nav class="mdc-list">
-                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                <a class="mdc-list-item drawer-list-item mdc-list-item--activated" href="#" aria-current="page">
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
                   <span class="mdc-list-item__text">Home</span>
                 </a>
 
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Contacts</h6>
-                <a class="mdc-list-item" href="#">
+                <a class="mdc-list-item drawer-list-item" href="#">
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
                   <span class="mdc-list-item__text">Email</span>
                 </a>
                 
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Texts</h6>
-                <a class="mdc-list-item" href="#">
+                <a class="mdc-list-item drawer-list-item" href="#">
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">note</i>
                   <span class="mdc-list-item__text">Text1</span>
                 </a>
           
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Works</h6>
-                <a class="mdc-list-item" href="#">
+                <a class="mdc-list-item drawer-list-item" href="#">
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">music_note</i>
                   <span class="mdc-list-item__text">Crocus documents</span>
                 </a>
@@ -282,24 +282,23 @@
           </div>
           <div class="other-content-panel content-panel mdc-elevation--z4">
             <div>
-              <h2>other</h2>
               <hr>
               <ul>
-                <li id="other-list-1" class="mdc-list-item list-surface mdc-ripple-upgraded" target="blank">
+                <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
                   <a>
                     <span class="mdc-list-item__graphic resources-graphic"></span>
                     <img src="" class="resources-graphic">
                     Tweet
                   </a>
                 </li>
-                <li class="mdc-list-item list-surface mdc-ripple-upgraded" target="blank">
+                <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
                   <a href="">
                     <span class="mdc-list-item__graphic resources-graphic"></span>
                     <img src="" class="resources-graphic">
                     text1
                   </a>
                 </li>
-                <li class="mdc-list-item list-surface mdc-ripple-upgraded" target="blank">
+                <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
                   <a href="">
                     <span class="mdc-list-item__graphic resources-graphic"></span>
                     <img src="" class="resources-graphic">
@@ -350,16 +349,15 @@
       "",
       "https://nakashimas.github.io/docs/testsubpage.html",
       ""];
-    let listitem = document.querySelectorAll('.mdc-list-item');
+    let listitem = document.querySelectorAll('.drawer-list-item');
     for(let i = 0; i < listitem.length; ++i){
       listitem[i].addEventListener('click', function(){
         console.log(i)
         if(i == 1){
           // メール送信
-          console.log()
         }else{
           // その他はpage移動
-          console.log(sub_page_addresses[i]);
+          location.href = sub_page_addresses[i];
         }
       });
     };
@@ -392,10 +390,20 @@
       location.href="https://github.com/nakashimas";
     });
     // ------------------------------------------------------------------------>
-    // button系
-    let otherlist1 = document.getElementById("other-list-1");
-    otherlist1.addEventListener("click", function(){
-      location.href="https://twitter.com/intent/tweet?text=Hello%20world";
-    });
+    // otherのlist
+    let otherlistitem = document.querySelectorAll('.other-list-item');
+    let otherlistaddresses = [];
+    for(let i = 0; i < otherlistitem.length; ++i){
+      // rippleのアニメーションをattach
+      mdc.ripple.MDCRipple.attachTo(otherlistitem[i]);
+      otherlistitem[i].addEventListener('click', function(){
+        console.log(i)
+        if(i == 1){
+          // メール送信
+        }else{
+          // その他はpage移動
+        }
+      });
+    };
   </script>
 </html>
