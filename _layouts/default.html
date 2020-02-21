@@ -351,7 +351,7 @@
       "https://nakashimas.github.io/docs/testsubpage.html",
       ""];
     let listitem = document.querySelectorAll('.mdc-list-item');
-    for(i = 0; i < listitem.length; ++i){
+    for(let i = 0; i < listitem.length; ++i){
       listitem[i].addEventListener('click', function(){
         console.log(i)
         if(i == 1){
@@ -359,7 +359,7 @@
           console.log()
         }else{
           // その他はpage移動
-          location.href = sub_page_addresses[i];
+          console.log(sub_page_addresses[i]);
         }
       });
     };
