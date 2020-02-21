@@ -344,18 +344,19 @@
       list.selectedIndex = pagenumber;
     }
     // drawer listのitemの設定
+    // リンクは元ファイルが".md"でも、".html"と書く必要がある。(当然)
     let sub_page_addresses = [
       "https://nakashimas.github.io/",
       "",
-      "docs/testsubpage.md",
+      "https://nakashimas.github.io/docs/testsubpage.html",
       ""];
     let listitem = document.querySelectorAll('.mdc-list-item');
     for(i = 0; i < listitem.length; ++i){
-      listitem[i].addEventListener('click', () => {
-        console.log(list.selectedIndex);
+      listitem[i].addEventListener('click', function(){
+        console.log(i)
         if(i == 1){
           // メール送信
-          
+          console.log()
         }else{
           // その他はpage移動
           location.href = sub_page_addresses[i];
