@@ -81,6 +81,14 @@
       .mdc-list{
         item-primary-text-ink-color: var(--main-theme-right)
       }
+      /* ------------------------------------------------------------------------ */
+      ul{
+        padding-left: 0px;
+      }
+      .other-list-item{
+        padding-left: 1em;
+      }
+      /* ------------------------------------------------------------------------ */
       /* follow-me */
       .follow-me {
         list-style: none;
@@ -191,7 +199,7 @@
       .follow-me li a[href*="youtube.com"]:hover::before        { background-color: #cd201f; }
       .follow-me li a[href$="/feed"]:hover::before              { background-color: #ffa500; }
       .follow-me li a[href$="/subscribe"]:hover::before         { background-color: #363636; }
-      /* -------- */
+      /* ------------------------------------------------------------------------ */
     }
     @media screen and (max-width:1024px){
     }
@@ -270,7 +278,7 @@
         -->
         <div id="main-content" class="mdc-layout-grid mdc-top-app-bar--fixed-adjust">
           <div class="drawer-content-panel content-panel mdc-elevation--z4">
-            <h2> {{ page.title }} </h2>
+            <h1> {{ page.title }} </h1>
             <hr>
             <!--
               ここにmarkdownの内容が表示される
@@ -286,23 +294,20 @@
               <ul>
                 <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
                   <a>
-                    <span class="mdc-list-item__graphic resources-graphic"></span>
-                    <img src="" class="resources-graphic">
+                    <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
                     Tweet
                   </a>
                 </li>
                 <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
-                  <a href="">
-                    <span class="mdc-list-item__graphic resources-graphic"></span>
-                    <img src="" class="resources-graphic">
-                    text1
+                  <a>
+                    <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
+                    Tweet
                   </a>
                 </li>
                 <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
-                  <a href="">
-                    <span class="mdc-list-item__graphic resources-graphic"></span>
-                    <img src="" class="resources-graphic">
-                    text1
+                  <a>
+                    <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
+                    Tweet
                   </a>
                 </li>
               </ul>
@@ -312,13 +317,15 @@
           <div class="share-content-panel content-panel mdc-elevation--z4">
             <hr>
             <ul class="follow-me">
+              <li><a href="https://twitter.com/NASPOCAT"></a></li>
               <li><a href="https://github.com/nakashimas"></a></li>
             </ul>
             <hr>
           </div>
           <div class="ref-content-panel content-panel mdc-elevation--z4">
             <hr>
-            <a>S. Nakashima</a><br>
+            <a>Author:</a><a>S. Nakashima</a><br>
+            <a>Biography:</a><a>京都の学生</a><br>
             <hr>
             <div id="page-date"><a>date: </a><a>{{ page.date }}</a></div>
             <div id="page-number"><a>pp.</a><a id="ind">{{ page.ind }}<a></div>
@@ -352,7 +359,6 @@
     let listitem = document.querySelectorAll('.drawer-list-item');
     for(let i = 0; i < listitem.length; ++i){
       listitem[i].addEventListener('click', function(){
-        console.log(i)
         if(i == 1){
           // メール送信
         }else{
@@ -397,9 +403,8 @@
       // rippleのアニメーションをattach
       mdc.ripple.MDCRipple.attachTo(otherlistitem[i]);
       otherlistitem[i].addEventListener('click', function(){
-        console.log(i)
         if(i == 1){
-          // メール送信
+
         }else{
           // その他はpage移動
         }
