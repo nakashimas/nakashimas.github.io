@@ -59,7 +59,7 @@
       }
       .highlighter-rouge{
         box-sizing: border-box;
-        background: var(--main-theme-middle-right);
+        background: var(--main-theme-right);
         color: var(--main-theme-dark);
         overflow: auto;
       }
@@ -234,35 +234,29 @@
               -->
               <nav class="mdc-list">
                 <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-                  <span class="mdc-list-item__text">Inbox</span>
+                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                  <span class="mdc-list-item__text">Home</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
-                  <span class="mdc-list-item__text">Star</span>
-                </a>
+
+                <hr class="mdc-list-divider">
+                <h6 class="mdc-list-group__subheader">Contacts</h6>
                 <a class="mdc-list-item" href="#">
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                  <span class="mdc-list-item__text">Sent Mail</span>
+                  <span class="mdc-list-item__text">Email</span>
                 </a>
+                
+                <hr class="mdc-list-divider">
+                <h6 class="mdc-list-group__subheader">Texts</h6>
                 <a class="mdc-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                  <span class="mdc-list-item__text">Drafts</span>
+                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">note</i>
+                  <span class="mdc-list-item__text">Text1</span>
                 </a>
           
                 <hr class="mdc-list-divider">
-                <h6 class="mdc-list-group__subheader">Labels</h6>
+                <h6 class="mdc-list-group__subheader">Works</h6>
                 <a class="mdc-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
-                  <span class="mdc-list-item__text">Family</span>
-                </a>
-                <a class="mdc-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
-                  <span class="mdc-list-item__text">Friends</span>
-                </a>
-                <a class="mdc-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
-                  <span class="mdc-list-item__text">Work</span>
+                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">music_note</i>
+                  <span class="mdc-list-item__text">Crocus documents</span>
                 </a>
               </nav>
             </div>
@@ -326,8 +320,8 @@
             <hr>
             <a>S. Nakashima</a><br>
             <hr>
-            <div id="page-date">{{ page.date }}</div>
-            <div id="page-number">{{ page.ind }}</div>
+            <div id="page-date"><a>date: </a><a>{{ page.date }}</a></div>
+            <div id="page-number"><a>pp.</a><a id="ind">{{ page.ind }}<a></div>
           </div>
         </div>
       </div>
@@ -339,10 +333,34 @@
     mdc.autoInit();
     // ------------------------------------------------------------------------>
     // ------------------------------------------------------------------------>
-    // listの設定
+    // drawer listの設定
     const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
     list.wrapFocus = true;
-    list.selectedIndex = 2;
+    const pagenumber = parseInt(document.getElementById("ind").innerHTML, 10);
+    if(isNaN(pagenumber)){
+      list.selectedIndex = 0;
+    }else{
+      list.selectedIndex = pagenumber;
+    }
+    // drawer listのitemの設定
+    let sub_page_addresses = [
+      "https://nakashimas.github.io/",
+      "",
+      "https://nakashimas.github.io/docs/testsubpage.md",
+      ""];
+    let listitem = document.querySelectorAll('.mdc-list-item');
+    for(i = 0; i < listitem.length; ++i){
+      listitem[i].addEventListener('click', () => {
+        console.log(list.selectedIndex);
+        if(i == 1){
+          // メール送信
+          
+        }else{
+          // その他はpage移動
+          location.href = sub_page_addresses[i];
+        }
+      });
+    };
     // drawer(id: index-drawer)の設定
     const drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
     const topAppBar =  mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector(".mdc-top-app-bar"));
