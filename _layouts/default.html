@@ -12,8 +12,18 @@
   <style>
     @media screen and (min-width:0px){
       :root {
-        --mdc-theme-primary: #cc99ff;
-        --mdc-theme-secondary: #c8e7bb;
+        --main-theme: #ff8080;
+        --main-theme-dark: #321616;
+        --main-theme-middle-right: #808080;
+        --main-theme-right: #ffefef;
+        /* mdc var */
+        --mdc-theme-primary: var(--main-theme-dark);
+        --mdc-theme-on-primary: var(--main-theme-right);
+        --mdc-theme-secondary: var(--main-theme-right);
+        --mdc-theme-on-secondary: var(--main-theme-right);
+        --mdc-theme-surface: var(--main-theme-right);
+        --mdc-theme-on-surface: var(--main-theme-right);
+        --mdc-theme-accent: var(--main-theme-right);
         --mdc-ripple-fg-size: 64px;
         --mdc-ripple-fg-scale: 2;
         --mdc-ripple-fg-translate-start: -0.64px, -3.2px;
@@ -28,34 +38,47 @@
       }
       h1, h2, h3, h4{
         padding: 0.5em 0.5em;
-        color: #323232;
-        background: #d0ffd0;
-        border-left: solid 5px #166432;
-        border-bottom: solid 5px #c8e7bb;
+        color: var(--main-theme-dark);
+        background: var(--main-theme-right);
+        border-left: solid 5px var(--main-theme-dark);
+        border-bottom: solid 5px var(--main-theme);
         border-radius: 0px 25px 25px 0px;
         word-break: break-all;
       }
       a{
         word-break: break-all;
+        color: var(--main-theme-dark);
+      }
+      #page-number{
+        width: 100%;
+        text-align: right;
+      }
+      #page-date{
+        width: 100%;
+        text-align: center;
       }
       .highlighter-rouge{
         box-sizing: border-box;
-        background: #eeddee;
-        color: #321632;
+        background: var(--main-theme-middle-right);
+        color: var(--main-theme-dark);
         overflow: auto;
       }
       hr{
-        border-top: 2px dashed #cc99ff;
+        border-top: 2px dashed var(--main-theme);
         box-shadow: 0;
       }
       ul{
         list-style: none;
       }
       header{
-        border-radius: 0px 0px 25px 25px;
+        border-radius: 0px 0px 0px 25px;
       }
       #drawer{
         border-radius: 0px 25px 0px 0px;
+        color: var(--main-theme-dark);
+      }
+      .mdc-list{
+        item-primary-text-ink-color: var(--main-theme-right)
       }
       /* follow-me */
       .follow-me {
@@ -295,15 +318,16 @@
           <div class="share-content-panel content-panel mdc-elevation--z4">
             <hr>
             <ul class="follow-me">
-              <li><a href="https://twitter.com"></a></li>
-              <li><a href="https://www.facebook.com"></a></li>
-              <li><a href="https://plus.google.com"></a></li>
+              <li><a href="https://github.com/nakashimas"></a></li>
             </ul>
             <hr>
           </div>
           <div class="ref-content-panel content-panel mdc-elevation--z4">
+            <hr>
             <a>S. Nakashima</a><br>
-            <a></a><br>
+            <hr>
+            <div id="page-date">{{ page.date }}</div>
+            <div id="page-number">{{ page.ind }}</div>
           </div>
         </div>
       </div>
@@ -318,6 +342,7 @@
     // listの設定
     const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
     list.wrapFocus = true;
+    list.selectedIndex = 2;
     // drawer(id: index-drawer)の設定
     const drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
     const topAppBar =  mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector(".mdc-top-app-bar"));
