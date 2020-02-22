@@ -21,12 +21,12 @@
     display: inline-block;
     font-family: FontAwesome;
     font-size: 16px;
-    height: 44px; /* Button height */
-    line-height: 44px; /* Button height */
+    height: 64px; /* Button height */
+    line-height: 64px; /* Button height */
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     text-align: center;
-    width: 44px; /* Button width */
+    width: 64px; /* Button width */
   }
   .follow-me li a:hover::before {
     color: #fff;
