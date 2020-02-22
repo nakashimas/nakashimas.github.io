@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,7 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://nakashimas.github.io/css/followme.css" rel="stylesheet">
     <!-- icon -->
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="shortcut icon" href="https://nakashimas.github.io/favicon.ico">
     <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
   </head>
   <style>
@@ -40,7 +40,7 @@
         padding-right: 20px;
         border-radius: 25px 25px 25px 25px;
       }
-      h1, h2, h3, h4, h5, h6{
+      h1, h2, h3, h4, h5, h6 :not(mdc-list-group__subheader){
         padding: 0.5em 0.5em;
         color: var(--main-theme-dark);
         background: var(--main-theme-right);
@@ -82,7 +82,7 @@
         color: var(--main-theme-dark);
       }
       .mdc-list{
-        item-primary-text-ink-color: var(--main-theme-right)
+        color: var(--main-theme-right)
       }
       /* ------------------------------------------------------------------------ */
       ul{
@@ -90,6 +90,10 @@
       }
       .other-list-item{
         padding-left: 1em;
+      }
+      /* ------------------------------------------------------------------------ */
+      .freebirdFormviewerViewCenteredContent{
+        margin-left: 0px;
       }
     }
     @media screen and (max-width:1024px){
@@ -137,21 +141,21 @@
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
                   <span class="mdc-list-item__text">Home</span>
                 </a>
-
+                <!-- ---------------------------------------------------------------- -->
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Contacts</h6>
                 <a class="mdc-list-item drawer-list-item" href="#">
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
                   <span class="mdc-list-item__text">Email</span>
                 </a>
-                
+                <!-- ---------------------------------------------------------------- -->
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Memo</h6>
                 <a class="mdc-list-item drawer-list-item" href="#">
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">note</i>
                   <span class="mdc-list-item__text">memo1</span>
                 </a>
-          
+                <!-- ---------------------------------------------------------------- -->
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Works</h6>
                 <a class="mdc-list-item drawer-list-item" href="#">
@@ -182,23 +186,24 @@
           <div class="other-content-panel content-panel mdc-elevation--z4">
             <div>
               <hr>
+              <h5>See also</h5>
               <ul>
                 <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
                   <a>
                     <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
-                    Tweet
+                    item1
                   </a>
                 </li>
                 <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
                   <a>
                     <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
-                    Tweet
+                    item2
                   </a>
                 </li>
                 <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
                   <a>
                     <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
-                    Tweet
+                    item3
                   </a>
                 </li>
               </ul>
@@ -207,15 +212,24 @@
           </div>
           <div class="share-content-panel content-panel mdc-elevation--z4">
             <hr>
-            <h5>follow me</h5>
+            <h5>Follow me</h5>
             <ul class="follow-me">
               <li><a href="https://twitter.com/NASPOCAT"></a></li>
               <li><a href="https://github.com/nakashimas"></a></li>
             </ul>
             <hr>
           </div>
+          <div class="form-content-panel content-panel mdc-elevation--z4">
+            <hr>
+            <h5>Form</h5>
+            <iframe class="sendgoogleform" src="https://docs.google.com/forms/d/e/1FAIpQLSeeyvjcfFwatkXrav9XfyVhGs-bOUHb_6r4f4iMOBXZE0NAOA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+              loading…
+            </iframe>
+            <hr>
+          </div>
           <div class="ref-content-panel content-panel mdc-elevation--z4">
             <hr>
+            <h5>Information</h5>
             <a>Author:</a><a>S. Nakashima</a><br>
             <a>Biography:</a><a>京都の学生</a><br>
             <hr>
