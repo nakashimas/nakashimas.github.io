@@ -64,6 +64,7 @@
       .highlighter-rouge{
         box-sizing: border-box;
         background: var(--main-theme-right-gray);
+        border-left: solid 5px var(--main-theme-middle-right);
         color: var(--main-theme-dark);
         overflow: auto;
       }
@@ -103,23 +104,18 @@
         padding-left: 20px;
         padding-right: 20px;
       }
-      h1 :not(mdc-list-group__subheader){
-        font-size: 1.5em;
+      #main-content{
+        margin-left: 1px;
+        margin-right: 1px;
       }
-      h2 :not(mdc-list-group__subheader){
+      h1 :not(mdc-list-group__subheader){
         font-size: 1.25em;
       }
-      h3 :not(mdc-list-group__subheader){
-        font-size: 0.75em;
+      h2 :not(mdc-list-group__subheader){
+        font-size: 1em;
       }
-      h4 :not(mdc-list-group__subheader){
-        font-size: 0.625em;
-      }
-      h5 :not(mdc-list-group__subheader){
-        font-size: 0.5em;
-      }
-      h6 :not(mdc-list-group__subheader){
-        font-size: 0.375;
+      h3 h4 h5 h6 :not(mdc-list-group__subheader){
+        font-size: small;
       }
     }
   </style>
