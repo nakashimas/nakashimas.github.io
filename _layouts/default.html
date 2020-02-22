@@ -97,6 +97,13 @@
       }
     }
     @media screen and (max-width:1024px){
+      .content-panel{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      h1, h2, h3, h4, h5, h6 :not(mdc-list-group__subheader){
+        font-size: small;
+      }
     }
   </style>
   <body class="mdc-typography">
@@ -183,32 +190,13 @@
             </div>
             <hr>
           </div>
-          <div class="other-content-panel content-panel mdc-elevation--z4">
-            <div>
-              <hr>
-              <h5>See also</h5>
-              <ul>
-                <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
-                  <a>
-                    <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
-                    item1
-                  </a>
-                </li>
-                <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
-                  <a>
-                    <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
-                    item2
-                  </a>
-                </li>
-                <li class="mdc-list-item other-list-item list-surface mdc-ripple-upgraded" target="blank">
-                  <a>
-                    <span class="mdc-list-item__graphic material-icons resources-graphic">share</span>
-                    item3
-                  </a>
-                </li>
-              </ul>
-              <hr>
-            </div>
+          <div class="form-content-panel content-panel mdc-elevation--z4">
+            <hr>
+            <h5>Form</h5>
+            <iframe class="sendgoogleform" src="https://docs.google.com/forms/d/e/1FAIpQLSeeyvjcfFwatkXrav9XfyVhGs-bOUHb_6r4f4iMOBXZE0NAOA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+              loading…
+            </iframe>
+            <hr>
           </div>
           <div class="share-content-panel content-panel mdc-elevation--z4">
             <hr>
@@ -217,14 +205,6 @@
               <li><a href="https://twitter.com/NASPOCAT"></a></li>
               <li><a href="https://github.com/nakashimas"></a></li>
             </ul>
-            <hr>
-          </div>
-          <div class="form-content-panel content-panel mdc-elevation--z4">
-            <hr>
-            <h5>Form</h5>
-            <iframe class="sendgoogleform" src="https://docs.google.com/forms/d/e/1FAIpQLSeeyvjcfFwatkXrav9XfyVhGs-bOUHb_6r4f4iMOBXZE0NAOA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
-              loading…
-            </iframe>
             <hr>
           </div>
           <div class="ref-content-panel content-panel mdc-elevation--z4">
