@@ -2,7 +2,7 @@
 layout: default
 title: "memo: R言語 表やグラフ、テキストをpng形式で保存"
 date: 2020-2-23
-ind: 2
+ind: 3
 ---
 
 ## 目次
@@ -130,7 +130,7 @@ grid.draw(my.data)
 dev.off()
 ```
 
- ![出力画像](https://nakashimas.github.io/img/imgrpng/monotable.png "出力")
+ ![出力画像](https://nakashimas.github.io/img/imgrpng/tablemono.png "出力")
 
 　ここでは、表示したいテーブルを"my.table"と定義しています。タイトルなどのテキストも、"grid.text()"関数を用いて以下のように記述できます。
 
@@ -348,11 +348,11 @@ dev.off()
 <https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/scan>  
 　"grid package"  
 <https://www.rdocumentation.org/packages/grid/versions/3.6.2>  
-　"gridExtra package"
+　"gridExtra package"  
 <https://www.rdocumentation.org/packages/gridExtra/versions/2.3>
 
-　"R List of Graphical Devices"
+　"R List of Graphical Devices"  
 <https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html>
 
-　"How to do in R: load an image file, print text on image, save modified image"
+　"How to do in R: load an image file, print text on image, save modified image"  
 <https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image>
