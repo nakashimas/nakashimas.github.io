@@ -63,6 +63,7 @@
       }
       .highlighter-rouge{
         box-sizing: border-box;
+        padding-left: 1em;
         background: var(--main-theme-right-gray);
         border-bottom: dashed 2px var(--main-theme-middle-right);
         color: var(--main-theme-dark);
@@ -172,6 +173,10 @@
                   <i class="material-icons mdc-list-item__graphic" aria-hidden="true">note</i>
                   <span class="mdc-list-item__text">memo1</span>
                 </a>
+                <a class="mdc-list-item drawer-list-item" href="#">
+                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">note</i>
+                  <span class="mdc-list-item__text">memo2</span>
+                </a>
                 <!-- ---------------------------------------------------------------- -->
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Works</h6>
@@ -251,6 +256,7 @@
       "https://nakashimas.github.io/",
       "",
       "https://nakashimas.github.io/docs/memo/portablecmd.html",
+      "https://nakashimas.github.io/docs/memo/rpng.html",
       ""];
     let listitem = document.querySelectorAll('.drawer-list-item');
     for(let i = 0; i < listitem.length; ++i){
