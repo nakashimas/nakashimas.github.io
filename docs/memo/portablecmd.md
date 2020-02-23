@@ -48,11 +48,11 @@ ind: 2
 　設定の記述方法は、組織のプロキシ設定に則る必要があり、以下のような構成となっています。  
 
 ```sh
-@SET HTTP_PROXY = `http://ユーザー名.パスワード@proxy.団体名.ドメイン:8080`
-@SET HTTPS_PROXY = `https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080`
+@SET HTTP_PROXY = http://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
+@SET HTTPS_PROXY = https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
 ```
 
-　ここで、"SET"は環境変数を設定するコマンドで、続く"HTTP_PROXY"、"HTTPS_PROXY"が変数名、"="の後の、"`https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080`"が変数に格納される値です。  
+　ここで、"SET"は環境変数を設定するコマンドで、続く"HTTP_PROXY"、"HTTPS_PROXY"が変数名、"="の後の、"https\://ユーザー名.パスワード@proxy.団体名.ドメイン:8080"が変数に格納される値です。  
 　また、"ユーザー名"には組織から与えられているユーザー名を、"パスワード"にはパスワードを、"proxy.団体名.ドメイン"にはプロキシサーバのホスト名を代入してください。末尾の番号はポート番号なので気にしなくても大丈夫です。
 
 ### 4-2 path設定
@@ -109,8 +109,8 @@ ind: 2
 ```sh
 @SET REMOVABLEROOT=%~d0
 @SET PATH = %PATH%;%REMOVABLEROOT%\ソフトウェアのパス
-SET HTTP_PROXY = `http://ユーザー名.パスワード@proxy.団体名.ドメイン:8080`
-SET HTTPS_PROXY = `https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080`
+SET HTTP_PROXY = http://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
+SET HTTPS_PROXY = https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
 @call cmd
 ```
 

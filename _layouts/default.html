@@ -84,7 +84,7 @@
       }
       /* ------------------------------------------------------------------------ */
       ul{
-        padding-left: 0px;
+        padding-left: 1em;
       }
       .other-list-item{
         padding-left: 1em;
@@ -282,6 +282,7 @@
       navigator.share(
         {
           title: document.title,
+          text: document.title,
           url: "https://nakashimas.github.io"
         }
       );
@@ -291,20 +292,5 @@
     githubbutton.addEventListener("click", function(){
       location.href="https://github.com/nakashimas";
     });
-    // ------------------------------------------------------------------------>
-    // otherのlist
-    let otherlistitem = document.querySelectorAll('.other-list-item');
-    let otherlistaddresses = [];
-    for(let i = 0; i < otherlistitem.length; ++i){
-      // rippleのアニメーションをattach
-      mdc.ripple.MDCRipple.attachTo(otherlistitem[i]);
-      otherlistitem[i].addEventListener('click', function(){
-        if(i == 1){
-
-        }else{
-          // その他はpage移動
-        }
-      });
-    };
   </script>
 </html>
