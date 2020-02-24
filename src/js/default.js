@@ -18,8 +18,8 @@ if(isNaN(pagenumber)){
 let sub_page_addresses = [
   "https://nakashimas.github.io/",
   "",
-  "https://nakashimas.github.io/docs/memo/portablecmd.html",
-  "https://nakashimas.github.io/docs/memo/rpng.html",
+  "https://nakashimas.github.io/docs/memo/memo.html",
+  "",
   ""];
 let listitem = document.querySelectorAll('.drawer-list-item');
 for(let i = 0; i < listitem.length; ++i){
