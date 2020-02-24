@@ -1,0 +1,108 @@
+@media screen and (min-width:0px){
+  :root {
+    font-family: YuGothic;
+    --main-theme: #ff8080;
+    --main-theme-dark: #321616;
+    --main-theme-middle-right: #808080;
+    --main-theme-right-gray: #f9efef;
+    --main-theme-right: #ffefef;
+    /* mdc var */
+    --mdc-theme-primary: var(--main-theme-dark);
+    --mdc-theme-on-primary: var(--main-theme-right);
+    --mdc-theme-secondary: var(--main-theme-right);
+    --mdc-theme-on-secondary: var(--main-theme-right);
+    --mdc-theme-surface: var(--main-theme-right);
+    --mdc-theme-on-surface: var(--main-theme-right);
+    --mdc-theme-accent: var(--main-theme-right);
+    --mdc-ripple-fg-size: 64px;
+    --mdc-ripple-fg-scale: 2;
+    --mdc-ripple-fg-translate-start: -0.64px, -3.2px;
+    --mdc-ripple-fg-translate-end: 16px, -6.4px;
+  }
+  .content-panel{
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px 25px 25px 25px;
+  }
+  h1, h2, h3, h4, h5, h6 :not(mdc-list-group__subheader){
+    padding: 0.5em 0.5em;
+    color: var(--main-theme-dark);
+    background: var(--main-theme-right);
+    border-left: solid 5px var(--main-theme-dark);
+    border-bottom: solid 5px var(--main-theme);
+    border-radius: 0px 25px 25px 0px;
+    word-break: break-all;
+  }
+  a{
+    word-break: break-all;
+    color: var(--main-theme-dark);
+  }
+  #page-number{
+    width: 100%;
+    text-align: right;
+  }
+  #page-date{
+    width: 100%;
+    text-align: center;
+  }
+  .highlighter-rouge{
+    box-sizing: border-box;
+    padding-left: 1em;
+    background: var(--main-theme-right-gray);
+    border-bottom: dashed 2px var(--main-theme-middle-right);
+    color: var(--main-theme-dark);
+    overflow: auto;
+  }
+  hr{
+    border-top: 2px dashed var(--main-theme);
+    box-shadow: 0;
+  }
+  header{
+    border-radius: 0px 0px 0px 25px;
+  }
+  #drawer{
+    border-radius: 0px 25px 0px 0px;
+    color: var(--main-theme-dark);
+  }
+  .mdc-list{
+    color: var(--main-theme-right)
+  }
+  /* ------------------------------------------------------------------------ */
+  ul{
+    padding-left: 1em;
+  }
+  .other-list-item{
+    padding-left: 1em;
+  }
+  /* ------------------------------------------------------------------------ */
+  .freebirdFormviewerViewCenteredContent{
+    margin-left: 0px;
+  }
+  #main-content{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  img :not([class]){
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width:1024px){
+  .content-panel{
+    margin: 1px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  h1 :not(mdc-list-group__subheader){
+    font-size: 1.25em;
+  }
+  h2 :not(mdc-list-group__subheader){
+    font-size: 1em;
+  }
+  h3 h4 h5 h6 :not(mdc-list-group__subheader){
+    font-size: small;
+  }
+}
