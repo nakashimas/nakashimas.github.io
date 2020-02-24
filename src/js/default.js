@@ -20,7 +20,8 @@ let sub_page_addresses = [
   "mailto:nascor.neco@gmail.com",
   "https://nakashimas.github.io/docs/memo/memo.html",
   "https://nakashimas.github.io/docs/works/works.html",
-  "https://nakashimas.github.io/docs/others/others.html"];
+  "https://nakashimas.github.io/docs/others/others.html",
+  "https://nakashimas.github.io/docs/portfolio/portfolio.html"];
 let listitem = document.querySelectorAll('.drawer-list-item');
 for(let i = 0; i < listitem.length; ++i){
   listitem[i].addEventListener('click', function(){
