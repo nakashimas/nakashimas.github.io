@@ -2,7 +2,6 @@
 layout: default
 title: "memo: portable環境を気楽に使う"
 date: 2020-2-23
-ind: 2
 ---
 
 ## 1 はじめに

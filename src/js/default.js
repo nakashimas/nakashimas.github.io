@@ -9,7 +9,7 @@ const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
 list.wrapFocus = true;
 const pagenumber = parseInt(document.getElementById("ind").innerHTML, 10);
 if(isNaN(pagenumber)){
-  list.selectedIndex = 0;
+  list.selectedIndex = null;
 }else{
   list.selectedIndex = pagenumber;
 }
@@ -17,15 +17,15 @@ if(isNaN(pagenumber)){
 // リンクは元ファイルが".md"でも、".html"と書く必要がある。(当然)
 let sub_page_addresses = [
   "https://nakashimas.github.io/",
-  "",
+  "mailto:nascor.neco@gmail.com",
   "https://nakashimas.github.io/docs/memo/memo.html",
   "https://nakashimas.github.io/docs/works/works.html",
   ""];
 let listitem = document.querySelectorAll('.drawer-list-item');
 for(let i = 0; i < listitem.length; ++i){
   listitem[i].addEventListener('click', function(){
-    if(i == 1){
-      // メール送信
+    if(i == 99){
+      // --
     }else{
       // その他はpage移動
       location.href = sub_page_addresses[i];

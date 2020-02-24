@@ -2,7 +2,6 @@
 layout: default
 title: "memo: R言語 表やグラフ、テキストをpng形式で保存"
 date: 2020-2-23
-ind: 3
 ---
 
 ## 1 はじめに
