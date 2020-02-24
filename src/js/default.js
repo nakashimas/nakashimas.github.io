@@ -9,7 +9,7 @@ const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
 list.wrapFocus = true;
 const pagenumber = parseInt(document.getElementById("ind").innerHTML, 10);
 if(isNaN(pagenumber)){
-  list.selectedIndex = null;
+  list.selectedIndex = -1;
 }else{
   list.selectedIndex = pagenumber;
 }
@@ -20,7 +20,7 @@ let sub_page_addresses = [
   "mailto:nascor.neco@gmail.com",
   "https://nakashimas.github.io/docs/memo/memo.html",
   "https://nakashimas.github.io/docs/works/works.html",
-  ""];
+  "https://nakashimas.github.io/docs/others/others.html"];
 let listitem = document.querySelectorAll('.drawer-list-item');
 for(let i = 0; i < listitem.length; ++i){
   listitem[i].addEventListener('click', function(){
