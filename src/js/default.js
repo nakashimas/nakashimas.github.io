@@ -46,7 +46,7 @@ navbutton.addEventListener("click", function(){
 // ------------------------------------------------------------------------>
 // その他ツールバーのイベント
 // home
-let homebbutton = document.getElementById("home-button");
+let homebutton = document.getElementById("home-button");
 homebutton.addEventListener("click", function(){
   location.href="https://nakashimas.github.io/";
 });
