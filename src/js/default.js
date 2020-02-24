@@ -19,7 +19,7 @@ let sub_page_addresses = [
   "https://nakashimas.github.io/",
   "",
   "https://nakashimas.github.io/docs/memo/memo.html",
-  "",
+  "https://nakashimas.github.io/docs/works/works.html",
   ""];
 let listitem = document.querySelectorAll('.drawer-list-item');
 for(let i = 0; i < listitem.length; ++i){
