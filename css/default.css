@@ -39,7 +39,7 @@
     word-break: break-all;
     color: var(--main-theme-dark);
   }
-  li > i{
+  li i{
     display: none;
   }
   #page-number{
