@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Home : works"
+title: "Home : others"
 date: 2020-2-23
 ind: 4
 ---

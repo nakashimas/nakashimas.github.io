@@ -4,18 +4,18 @@ title: "memo: portable環境を気楽に使う"
 date: 2020-2-23
 ---
 
-## 1 はじめに
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 1 はじめに
 
 　このページはportable環境のメモです。
 
-## 2 問題
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 2 問題
 
 　学校などの組織が用意したアカウントを使って、組織が用意したサーバを介して作業する場合、自前の環境を使いたいことが多々あります。例えば、私は「pipはあるけどgitがない」という問題に直面したときにそう感じました。  
 　自前の環境を使う、最も豪華な方法は、ラップトップPCを持ち込むことでしょう。あるいは、仮想マシンを使うことで解決できると思います。しかし、毎日のようにラップトップPCを持ち運んだり、二回osの起動時間を待つことは、かなりの苦痛です。  
 　特に、仮想マシンを使う利点は、コンピューターで少し作業する程度の人（私）には、殆どありません。  
 　従って、いつも持ち運ぶようなusbメモリに「Portable Git」や「VS Code」などを保存しておいて、環境を汚さずに使用できれば、殆ど問題がないと考えられます。  
 
-## 3 解決策
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 3 解決策
 
 ### 3-1 方針
 
@@ -30,7 +30,7 @@ date: 2020-2-23
 
 　バッチファイル(.bat)は、テキストファイルを作成して、拡張子を".bat"に変更することで作成できます。作成したバッチファイルは、持ち運ぶための記憶装置(usbメモリ)の最も浅い階層に保存しておくと便利です。
 
-## 4 書き込む内容
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 4 書き込む内容
 
 ### 4-1 proxy設定
 
@@ -92,7 +92,7 @@ date: 2020-2-23
 @call cmd
 ```
 
-## 5 バッチファイルの中身の全体像
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 5 バッチファイルの中身の全体像
 
 　以上の手順を踏まえて編集したバッチファイルは、最終的に以下のような内容になります。
 
@@ -104,7 +104,7 @@ SET HTTPS_PROXY = https://ユーザー名.パスワード@proxy.団体名.ドメ
 @call cmd
 ```
 
-## 6 参考
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 6 参考
 
 　Windowsコマンドプロンプトで認証プロキシを突破する  
 <https://qiita.com/hamham/items/cb658f5a8c74f35255be>

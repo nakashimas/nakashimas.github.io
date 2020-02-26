@@ -4,14 +4,14 @@ title: "memo: R言語 表やグラフ、テキストをpng形式で保存"
 date: 2020-2-23
 ---
 
-## 1 はじめに
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 1 はじめに
 
 　このページはR言語でいろいろな出力をpng形式で保存する方法のメモです。png形式以外にも、jpegやpdf、bitmapで保存できますが、簡単のためpng形式のみを記録します。  
 　もっと良い方法が分かった場合、追記、修正します。
 
 　R version 3.6.2 (2019-12-12)
 
-## 2 GUIで保存する方法
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 2 GUIで保存する方法
 
 ### 2-1 グラフ
 
@@ -33,7 +33,7 @@ date: 2020-2-23
 
 　コンソールへの出力テキスト("cat()"や"summary()"による出力)を保存する場合も、表と同じく、クリップボードを使います。画面のスクリーンショットを撮るか、出力をコピーしてExcelなどでレイアウトを整えます。
 
-## 3 スクリプトで保存する方法
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 3 スクリプトで保存する方法
 
 ### 3-1 グラフ
 
@@ -182,7 +182,7 @@ for (t in rev(texts)) {
 dev.off()
 ```
 
-## 4 使用例
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 4 使用例
 
 ### 4-1 グラフの例
 
@@ -325,7 +325,7 @@ dev.off()
 
 　Rstudioの出力と見比べると、微妙にずれています。調整すると大丈夫そうですが、面倒なのでテキストはGUIから保存する方がいいかもしれません。
 
-## 5 参考
+## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">check_circle</i> 5 参考
 
 　"R で描いたグラフを PNG や PDF に保存する方法"  
 <https://stats.biopapyrus.jp/r/graph/imagedevice.html>

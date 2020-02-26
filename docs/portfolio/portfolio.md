@@ -5,6 +5,8 @@ date: 2020-2-22
 ind: 5
 ---
 
+<dev>{$ include toc.html html=content %}</dev>
+
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i> Profile
 
 　京都の人文学系の学部2回生。
@@ -21,7 +23,7 @@ ind: 5
 
 - [楽曲分析ソフト 「Crocus」(改修中)](https://github.com/nasneco/Crocus)
 
-　楽曲の音名の頻度分析や、FP-growthを使った主要モチーフ推定等で、古典的楽曲分析を補助する。
+　楽曲の音名の頻度分析や、FP-growthを使った主要モチーフ推定等で、古典的楽曲分析を補助するソフトウェア。
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">directions_run</i> Feature
 
