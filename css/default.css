@@ -39,8 +39,8 @@
     word-break: break-all;
     color: var(--main-theme-dark);
   }
-  li > a > i{
-    margin-top: 5px;
+  li > i{
+    display: none;
   }
   #page-number{
     width: 100%;
