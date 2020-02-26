@@ -39,9 +39,6 @@
     word-break: break-all;
     color: var(--main-theme-dark);
   }
-  li i{
-    display: none;
-  }
   #page-number{
     width: 100%;
     text-align: right;
