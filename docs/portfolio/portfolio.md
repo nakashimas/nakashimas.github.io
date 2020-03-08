@@ -19,9 +19,13 @@ ind: 5
 
 　機械学習を用いて自動で楽曲を生成し、Twitterに投稿するアカウント。
 
+[more >](https://nakashimas.github.io/docs/works/nasnecobot.html)
+
 - [楽曲分析ソフト 「Crocus」(改修中)](https://github.com/nasneco/Crocus)
 
 　楽曲の音名の頻度分析や、FP-growthを使った主要モチーフ推定等で、古典的楽曲分析を補助するソフトウェア。
+
+[more >](https://nakashimas.github.io/docs/works/crocus.html)
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">directions_run</i> Feature
 
