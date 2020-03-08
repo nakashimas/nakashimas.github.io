@@ -128,16 +128,18 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .htmlcontent{
-    position: relative;
-    overflow: hidden;
-    /*  */
+  .htmlcontentcontainer{
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
-    /*  */
+  }
+  .htmlcontent{
+    margin: auto;
+    max-width: 90vw;
+    width: 640px;
+    /* 
     transform: scale(0.3);
     -o-transform: scale(0.3);
     -webkit-transform: scale(0.3);
@@ -147,7 +149,7 @@
     -o-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
+    -ms-transform-origin: 0 0; */
   }
   h1 :not(mdc-list-group__subheader){
     font-size: 1.25em;
