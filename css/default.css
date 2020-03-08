@@ -129,8 +129,10 @@
     padding-right: 20px;
   }
   .htmlcontent{
-    width: 256px;
-    height: 128px;
+    margin: auto;
+    max-width: 90vw;
+    width: 1024px;
+    height: 512px;
     /* scale */
     transform: scale(0.25);
     -o-transform: scale(0.25);
@@ -144,8 +146,8 @@
     -ms-transform-origin: 0 0;
   }
   .htmlcontent iframe{
-    width: 256px;
-    height: 128px;
+    width: 1024px;
+    height: 512px;
   }
   h1 :not(mdc-list-group__subheader){
     font-size: 1.25em;
