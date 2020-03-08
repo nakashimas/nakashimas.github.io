@@ -8,6 +8,8 @@ date: 2020-3-8
 
 ## 本体
 
-<div class="htmlcontent">
+<div class="freebirdFormviewerViewFormContentWrapper">
+    <div class="freebirdFormviewerViewCenteredContent">
     <iframe src="https://nakashimas.github.io/docs/works/GreatAuthorMonteCarlo/index.html">loading</iframe>
+    </div>
 </div>
