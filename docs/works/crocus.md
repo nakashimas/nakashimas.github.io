@@ -8,6 +8,8 @@ date: 2020-3-8
 
 楽曲分析支援ツールとして作りました。
 
+[Crocus github](https://github.com/nasneco/Crocus)
+
 ## 使用法
 
 v0.1.0はpyinstallerで配布していましたが、不都合があったため、pythonモジュールとして起動するようにしておきました。
