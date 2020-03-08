@@ -128,6 +128,25 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+  .htmlcontent{
+    width: 256px;
+    height: 128px;
+    /* scale */
+    transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+  }
+  .htmlcontent iframe{
+    width: 256px;
+    height: 128px;
+  }
   h1 :not(mdc-list-group__subheader){
     font-size: 1.25em;
   }
