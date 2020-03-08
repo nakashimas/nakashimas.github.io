@@ -19,13 +19,15 @@
     --mdc-ripple-fg-translate-start: -0.64px, -3.2px;
     --mdc-ripple-fg-translate-end: 16px, -6.4px;
   }
+  body{
+    margin-right: 0px;
+  }
   .content-panel{
     margin: 10px;
-    margin-right: 0px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px 25px 25px 0px;
   }
   .htmlcontent{
     width: 1024px;
@@ -106,7 +108,6 @@
 @media screen and (max-width:1024px){
   .content-panel{
     margin: 1px;
-    margin-right: 0px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
