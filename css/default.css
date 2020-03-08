@@ -29,7 +29,7 @@
   }
   .htmlcontent{
     width: 1024px;
-    height: 4096px;
+    height: 1024px;
     transform: scale(0.5);
     -o-transform: scale(0.5);
     -webkit-transform: scale(0.5);
