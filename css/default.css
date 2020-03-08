@@ -30,8 +30,8 @@
     border-radius: 25px 0px 0px 25px;
   }
   .htmlcontent{
-    width: 1024px;
-    height: 1024px;
+    position: relative;
+    overflow: hidden;
     transform: scale(1);
     -o-transform: scale(1);
     -webkit-transform: scale(1);
@@ -45,7 +45,9 @@
   }
   .htmlcontent iframe{
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: absolute;
+    border: 0;
   }
   h1, h2, h3, h4, h5, h6 :not(mdc-list-group__subheader){
     padding: 0.5em 0.5em;
