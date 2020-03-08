@@ -11,13 +11,11 @@ date: 2020-3-8
 
 ## 稼働状況
 
-<div class="htmlcontentcontainer">
-    <div class="htmlcontent">
-        <a class="twitter-timeline" href="https://twitter.com/cc_99_ff">
-            Tweets by cc_99_ff
-        </a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
+<div style="text-align:center;">
+    <a class="twitter-timeline" data-width="320" data-height="400" data-chrome="transparent nofooter" data-link-color="#ff8080" href="https://twitter.com/cc_99_ff?ref_src=twsrc%5Etfw">
+        Tweets by cc_99_ff
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 ## 改修予定
