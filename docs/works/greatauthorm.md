@@ -6,7 +6,11 @@ date: 2020-3-8
 
 ## 説明
 
+講義課題として作成したネタです。
+
 ## 本体
+
+ブラウザによっては表示が崩れます。
 
 <div class="htmlcontentcontainer">
     <div class="htmlcontent">
