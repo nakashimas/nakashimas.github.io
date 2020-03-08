@@ -27,7 +27,7 @@
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 25px 25px 25px 0px;
+    border-radius: 25px 0px 0px 25px;
   }
   .htmlcontent{
     width: 1024px;
