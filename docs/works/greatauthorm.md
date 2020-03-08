@@ -8,6 +8,4 @@ date: 2020-3-8
 
 ## 本体
 
-<div>
-    <iframe class="htmlcontent" src="https://nakashimas.github.io/docs/works/GreatAuthorMonteCarlo/index.html">loading</iframe>
-</div>
+<iframe class="htmlcontent" src="https://nakashimas.github.io/docs/works/GreatAuthorMonteCarlo/index.html">loading</iframe>
