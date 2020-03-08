@@ -43,6 +43,10 @@
     -moz-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
   }
+  .htmlcontent iframe{
+    width: 100%;
+    height: auto;
+  }
   h1, h2, h3, h4, h5, h6 :not(mdc-list-group__subheader){
     padding: 0.5em 0.5em;
     color: var(--main-theme-dark);
