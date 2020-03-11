@@ -10,7 +10,7 @@ date: 2020-3-12
 
  ![profile](https://nakashimas.github.io/img/nasnecobot/profile.png "profile")
 
-["Twitterアカウント(@cc_99_ff) >"](https://twitter.com/cc_99_ff)
+[Twitterアカウント(@cc_99_ff) >](https://twitter.com/cc_99_ff)
 
 ## 機能
 
@@ -68,7 +68,7 @@ date: 2020-3-12
 
 ## お問い合わせ
 
-以下のような内容で、管理者にお問い合わせされる場合は、本サイト画面左上のメニューから、「Email」をクリックしてメールを送信するか、["管理者のメールアドレス"]:nascor.neco@gmail.com宛てにメールを送信してください。  
+以下のような内容で、管理者にお問い合わせされる場合は、本サイト画面左上のメニューから、「Email」をクリックしてメールを送信するか、<管理者のメールアドレス <&#110;&#97;&#115;&#99;&#111;&#114;&#46;&#110;&#101;&#99;&#111;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;> 宛てにメールを送信してください。  
 
 - 開発への参加
 
@@ -90,5 +90,5 @@ date: 2020-3-12
 
 <hr>
 
-["Home >"](https://nakashimas.github.io)
-["Works >"](https://nakashimas.github.io/docs/works/works.html)
+[Home >](https://nakashimas.github.io)  
+[Works >](https://nakashimas.github.io/docs/works/works.html)
