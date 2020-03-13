@@ -13,8 +13,9 @@ ind: 6
 
 1. アプリケーションソフトウェア系統
 
-<details><summary>制作のために少し習得しています</summary>
+<details>
 
+<summary>制作のために少し習得しています</summary>
 <div>
 
 - 制作環境の扱い
@@ -30,8 +31,9 @@ ind: 6
 
 2. その他の系統
 
-<details><summary>制作のために習得したものと、大学などで学んだもの</summary>
+<details>
 
+<summary>制作のために習得したものと、大学などで学んだもの</summary>
 <div>
 
 - 人文・芸術
