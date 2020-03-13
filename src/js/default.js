@@ -26,8 +26,7 @@ let sub_page_addresses = [
 let listitem = document.querySelectorAll('.drawer-list-item');
 for(let i = 0; i < listitem.length; ++i){
   listitem[i].addEventListener('click', function(){
-    if(i == 99){
-      // --
+    if(i == 1 || i == 2){
     }else{
       // その他はpage移動
       location.href = sub_page_addresses[i];
