@@ -13,3 +13,7 @@ date: 2020-3-11
 ## Document
 
  ["自動作曲bot 「茄子ねこ」"](https://nakashimas.github.io/docs/works/nasnecobot.html)
+
+<hr>
+
+[Home >](https://nakashimas.github.io/index.html)  

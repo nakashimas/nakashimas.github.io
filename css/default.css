@@ -71,6 +71,17 @@
     word-break: break-all;
     color: var(--main-theme-dark);
   }
+  table{
+    border-collapse: collapse;
+    border: 1px solid --main-theme;
+  }
+  th, td{
+    padding: 1px;
+    border: 1px solid --main-theme;
+  }
+  th{
+    background: --main-theme;
+  }
   #page-number{
     width: 100%;
     text-align: right;
