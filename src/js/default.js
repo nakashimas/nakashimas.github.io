@@ -17,7 +17,8 @@ if(isNaN(pagenumber)){
 // リンクは元ファイルが".md"でも、".html"と書く必要がある。(当然)
 let sub_page_addresses = [
   "https://nakashimas.github.io/",
-  "mailto:nascor.neco@gmail.com",
+  "#infocontact",
+  "#infoform",
   "https://nakashimas.github.io/docs/memo/memo.html",
   "https://nakashimas.github.io/docs/works/works.html",
   "https://nakashimas.github.io/docs/others/others.html",
