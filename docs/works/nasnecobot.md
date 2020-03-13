@@ -86,5 +86,5 @@ date: 2020-3-12
 
 <hr>
 
-[Home >](https://nakashimas.github.io)  
+[Home >](https://nakashimas.github.io/index.html)  
 [Works >](https://nakashimas.github.io/docs/works/works.html)

@@ -16,7 +16,7 @@ if(isNaN(pagenumber)){
 // drawer listのitemの設定
 // リンクは元ファイルが".md"でも、".html"と書く必要がある。(当然)
 let sub_page_addresses = [
-  "https://nakashimas.github.io/",
+  "https://nakashimas.github.io/index.html",
   "#infocontact",
   "#infoform",
   "https://nakashimas.github.io/docs/memo/memo.html",
@@ -49,7 +49,7 @@ navbutton.addEventListener("click", function(){
 // home
 let homebutton = document.getElementById("home-button");
 homebutton.addEventListener("click", function(){
-  location.href="https://nakashimas.github.io/";
+  location.href="https://nakashimas.github.io/index.html";
 });
 // share
 let sharebutton = document.getElementById("share-button");
@@ -58,7 +58,7 @@ sharebutton.addEventListener("click", function(){
     {
       title: document.title,
       text: document.title,
-      url: "https://nakashimas.github.io"
+      url: "https://nakashimas.github.io/index.html"
     }
   );
 });

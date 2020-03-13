@@ -347,3 +347,8 @@ dev.off()
 
 　"How to do in R: load an image file, print text on image, save modified image"  
 <https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image>
+
+<hr>
+
+[Home >](https://nakashimas.github.io/index.html)  
+[Memo >](https://nakashimas.github.io/docs/memo/memo.html)

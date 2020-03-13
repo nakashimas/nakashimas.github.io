@@ -17,3 +17,8 @@ date: 2020-3-8
     <iframe src="https://nakashimas.github.io/docs/works/GreatAuthorMonteCarlo/index.html">loading</iframe>
     </div>
 </div>
+
+<hr>
+
+[Home >](https://nakashimas.github.io/index.html)  
+[Works >](https://nakashimas.github.io/docs/works/works.html)

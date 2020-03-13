@@ -11,7 +11,16 @@ ind: 5
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">emoji_people</i> Skils
 
-　色々
+- 制作環境
+
+ | :---: | :--- |
+ | OS | Windows, ubuntu |
+ | App | , DAW, UnityEngine | 
+ | Language | Python, c/c++, javascript, R, (SQL, java, php) |
+
+- その他
+
+ , 作曲, (楽曲分析, 楽譜浄書)
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">accessibility_new</i> Works
 
@@ -29,4 +38,9 @@ ind: 5
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">directions_run</i> Feature
 
-　このサイトの整理
+　茄子ねこ botの改修
+
+<hr>
+
+[Home >](https://nakashimas.github.io/index.html)  
+[Others >](https://nakashimas.github.io/docs/others/others.html)
