@@ -13,7 +13,9 @@ ind: 6
 
 1. アプリケーションソフトウェア系統
 
-<details><summary>制作のために少し習得しています</summary><div>
+<details><summary>制作のために少し習得しています</summary>
+
+<div>
 
 - 制作環境の扱い
 
@@ -22,18 +24,24 @@ ind: 6
  | App | DAW, Vocaloid, Git, Elan, Praat, Unity など | 
  | 言語 他 | Python, c/c++, R, javascript, Markup, (SQL, java, php) | 
 
-</div></details>
+</div>
+
+</details>
 
 2. その他の系統
 
-<details><summary>制作のために習得したものと、大学などで学んだもの</summary><div>
+<details><summary>制作のために習得したものと、大学などで学んだもの</summary>
+
+<div>
 
 - 人文・芸術
 
  | :---: | :--- |
  | 音楽 | 楽曲分析, (作曲, 楽譜浄書) |
 
-</div></details>
+</div>
+
+</details>
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">accessibility_new</i> Works
 
