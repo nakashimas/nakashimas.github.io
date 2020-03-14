@@ -1,0 +1,8 @@
+@media screen and (min-width:0px){
+  .verovio-content{
+    border: 1px solid lightgray;
+    min-height: 800px;
+  }
+}
+@media screen and (max-width:1024px){
+}
