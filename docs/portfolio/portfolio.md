@@ -58,5 +58,5 @@ ind: 6
 <hr>
 
 [Home >](https://nakashimas.github.io/index.html)  
-[Works >](https://nakashimas.github.io/docs/others/others.html)  
+[Works >](https://nakashimas.github.io/docs/works/works.html)  
 [Others >](https://nakashimas.github.io/docs/others/others.html)
