@@ -23,10 +23,10 @@
     margin-right: 0px;
   }
   .mdc-drawer .mdc-list-item--activated {
-    color: --main-theme;
+    color: var(--main-theme);
   }
   .mdc-list-item--selected, .mdc-list-item--activated {
-    color: --main-theme;
+    color: var(--main-theme);
     color: var(--mdc-theme-primary, --main-theme);
   }
   .content-panel{
@@ -80,13 +80,13 @@
   }
   table{
     border-collapse: collapse;
-    border: 1px solid --main-theme;
+    border: 1px solid var(--main-theme);
   }
   th, td{
-    border: 1px solid --main-theme;
+    border: 1px solid var(--main-theme);
   }
   th{
-    background: --main-theme;
+    background: var(--main-theme);
   }
   #page-number{
     width: 100%;
