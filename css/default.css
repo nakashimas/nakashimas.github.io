@@ -142,13 +142,13 @@
     margin: auto;
     max-width: 90vw;
     width: 1024px;
-    height: 512px;
+    height: 1024px;
     /* scale */
-    transform: scale(0.4);
-    -o-transform: scale(0.4);
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    -ms-transform: scale(0.4);
+    transform: scale(0.35);
+    -o-transform: scale(0.35);
+    -webkit-transform: scale(0.35);
+    -moz-transform: scale(0.35);
+    -ms-transform: scale(0.35);
     transform-origin: 0 0;
     -o-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
@@ -157,7 +157,7 @@
   }
   .htmlcontent iframe{
     width: 1024px;
-    height: 512px;
+    height: 1024px;
   }
   h1 :not(mdc-list-group__subheader){
     font-size: 1.25em;
