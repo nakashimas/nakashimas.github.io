@@ -22,6 +22,7 @@
   body{
     margin-right: 0px;
   }
+  /* mdc list drawer */
   .mdc-drawer .mdc-list-item--activated {
     color: var(--main-theme);
   }
@@ -29,6 +30,11 @@
     color: var(--main-theme);
     color: var(--mdc-theme-primary, --main-theme);
   }
+  .mdc-list-item--selected .mdc-list-item__graphic, .mdc-list-item--activated .mdc-list-item__graphic {
+    color: var(--main-theme);
+    color: var(--mdc-theme-primary, var(--main-theme));
+  }
+  /* content box */
   .content-panel{
     margin: 10px;
     margin-right: 0px;
