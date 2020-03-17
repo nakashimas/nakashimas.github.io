@@ -13,6 +13,17 @@ if(isNaN(pagenumber)){
 }else{
   list.selectedIndex = pagenumber;
 }
+// drawer(id: index-drawer)の設定
+const drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
+const topAppBar =  mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector(".mdc-top-app-bar"));
+topAppBar.setScrollTarget(document.getElementById("main-content"));
+// ------------------------------------------------------------------------>
+// ハンバーガーにイベントを付ける
+let navbutton = document.getElementById("nav-button");
+navbutton.addEventListener("click", function(){
+  // trueを代入するとdrawerを開く
+  drawer.open = !drawer.open;
+});
 // drawer listのitemの設定
 // リンクは元ファイルが".md"でも、".html"と書く必要がある。(当然)
 let sub_page_addresses = [
@@ -31,19 +42,10 @@ for(let i = 0; i < listitem.length; ++i){
       // その他はpage移動
       location.href = sub_page_addresses[i];
     }
+    // 選択後、drawerを閉じる
+    drawer.open = false;
   });
 };
-// drawer(id: index-drawer)の設定
-const drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
-const topAppBar =  mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector(".mdc-top-app-bar"));
-topAppBar.setScrollTarget(document.getElementById("main-content"));
-// ------------------------------------------------------------------------>
-// ハンバーガーにイベントを付ける
-let navbutton = document.getElementById("nav-button");
-navbutton.addEventListener("click", function(){
-  // trueを代入すると開く
-  drawer.open = !drawer.open;
-});
 // ------------------------------------------------------------------------>
 // その他ツールバーのイベント
 // home
