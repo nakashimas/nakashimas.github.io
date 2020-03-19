@@ -20,7 +20,7 @@ ind: 6
 - [自動作曲bot 「茄子ねこ」(改修中)](https://twitter.com/cc_99_ff)
 
     機械学習を用いて自動で楽曲を生成し、Twitterに投稿するアカウント。  
-    [more >](https://nakashimas.github.io/docs/works/nasnecobot.html)
+    [more >](https://nakashimas.github.io/docs/works/nasneco.html)
 
 - [楽曲分析ソフト 「Crocus」(改修中)](https://github.com/nasneco/Crocus)
 
