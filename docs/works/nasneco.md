@@ -8,7 +8,7 @@ date: 2020-3-12
 
 茄子ねこ（@nasneco）に成り代わって作曲したり、呟いたりするTwitter botです。
 
- ![profile](https://nakashimas.github.io/img/nasnecobot/profile.png "profile")
+ ![profile](https://nakashimas.github.io/img/nasneco/profile.png "profile")
 
 [Twitterアカウント(@cc_99_ff) >](https://twitter.com/cc_99_ff)
 
