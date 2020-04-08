@@ -6,3 +6,7 @@ ind: 3
 ---
 
 - [R言語 表やグラフ、テキストをpng形式で保存](https://nakashimas.github.io/docs/memo/rpng.html)
+
+<hr>
+
+[Home >](https://nakashimas.github.io/index.html)  
