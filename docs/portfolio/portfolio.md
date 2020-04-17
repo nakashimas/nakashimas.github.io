@@ -7,7 +7,7 @@ ind: 6
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i> Profile
 
-　京都の人文学系の学部2回生。(2020年3月時点)
+　京都の人文学系の学部3回生。(2020年4月時点)
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">emoji_people</i> Skills
 
