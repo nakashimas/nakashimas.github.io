@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "楽曲生成依頼の例"
-date: 2020-4-17
+date: 2020-4-18
 ---
 
 ## 概要
@@ -9,9 +9,9 @@ date: 2020-4-17
 本ページでは、自動作曲bot「茄子ねこ」の楽曲生成依頼の詳細について説明します。
 
 楽曲生成依頼の機能については、[楽曲生成依頼についてのページ](https://nakashimas.github.io/docs/works/nasneco_generation.html)を参照してください。  
-自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](https://nakashimas.github.io/docs/works/nasneco.html)を参照してください。
+また、自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](https://nakashimas.github.io/docs/works/nasneco.html)を参照してください。
 
-## 実用例
+## 実在する楽曲の例
 
 ### Bach bwv988 No. 1
 
@@ -27,9 +27,9 @@ date: 2020-4-17
 
 <div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo1.musicxml</div>
 
-### 他
+## 実際に送られた依頼文
 
-準備中です。
+まだ掲載されている例はありません。
 
 <hr>
 
