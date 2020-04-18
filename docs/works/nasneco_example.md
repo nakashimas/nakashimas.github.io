@@ -30,6 +30,10 @@ date: 2020-4-17
 
 <div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo_1.musicxml</div>
 
+### 他
+
+準備中です。
+
 <hr>
 
 [NASNECO Top >](https://nakashimas.github.io/docs/works/nasneco.html)  
