@@ -21,10 +21,7 @@ date: 2020-4-17
 @cc_99_ff music?L='1/16'?M='3/4'?G^FG3DEFGAB^c|d^cd3ABcde^fd|g^fg3fed^ceAG|^FED^CDFA,G,^F,A,D,2|z2d=cd2G2B,2d2|z2ede2A2C2e2|z2^fef2d2a2c2|c2B2zGBdgdga|bgdBGBdgbg^fe|ae^cA^FAcea^fed|gdBGEGBdg^fed|^cGE^CA,CEGcedc|d2^F,2F,2A2d2^f2|B2G,2G,2B2e2g2|^ceAG^FAd^fgedc|^fd^cBAG^FED4:|;
 ```
 
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="@cc_99_ff music?L='1/16'?M='3/4'?G^FG3DEFGAB^c|d^cd3ABcde^fd|g^fg3fed^ceAG|^FED^CDFA,G,^F,A,D,2|z2d=cd2G2B,2d2|z2ede2A2C2e2|z2^fef2d2a2c2|c2B2zGBdgdga|bgdBGBdgbg^fe|ae^cA^FAcea^fed|gdBGEGBdg^fed|^cGE^CA,CEGcedc|d2^F,2F,2A2d2^f2|B2G,2G,2B2e2g2|^ceAG^FAd^fgedc|^fd^cBAG^FED4:|;">
-    Tweet
-</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/intent/tweet?screen_name=cc_99_ff&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false" data-text="music?L='1/16'?M='3/4'?G^FG3DEFGAB^c|d^cd3ABcde^fd|g^fg3fed^ceAG|^FED^CDFA,G,^F,A,D,2|z2d=cd2G2B,2d2|z2ede2A2C2e2|z2^fef2d2a2c2|c2B2zGBdgdga|bgdBGBdgbg^fe|ae^cA^FAcea^fed|gdBGEGBdg^fed|^cGE^CA,CEGcedc|d2^F,2F,2A2d2^f2|B2G,2G,2B2e2g2|^ceAG^FAd^fgedc|^fd^cBAG^FED4:|;">Tweet to @cc_99_ff</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 楽譜
 
