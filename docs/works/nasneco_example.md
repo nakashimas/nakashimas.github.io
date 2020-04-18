@@ -28,7 +28,7 @@ date: 2020-4-17
 
 楽譜
 
-<div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo_1.musicxml</div>
+<div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo1.musicxml</div>
 
 ### 他
 
