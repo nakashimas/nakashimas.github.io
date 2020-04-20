@@ -3,9 +3,16 @@
 nakashimas GitHub Pages
 ===========================================
 
-.. code-block:: powershell
-    :caption: Win
+https://nakashimas.github.io
 
-1. Overview
+Overview
+----------------
 
- | https://nakashimas.github.io
+このリポジトリでは、nakashimas_ のホームページを管理しています。
+
+.. _nakashimas : https://github.com/nakashimas
+
+Author
+----------------
+
+nakashimas 他
