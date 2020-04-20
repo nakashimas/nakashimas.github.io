@@ -27,6 +27,19 @@ date: 2020-4-18
 
 <div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo1.musicxml</div>
 
+### Debussy L66 No. 1
+
+ドビュッシー、二つのアラベスクより、第一番の序盤(260文字)
+```sh
+@cc_99_ff music?T='DeuxArabesques1'?C='Debussy,Claude'?(3CEA(3cef(3gdB(3GDB,|(3A,CF(3Acd(3eBG(3EB,G,|z2c2f2c2-|c2c2f2a2|a2a4(3agf|z2(3efc(3eBc(3GBF|(3GEGD4C2|B,z(3efc(3eBc(3GBF|(3GEGD4C2|(3B,A,B,C3EDE|C2G4E2|(3DCDE2-EGFG|E2c4(3^AcA|G2e4(3cec|g3fg3f|;g3fgf2g|];
+```
+
+<a href="https://twitter.com/intent/tweet?screen_name=cc_99_ff&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false" data-text="music?T='DeuxArabesques1'?C='Debussy,Claude'?(3CEA(3cef(3gdB(3GDB,|(3A,CF(3Acd(3eBG(3EB,G,|z2c2f2c2-|c2c2f2a2|a2a4(3agf|z2(3efc(3eBc(3GBF|(3GEGD4C2|B,z(3efc(3eBc(3GBF|(3GEGD4C2|(3B,A,B,C3EDE|C2G4E2|(3DCDE2-EGFG|E2c4(3^AcA|G2e4(3cec|g3fg3f|;g3fgf2g|];">Tweet to @cc_99_ff</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+楽譜
+
+<div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo2.musicxml</div>
+
 ## 実際に送られた依頼文
 
 まだ掲載されている例はありません。
