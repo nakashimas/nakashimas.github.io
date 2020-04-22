@@ -1,6 +1,0 @@
-{
-      "Developer_API_Base_URL": "https://api.ce-cotoha.com/api/dev/nlp/",
-      "Developer_Client_id" : "ppqKYAjDwgWLUPl62tEP9MYf1BjhB02g",
-      "Developer_Client_secret" : "JjXfcF1AJCdEMVyo",
-      "Access_Token_Publish_URL" : "https://api.ce-cotoha.com/v1/oauth/accesstokens"
-}
