@@ -99,7 +99,7 @@ GitHubのリポジトリは非公開のため、説明書として、ここに�
 
   例
   
-  ![opt_a_file_upload](img/opt_a_file_upload.png)
+  ![opt_a_file_upload](https://nakashimas.github.io/img/hatonokai/opt_a_file_upload.png)
 
 - **乱数を用いて情報を作成する**  
 
