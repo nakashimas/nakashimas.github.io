@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Portfolio
-date: 2020-2-22
+title: "Portfolio"
+date: 2020-7-7
 ind: 6
 ---
 
@@ -19,18 +19,20 @@ ind: 6
 
 - [自動作曲bot 「茄子ねこ」](https://twitter.com/cc_99_ff)
 
-    機械学習を用いて自動で楽曲を生成し、Twitterに投稿するアカウント。  
+    機械学習を用いて自動で楽曲を生成し、Twitterに投稿するアカウント。     
     [more >](https://nakashimas.github.io/docs/works/nasneco.html)
 
 - [discord bot「鳩の会」](https://nakashimas.github.io/docs/works/hatonokai.html)
     
     自粛期間を機に友人と共同制作したdiscord-bot。  
-    便利機能オールインワンで、かつ新奇な機能も持つ。
+    便利機能オールインワンで、かつ新奇な機能も持つ。  
+    [more >](https://nakashimas.github.io/docs/works/hatonokai.html)
   
 
 ## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">directions_run</i> Recent
 
-特になし
+自動作曲bot 「茄子ねこ」の楽曲生成器の改善。  
+このサイトのレイアウトの改善。
 
 <hr>
 
