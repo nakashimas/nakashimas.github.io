@@ -1,0 +1,7 @@
+baseURL = "http://nakashimas.github.io/"
+languageCode = "ja"
+title = "NS HOME"
+contentDir = "content"
+disableKinds = ["RSS", "sitemap"]
+[taxonomies]
+tag = "tags"
