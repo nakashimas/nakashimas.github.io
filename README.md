@@ -19,6 +19,7 @@
   <br>
 </p>
 <h2> Contents </h2>
+
 - [Description](#description)
 - [Downloads](#downloads)
 - [License](#license)
@@ -44,6 +45,7 @@ git clone https://github.com/nakashimas/nakashimas.github.io
 
 いくつか前のバージョンのレイアウトや、ページを閲覧したい場合は、 [Releaces](https://github.com/nakashimas/nakashimas.github.io/releases) から閲覧できます(非推奨)
 
+
 ## License
 
 This project is licensed under the terms of the [MIT](./LICENSE).
@@ -58,6 +60,7 @@ This project is licensed under the terms of the [MIT](./LICENSE).
 |  :----:  |  :-----:  |
 |          |           |
 |          |           |
+
 
 ## Author
 
