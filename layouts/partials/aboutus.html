@@ -1,0 +1,29 @@
+
+{{ with .Site.Params.aboutus }}
+  {{ if .enable }}
+    <section class="site-hero-sustain-high" style="background-color: #FF9996;"></section>
+    <section class="site-aboutus" id="aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2 class="text-white">{{ .title }}</h2>
+              <p class="text-white">{{ .subtitle }}</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="section-title-letter">
+              <p class="text-white">
+                {{ .description_en | safeHTML }}
+                {{ .description | safeHTML }}
+              </p>
+            </div>
+          </div>
+          <div class="col-12 text-center text-lg-left">
+            <a href="aboutus" class="site-aboutus-cta">MORE INFO <span style="bottom: 1px; position:relative">:</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

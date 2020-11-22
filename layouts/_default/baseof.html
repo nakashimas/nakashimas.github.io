@@ -1,18 +1,12 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ block "title" . }}{{ end }}</title>
-  </head>
-  <body>
-    {{ "<!-- _default/baseof.html start -->" | safeHTML }}
-    <ul>
-      <li><a href="{{ relURL "/" }}">トップ</a></li>
-      <li><a href="{{ relURL "/article/" }}">記事</a></li>
-      <li><a href="{{ relURL "/tags/" }}">タグ</a></li>
-    </ul>
-    <hr />
-    {{ block "main" . }}{{ end }}
-    {{ "<!-- _default/baseof.html end -->" | safeHTML }}
-  </body>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <main>
+            {{- block "main" . }}{{- end }}
+        </main>
+        {{- partial "footer.html" . -}}
+    </body>
+    {{- partial "foot.html" . -}}
 </html>

@@ -18,6 +18,7 @@
   </a>
   <br>
 </p>
+
 <h2> Contents </h2>
 
 - [Description](#description)
@@ -43,7 +44,7 @@
 git clone https://github.com/nakashimas/nakashimas.github.io
 ```
 
-いくつか前のバージョンのレイアウトや、ページを閲覧したい場合は、 [Releaces](https://github.com/nakashimas/nakashimas.github.io/releases) から閲覧できます(非推奨)
+いくつか前のバージョンのレイアウトや、ページを閲覧したい場合は、 [Releaces](https://github.com/nakashimas/nakashimas.github.io/releases) から閲覧できます。
 
 
 ## License
@@ -54,12 +55,21 @@ This project is licensed under the terms of the [MIT](./LICENSE).
 
 また、このプロジェクトには、異なるライセンスを持つ他のプロジェクトが用いられています。
 
-使われているプロジェクトのライセンスの一覧：
+**使われているプロジェクトのライセンスの一覧**
 
-|  assets  |  LICENSE  |
-|  :----:  |  :-----:  |
-|          |           |
-|          |           |
+アセット・APIなど：
+
+|  ASSETS        |  LICENSE                                                        | VERSION      |
+|  :----:        |  :-----:                                                        | :-----:      |
+| bootstrap      |  [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)   |  4.3.1       |
+| awesome-font   |  [SIL OFL 1.1 and MIT](https://fontawesome.com/v4.7.0/license/) |  4.7.0       |
+| svgbackgrounds |  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)      |  2020/11/21  |
+
+Hugoテーマ：
+
+|  THEME      |  LICENSE                                                               | VERSION      |
+|  :----:     |  :-----:                                                               | :-----:      |
+| roxo        |  [MIT](https://github.com/StaticMania/roxo-hugo/blob/master/LICENSE)   |  2020/05/30  |
 
 
 ## Author

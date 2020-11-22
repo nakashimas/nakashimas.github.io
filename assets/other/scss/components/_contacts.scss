@@ -1,0 +1,15 @@
+
+.site-contacts{
+  padding: 120px 0;
+  color: $white;
+  background: $primary-color;
+  .section-title{
+    margin-bottom: 40px;
+  }
+  .follow-me{
+    @include desktop{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

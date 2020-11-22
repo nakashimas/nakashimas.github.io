@@ -5,15 +5,15 @@ date: 2020-7-7
 ind: 6
 ---
 
-## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i> Profile
+### <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i> Profile
 
 　京都の人文学系の学部3回生。(2020年7月時点)
 
-## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">emoji_people</i> Skills
+### <i class="material-icons mdc-list-item__graphic" aria-hidden="true">emoji_people</i> Skills
 
 　勉強しています。
 
-## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">accessibility_new</i> Works
+### <i class="material-icons mdc-list-item__graphic" aria-hidden="true">accessibility_new</i> Works
 
 　趣味で次のようなものを作っています。
 
@@ -29,7 +29,7 @@ ind: 6
     [more >](https://nakashimas.github.io/docs/works/hatonokai.html)
   
 
-## <i class="material-icons mdc-list-item__graphic" aria-hidden="true">directions_run</i> Recent
+### <i class="material-icons mdc-list-item__graphic" aria-hidden="true">directions_run</i> Recent
 
 自動作曲bot 「茄子ねこ」の楽曲生成器の改善。  
 このサイトのレイアウトの改善。

@@ -1,0 +1,23 @@
+
+{{ define "main" }}
+  <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="site-project-header-content">
+            <h1>
+              {{ .Title | safeHTML }}
+            </h1>
+          </div>
+        </div>
+        <div class="col-lg-4">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="site-project" id="aboutus">
+    
+  </section>
+  {{ partial "contacts.html" . }}
+{{ end }}
