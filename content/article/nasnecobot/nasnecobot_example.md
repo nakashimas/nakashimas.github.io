@@ -1,19 +1,32 @@
 ---
 title: "NASNECO BOT : EXAMPLE"
 date: 2019-12-23T20:56:42+06:00
-type: projects
-description: "Artifical Music Composer"
+type: article
+description: "Generate music using CLI on SNS"
 image: "images/sub/nasnecobot/profile.png"
-category: ["BOT", "MACHINE-LEARNING", "TWITTER", "INSTAGRAM"]
+category: ["BOT", "ABC-NOTATION", "CLI"]
 project_images: []
+authors: 
+    nakashimas:
+        name: "nakashimas"
+        profession: "student"
+        description: "京都の学生です。"
+        icon_image: "https://avatars1.githubusercontent.com/u/61147776"
+        url: "https://github.com/nakashimas"
+    nasneco:
+        name: "nasneco"
+        profession: "student"
+        description: "趣味が作曲とかの人"
+        icon_image: "https://pbs.twimg.com/profile_images/1204033436156981248/HutTMW0m_400x400.jpg"
+        url: "https://twitter.com/nasneco"
 ---
 
 ### 概要
 
 本ページでは、自動作曲bot「茄子ねこ」の楽曲生成依頼の詳細について説明します。
 
-楽曲生成依頼の機能については、[楽曲生成依頼についてのページ](https://nakashimas.github.io/docs/works/nasneco_generation.html)を参照してください。  
-また、自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](https://nakashimas.github.io/docs/works/nasneco.html)を参照してください。
+楽曲生成依頼の機能については、[楽曲生成依頼についてのページ](/article/nasnecobot/nasnecobot_example/)を参照してください。  
+また、自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](/projects/nasnecobot/nasnecobot/)を参照してください。
 
 ### 実在する楽曲の例
 
@@ -48,9 +61,3 @@ project_images: []
 
 まだ掲載されている例はありません。
 
-<hr>
-
-[NASNECO Top >](https://nakashimas.github.io/docs/works/nasneco.html)  
-[NASNECO Generation >](https://nakashimas.github.io/docs/works/nasneco_generation.html)  
-[Home >](https://nakashimas.github.io/index.html)  
-[Works >](https://nakashimas.github.io/docs/works/works.html)

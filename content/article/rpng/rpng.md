@@ -1,11 +1,18 @@
 ---
-title: "PNG IN R lang"
+title: "PNG ON R LANG"
 date: 2019-12-23T20:56:42+06:00
 type: article
-description: ""
-image: ""
+description: "To management PNG output on R Studio"
+image: "/images/sub/imgrpng/saveaspng1.png"
 category: []
 project_images: []
+authors: 
+    nakashimas:
+        name: "nakashimas"
+        profession: "student"
+        description: "京都の学生です。"
+        icon_image: "https://avatars1.githubusercontent.com/u/61147776"
+        url: "https://github.com/nakashimas"
 ---
 
 ### 1 はじめに
@@ -21,9 +28,9 @@ project_images: []
 
 　Rstudioの場合、表示されたグラフを右クリックすることで、画像を保存する選択肢を表示できます。
 
- ![画面1](https://nakashimas.github.io/img/imgrpng/saveaspng1.png "画面")
+<div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng1.png"  style="width:80%"></div>
 
- ![画面2](https://nakashimas.github.io/img/imgrpng/saveaspng2.png "画面")
+<div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng2.png"  style="width:80%"></div>
 
 　右クリック　→　「Save image as ...」を選択　→　保存先を選択
 
@@ -71,7 +78,7 @@ plot(x, y)
 dev.off()
 ```
 
- ![出力画像](https://nakashimas.github.io/img/imgrpng/graph1x1.png "出力")
+<div style="text-align: center"><img src="/images/sub/imgrpng/graph1x1.png"  style="width:80%"></div>
 
 　また、通常の出力と同様に、"par()"関数を使えば、複数のグラフを一つのpng画像に出力することもできます。
 
@@ -93,7 +100,7 @@ plot(x, y)
 dev.off()
 ```
 
- ![出力画像](https://nakashimas.github.io/img/imgrpng/graph2x2.png "出力")
+<div style="text-align: center"><img src="/images/sub/imgrpng/graph2x2.png"  style="width:80%"></div>
 
 ### 3-2　表
 
@@ -125,7 +132,7 @@ grid.draw(my.data)
 dev.off()
 ```
 
- ![出力画像](https://nakashimas.github.io/img/imgrpng/tablemono.png "出力")
+<div style="text-align: center"><img src="/images/sub/imgrpng/tablemono.png"  style="width:80%"></div>
 
 　ここでは、表示したいテーブルを"my.table"と定義しています。タイトルなどのテキストも、"grid.text()"関数を用いて以下のように記述できます。
 
@@ -212,7 +219,7 @@ for (i in colnames(tmp)) {
 
 　図1の結果
 
- ![出力画像](https://nakashimas.github.io/img/imgrpng/graph1.png "出力")
+<div style="text-align: center"><img src="/images/sub/imgrpng/graph1.png"  style="width:80%"></div>
 
 　Wordに貼る場合、図表番号はWrod側で自動割り当てしてくれるので、Rで図に題名を付けておく理由はあまりないかもしれません。
 
@@ -285,7 +292,7 @@ for (i in 1:length(tmp)) {
 
 　表1の結果
 
- ![出力画像](https://nakashimas.github.io/img/imgrpng/table1.png "出力")
+<div style="text-align: center"><img src="/images/sub/imgrpng/table1.png"  style="width:80%"></div>
 
 　日本語文の質問の選択肢など、長いファクター名は見切れたり、重なったりする可能性があります。そのため、適度に改行コードを加えるなどして調整することが必要です。例では、指定文字数ごとに改行コードを挟む処理を行っています。
 
@@ -325,34 +332,30 @@ for (t in rev(texts)) {
 dev.off()
 ```
 
- ![出力画像](https://nakashimas.github.io/img/imgrpng/hoge.png "出力")
+<div style="text-align: center"><img src="/images/sub/imgrpng/hoge.png"  style="width:80%"></div>
 
 　Rstudioの出力と見比べると、微妙にずれています。調整すると大丈夫そうですが、面倒なのでテキストはGUIから保存する方がいいかもしれません。
 
 ### 5 参考
 
 　"R で描いたグラフを PNG や PDF に保存する方法"  
-<https://stats.biopapyrus.jp/r/graph/imagedevice.html>
+[link](https://stats.biopapyrus.jp/r/graph/imagedevice.html)
 
 　"RDocumentation"  
 　"png function"  
-<https://www.rdocumentation.org/packages/grDevices/versions/3.4.1/topics/png>  
+[link](https://www.rdocumentation.org/packages/grDevices/versions/3.4.1/topics/png)  
 　"sink function"  
-<https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sink>  
+[link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sink)  
 　"scan function"  
-<https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/scan>  
+[link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/scan)  
 　"grid package"  
-<https://www.rdocumentation.org/packages/grid/versions/3.6.2>  
+[link](https://www.rdocumentation.org/packages/grid/versions/3.6.2)  
 　"gridExtra package"  
-<https://www.rdocumentation.org/packages/gridExtra/versions/2.3>
+[link](https://www.rdocumentation.org/packages/gridExtra/versions/2.3)
 
 　"R List of Graphical Devices"  
-<https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html>
+[link](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html)
 
 　"How to do in R: load an image file, print text on image, save modified image"  
-<https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image>
+[link](https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image)
 
-<hr>
-
-[Home >](https://nakashimas.github.io/index.html)  
-[Memo >](https://nakashimas.github.io/docs/memo/memo.html)

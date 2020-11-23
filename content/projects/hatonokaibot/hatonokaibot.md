@@ -6,6 +6,19 @@ description: "Artifical Music Composer"
 image: "images/sub/nasnecobot/profile.png"
 category: ["BOT", "MACHINE-LEARNING", "TWITTER", "INSTAGRAM"]
 project_images: []
+authors: 
+    nakashimas:
+        name: "nakashimas"
+        profession: "student"
+        description: "京都の学生です。"
+        icon_image: "https://avatars1.githubusercontent.com/u/61147776"
+        url: "https://github.com/nakashimas"
+    ramu-ne:
+        name: "<span class='blockable'>ramu-ne</span>"
+        profession: "student"
+        description: ""
+        icon_image: "https://avatars2.githubusercontent.com/u/50581179"
+        url: "https://github.com/ramune2332"
 ---
 
 ### Description
@@ -103,7 +116,7 @@ GitHubのリポジトリは非公開のため、説明書として、ここに�
 
   例
   
-  ![opt_a_file_upload](https://nakashimas.github.io/img/hatonokai/opt_a_file_upload.png)
+  <img src="https://nakashimas.github.io/img/hatonokai/opt_a_file_upload.png" style="width:100%">
 
 - **乱数を用いて情報を作成する** 
 

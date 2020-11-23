@@ -7,7 +7,12 @@
     transition: all 0.3s ease-in;
     &-thumb{
       img{
+        $my-filter: grayscale(100%) sepia(100%) hue-rotate(-44.789deg) saturate(110.938%) brightness(101.189%);
         width: 100%;
+        -webkit-filter: $my-filter;
+        -moz-filter: $my-filter;
+        -ms-filter:$my-filter;
+        filter:$my-filter;
       }
     }
     &-content{

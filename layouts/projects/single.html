@@ -11,6 +11,7 @@
             </h1>
             <div class="site-project-single-description">
               {{ .Content }}
+              {{ partial "authors.html" . }}
             </div>
             <div class="site-project-single-image">
               {{ range .Params.project_images }}

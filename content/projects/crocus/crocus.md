@@ -6,6 +6,13 @@ description: "Artifical Music Composer"
 image: "images/sub/nasnecobot/profile.png"
 category: ["BOT", "MACHINE-LEARNING", "TWITTER", "INSTAGRAM"]
 project_images: []
+authors: 
+    nasneco:
+        name: "nasneco"
+        profession: "student"
+        description: "趣味が作曲とかの人"
+        icon_image: "https://pbs.twimg.com/profile_images/1204033436156981248/HutTMW0m_400x400.jpg"
+        url: "https://twitter.com/nasneco"
 ---
 
 ### 説明

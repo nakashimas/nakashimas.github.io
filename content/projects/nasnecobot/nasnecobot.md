@@ -6,13 +6,26 @@ description: "Artifical Music Composer"
 image: "images/sub/nasnecobot/profile.png"
 category: ["BOT", "MACHINE-LEARNING", "TWITTER", "INSTAGRAM"]
 project_images: []
+authors: 
+    nakashimas:
+        name: "nakashimas"
+        profession: "student"
+        description: "京都の学生です。"
+        icon_image: "https://avatars1.githubusercontent.com/u/61147776"
+        url: "https://github.com/nakashimas"
+    nasneco:
+        name: "nasneco"
+        profession: "student"
+        description: "趣味が作曲とかの人"
+        icon_image: "https://pbs.twimg.com/profile_images/1204033436156981248/HutTMW0m_400x400.jpg"
+        url: "https://twitter.com/nasneco"
 ---
 
 ### 概要
 
 自動作曲bot「茄子ねこ」は、茄子ねこ（@nasneco）に成り代わって作曲したり、呟いたりするTwitter botです。
 
- ![profile](https://nakashimas.github.io/img/nasneco/profile.png "profile")
+<div style="text-align:center"><img src="/images/sub/nasnecobot/profile.png" style="width:80%"></div>
 
 [Twitterアカウント(@cc_99_ff) >](https://twitter.com/cc_99_ff)
 
@@ -53,7 +66,7 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 ```
 
 また、旋律の要件に応じて、オプションが指定できます。  
-詳しくは、[楽曲生成依頼についてのページ](https://nakashimas.github.io/docs/works/nasneco_generation.html)を参照してください。
+詳しくは、[楽曲生成依頼についてのページ](/article/nasnecobot/nasneco_generation/)を参照してください。
 
 ### 投稿内容の扱い、及び利用上の注意
 
@@ -82,32 +95,27 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 
 ### 近況
 
+2020/09/19 BOTの動作を管理する機能を改善しました。 
+
+過去の大幅な変更
+
 2020/04/19 楽曲生成依頼機能の改修をしました。 
-
-<details>
-
-<summary>過去の大幅な変更</summary>
-<br>
-2020/04/19 生成依頼機能の改修をしました。<br>
-2020/04/08 楽曲生成機能の改良をしました。<br>
-2020/03/19 動画投稿機能の修正をしました。<br>
-2020/03/17 フォローを返すようにしました。<br>
-2020/03/16 文章を投稿するようにしました。<br>
-2020/03/07 開発を引き継ぎ、再開しました。<br>
-2019/10/24 稼働を一時止めました。<br>
-2019/10/12 楽曲投稿を始めました。<br>
-
-</details>
+2020/04/19 生成依頼機能の改修をしました。  
+2020/04/08 楽曲生成機能の改良をしました。  
+2020/03/19 動画投稿機能の修正をしました。  
+2020/03/17 フォローを返すようにしました。  
+2020/03/16 文章を投稿するようにしました。  
+2020/03/07 開発を引き継ぎ、再開しました。  
+2019/10/24 稼働を一時止めました。  
+2019/10/12 楽曲投稿を始めました。  
 
 ### 改修予定
 
-その他マイナーチェンジ（楽曲生成機能の微修正など）
+楽曲生成モデルの大幅改善
+
+その他マイナーチェンジ
 
 ### 質問に対する回答
 
 まだ質問はありません
 
-<hr>
-
-[Home >](https://nakashimas.github.io/index.html)  
-[Works >](https://nakashimas.github.io/docs/works/works.html)
