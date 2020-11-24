@@ -23,6 +23,7 @@
 
 - [Description](#description)
 - [Downloads](#downloads)
+- [Development](#development)
 - [License](#license)
 - [Author](#author)
 
@@ -45,6 +46,32 @@ git clone https://github.com/nakashimas/nakashimas.github.io
 ```
 
 いくつか前のバージョンのレイアウトや、ページを閲覧したい場合は、 [Releaces](https://github.com/nakashimas/nakashimas.github.io/releases) から閲覧できます。
+
+## Development
+
+publicディレクトリ(./docs)の初期化
+
+```sh
+git checkout --orphan gh-pages
+git branch
+git reset --hard
+git commit --allow-empty -m "initialize gh-pages"
+git push -u origin gh-pages
+git checkout master
+rm -rf docs
+git worktree add docs gh-pages
+```
+
+デプロイ作業
+
+```sh
+hugo
+cd docs
+git add -A
+git commit -m "publish update"
+cd ..
+git push -u origin gh-pages
+```
 
 
 ## License

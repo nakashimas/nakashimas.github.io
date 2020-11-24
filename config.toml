@@ -1,11 +1,12 @@
 
-baseURL = "http://nakashimas.github.io/"
-languageCode = "ja"
-title = "NS HOME"
+baseURL       = "http://nakashimas.github.io/"
+languageCode  = "ja"
+title         = "NS HOME"
 summarylength = 32
-contentDir = "content"
-assetDir = "assets"
-disableKinds = ["RSS", "sitemap"]
+contentDir    = "content"
+assetDir      = "assets"
+publishDir    = "docs"
+disableKinds  = ["RSS", "sitemap"]
 
 
 [taxonomies]
