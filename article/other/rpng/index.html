@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>PNG ON R LANG</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  
+  <meta name="author" content="nakashimas">
+  
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  <!-- Bootstrap -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/bootstrap/css/bootstrap.min.css" />
+
+  <!-- font-awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- verovio -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/verovio/css/verovio.min.css" />
+ 
+  <!-- followme -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/followme/css/followme.min.css" />
+
+  <!-- syntaxhighlights -->
+  
+  <link href="http://nakashimas.github.io/other/css/syntax.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheets -->
+  
+  <link href="http://nakashimas.github.io/other/scss/style.min.css" rel="stylesheet" />
+
+
+  
+  <link rel="shortcut icon" href="http://nakashimas.github.io/images/icon/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="http://nakashimas.github.io/images/icon/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg site-navigation">
+    <div class="container">
+      <a class="navbar-brand" href="http://nakashimas.github.io/">
+        <img src="http://nakashimas.github.io/images/icon/favicon.PNG" alt="logo" style = "border-radius: 50% 50% 50% 50%; width: 24px; height: auto;" />
+      </a>
+      
+        <a class="btn" href="" style = "transition: all .3s ease; padding: 15px 18px; position: relative; top: 2px;">INFO <span style='bottom: 1px; position:relative'>:</span></a>
+      
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#sitenavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="sitenavbar">
+        <ul class="navbar-nav ml-auto main-nav">
+           
+           
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/">HOME</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/about">ABOUT</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/article">ARTICLE</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/contacts">CONTACTS</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="http://nakashimas.github.io/projects">
+                      <span class="btn-area">
+                      <span data-text="PROJECTS">
+                          PROJECTS
+                      </span>
+                      </span>
+                  </a>
+                </li>
+             
+          
+        </ul>
+      </div>
+    </div>
+</nav>
+  <main>
+  <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-single-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single">
+            <h1>
+              PNG ON R LANG
+            </h1>
+            <div class="site-project-single-description">
+              <h3 id="1-はじめに">1 はじめに</h3>
+<p>　このページはR言語でいろいろな出力をpng形式で保存する方法のメモです。png形式以外にも、jpegやpdf、bitmapで保存できますが、簡単のためpng形式のみを記録します。<br>
+　もっと良い方法が分かった場合、追記、修正します。</p>
+<p>　R version 3.6.2 (2019-12-12)</p>
+<h3 id="2-guiで保存する方法">2 GUIで保存する方法</h3>
+<h4 id="2-1-グラフ">2-1 グラフ</h4>
+<p>　Rstudioの場合、表示されたグラフを右クリックすることで、画像を保存する選択肢を表示できます。</p>
+<div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng1.png"  style="width:80%"></div>
+<div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng2.png"  style="width:80%"></div>
+<p>　右クリック　→　「Save image as &hellip;」を選択　→　保存先を選択</p>
+<p>　といった手順で保存することができます。</p>
+<h4 id="2-2表">2-2　表</h4>
+<p>　クリップボードを使います。画面のスクリーンショットを撮るか、コンソールへの出力をコピーしてExcelなどでレイアウトを整えます。</p>
+<h4 id="2-3-テキスト">2-3 テキスト</h4>
+<p>　コンソールへの出力テキスト(&ldquo;cat()&ldquo;や&quot;summary()&ldquo;による出力)を保存する場合も、表と同じく、クリップボードを使います。画面のスクリーンショットを撮るか、出力をコピーしてExcelなどでレイアウトを整えます。</p>
+<h3 id="3-スクリプトで保存する方法">3 スクリプトで保存する方法</h3>
+<h4 id="3-1-グラフ">3-1 グラフ</h4>
+<p>　グラフをpng画像に直接出力するためには、以下のような記述が使えます。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># pngを開く</span>
+<span style="color:#a6e22e">png</span>(filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;graph.png&#34;</span>, width <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># ここに描画のスクリプトを記述する。</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e"># pngを解放</span>
+<span style="color:#a6e22e">dev.off</span>()
+</code></pre></td></tr></table>
+</div>
+</div><p>　&ldquo;png()&ldquo;関数は、出力先を&quot;filename&quot;引数に指定したpng画像（ここでは、「graph.png」）に置き換えるものです。また、&ldquo;dev.off()&ldquo;関数は置き換え状態を解除するもので、この関数を末尾に記述しておかないと、後に続く出力命令が全て&quot;filename&quot;引数のpng画像に上書きされます。<br>
+　例えば、散布図を描画する場合は以下のようになります。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># pngを開く</span>
+<span style="color:#a6e22e">png</span>(filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;graph.png&#34;</span>, width <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>
+y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>
+<span style="color:#75715e"># 描画</span>
+<span style="color:#a6e22e">plot</span>(x, y)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e"># pngを解放</span>
+<span style="color:#a6e22e">dev.off</span>()
+</code></pre></td></tr></table>
+</div>
+</div><div style="text-align: center"><img src="/images/sub/imgrpng/graph1x1.png"  style="width:80%"></div>
+<p>　また、通常の出力と同様に、&ldquo;par()&ldquo;関数を使えば、複数のグラフを一つのpng画像に出力することもできます。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># pngを開く</span>
+<span style="color:#a6e22e">png</span>(filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;graph.png&#34;</span>, width <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e"># 2x2に描画するように設定する。mfrowは行順に並べる。</span>
+<span style="color:#a6e22e">par</span>(mfrow <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>))
+x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>
+y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>
+<span style="color:#75715e"># 描画</span>
+<span style="color:#a6e22e">plot</span>(x, y)
+<span style="color:#a6e22e">plot</span>(x, y)
+<span style="color:#a6e22e">plot</span>(x, y)
+<span style="color:#a6e22e">plot</span>(x, y)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e"># pngを解放</span>
+<span style="color:#a6e22e">dev.off</span>()
+</code></pre></td></tr></table>
+</div>
+</div><div style="text-align: center"><img src="/images/sub/imgrpng/graph2x2.png"  style="width:80%"></div>
+<h4 id="3-2表">3-2　表</h4>
+<p>　この&quot;png()&ldquo;関数は、出力先を置き換えるものであると説明しましたが、より正確には、RStudioGDでグラフィックデバイスを開くものです。つまり、グラフィックデバイスにグラフを描画する&quot;plot()&ldquo;などは&quot;png()&ldquo;関数でpng画像の出力が可能ですが、&ldquo;print()&ldquo;や&quot;cat()&ldquo;を使った出力は、上記の方法ではサポートされないということです。<br>
+　しかし、逆に、グラフィックデバイスに出力するように設定することで、大抵の出力をpng画像として保存することができます。</p>
+<p>　tableやdataframeなどの表示も、デフォルトではグラフィックデバイスに出力されないため、上記の方法ではpng画像の出力ができませんが、以下のような方法でグラフィックデバイスに出力するようにすると、png画像としての保存ができます。</p>
+<p>　標準ライブラリの「grid」と「gridExtra」を使うため、序盤にロードしておきます。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(gridExtra)
+<span style="color:#a6e22e">library</span>(grid)
+
+<span style="color:#75715e"># pngを開く</span>
+<span style="color:#a6e22e">png</span>(filename <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34;table.png&#34;</span>), width <span style="color:#f92672">=</span> <span style="color:#ae81ff">1200</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">250</span>)
+
+<span style="color:#75715e"># grid pageを開く</span>
+<span style="color:#a6e22e">grid.newpage</span>()
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+my.table <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">table</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;c&#34;</span>,<span style="color:#e6db74">&#34;d&#34;</span>),each<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>),<span style="color:#a6e22e">rep</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>),each<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>))
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e"># grid pageに描画できる型に変える</span>
+my.data <span style="color:#f92672">&lt;-</span> gridExtra<span style="color:#f92672">::</span><span style="color:#a6e22e">tableGrob</span>(my.table)
+<span style="color:#75715e"># grid pageに描画する</span>
+<span style="color:#a6e22e">grid.draw</span>(my.data)
+
+<span style="color:#75715e"># pngを解放</span>
+<span style="color:#a6e22e">dev.off</span>()
+</code></pre></td></tr></table>
+</div>
+</div><div style="text-align: center"><img src="/images/sub/imgrpng/tablemono.png"  style="width:80%"></div>
+<p>　ここでは、表示したいテーブルを&quot;my.table&quot;と定義しています。タイトルなどのテキストも、&ldquo;grid.text()&ldquo;関数を用いて以下のように記述できます。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">my.title <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;表1: my.dataの集計結果&#34;</span>
+<span style="color:#a6e22e">grid.text</span>(my.title, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>, gp <span style="color:#f92672">=</span> mygp)
+<span style="color:#75715e"># grid pageに描画する</span>
+<span style="color:#a6e22e">grid.draw</span>(my.data)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="3-3-テキスト">3-3 テキスト</h4>
+<p>　以上のような方法で、強引にグラフィックデバイスに出力すると、コンソールへの出力テキストもpng画像として直接保存できます。<br>
+　まず、コンソール出力を部分的に取得するために、&ldquo;sink()&ldquo;関数を使って、コンソール出力をテキストファイルに書き込みます。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># コンソール出力を&#34;mytext.txt&#34;に保存</span>
+<span style="color:#a6e22e">sink</span>(file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mytext.txt&#34;</span>)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># ここにコンソール出力を伴うスクリプトを記述する。</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#a6e22e">sink</span>()
+</code></pre></td></tr></table>
+</div>
+</div><p>　&ldquo;sink()&ldquo;関数は、&ldquo;png()&ldquo;関数と同様に、以降の出力を全て対象の出力先に保存してしまいます。そのため、末尾に引数無しの&quot;sink()&ldquo;関数を記載して、デフォルトの出力先に変更しておきます。</p>
+<p>　次に、&ldquo;scan()&ldquo;関数を使って、保存したテキストファイルを改行コードごとに分けたベクトルを作成します。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># コンソール出力を読み込んでベクトルにする</span>
+texts <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">scan</span>(file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mytext.txt&#34;</span>, what <span style="color:#f92672">=</span> <span style="color:#a6e22e">character</span>(), 
+    sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\n&#34;</span>, skip <span style="color:#f92672">=</span> <span style="color:#ae81ff">0L</span>, nlines <span style="color:#f92672">=</span> <span style="color:#ae81ff">0L</span>, na.strings <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;NA&#34;</span>, 
+    flush <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, strip.white <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, quiet <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, 
+    blank.lines.skip <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, multi.line <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>, comment.char <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, 
+    allowEscapes <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, fileEncoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, encoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;unknown&#34;</span>, 
+    text, skipNul <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p>　最後に、グラフィックデバイスを開いて等間隔にテキストを出力します。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># pngを開く</span>
+<span style="color:#a6e22e">png</span>(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./hoge.png&#34;</span>)
+<span style="color:#75715e"># 新しいデバイスを開く</span>
+<span style="color:#a6e22e">par</span>(mar<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>), xpd<span style="color:#f92672">=</span><span style="color:#66d9ef">NA</span>, mgp<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>), oma<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>), ann<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>, adj<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+<span style="color:#a6e22e">plot.new</span>()
+<span style="color:#a6e22e">plot.window</span>(<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># デバイスの中に等間隔にテキストを表示</span>
+counts <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+height <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#a6e22e">length</span>(texts)
+<span style="color:#a6e22e">for </span>(t in <span style="color:#a6e22e">rev</span>(texts)) {
+  <span style="color:#a6e22e">text</span>(<span style="color:#ae81ff">.1</span>, height <span style="color:#f92672">*</span> counts, t, cex<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+  counts <span style="color:#f92672">&lt;-</span> counts <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+}
+<span style="color:#75715e"># pngを解放</span>
+<span style="color:#a6e22e">dev.off</span>()
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="4-使用例">4 使用例</h3>
+<h4 id="4-1-グラフの例">4-1 グラフの例</h4>
+<p>　データ「Arthritis」の全ての項目の単純集計結果をグラフとして保存。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(vcd)
+counts <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+tmp <span style="color:#f92672">&lt;-</span> Arthritis[,<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>)]
+
+<span style="color:#a6e22e">for </span>(i in <span style="color:#a6e22e">colnames</span>(tmp)) {
+  <span style="color:#a6e22e">png</span>(filename <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste</span>(<span style="color:#a6e22e">c</span>(counts,<span style="color:#e6db74">&#34;.png&#34;</span>), collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>), width <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>)
+  <span style="color:#75715e"># --------------------------------------------------------------&gt;</span>
+  <span style="color:#75715e"># 描画</span>
+  my.data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">table</span>(tmp[,i])
+  <span style="color:#a6e22e">barplot</span>(my.data, main <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;図&#34;</span>, <span style="color:#a6e22e">as.character</span>(counts), <span style="color:#e6db74">&#34;: &#34;</span>, <span style="color:#a6e22e">as.character</span>(i)), collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>))
+  <span style="color:#75715e"># --------------------------------------------------------------&gt;</span>
+  <span style="color:#75715e"># pngを解放</span>
+  <span style="color:#a6e22e">dev.off</span>()
+  counts <span style="color:#f92672">&lt;-</span> counts <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>　図1の結果</p>
+<div style="text-align: center"><img src="/images/sub/imgrpng/graph1.png"  style="width:80%"></div>
+<p>　Wordに貼る場合、図表番号はWrod側で自動割り当てしてくれるので、Rで図に題名を付けておく理由はあまりないかもしれません。</p>
+<h4 id="4-2-表の例">4-2 表の例</h4>
+<p>　データ「Arthritis」の全ての項目の単純集計結果を表として保存。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(vcd)
+<span style="color:#a6e22e">library</span>(gridExtra)
+<span style="color:#a6e22e">library</span>(grid)
+<span style="color:#a6e22e">data</span>(Arthritis)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e"># 列名を調整する関数</span>
+column_adjusted <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(.col, len){
+  ng <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>()
+  l <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#a6e22e">while</span>(l <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">nchar</span>(.col)){
+    t <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.vector</span>(<span style="color:#a6e22e">str_sub</span>(.col, start <span style="color:#f92672">=</span> l, end <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))
+    ng <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(ng, t)
+    l <span style="color:#f92672">&lt;-</span> l <span style="color:#f92672">+</span> len
+  }
+  <span style="color:#a6e22e">for</span>(k in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(<span style="color:#a6e22e">length</span>(ng)<span style="color:#ae81ff">-1</span>)){
+    ng[k] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste</span>(ng[k],<span style="color:#e6db74">&#34;\n&#34;</span>)
+  }
+  <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">paste</span>(ng, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>))
+}
+
+columns_adjusted <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(.cols, len){
+  <span style="color:#a6e22e">for</span>(c in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(.cols)){
+    <span style="color:#a6e22e">if</span>(<span style="color:#a6e22e">nchar</span>(.cols[c]) <span style="color:#f92672">&gt;</span> len){
+      .cols[c] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">column_adjusted</span>(.cols[c], len)
+    }
+  }
+  <span style="color:#a6e22e">return</span>(.cols)
+}
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#75715e"># グラフィックスパラメータの設定</span>
+mytheme <span style="color:#f92672">&lt;-</span> gridExtra<span style="color:#f92672">::</span><span style="color:#a6e22e">ttheme_default</span>(base_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>,
+                                     core <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>(fg_params <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>(cex<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)),
+                                     colhead <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>(fg_params <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>(cex<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)))
+mygp <span style="color:#f92672">&lt;-</span> grid<span style="color:#f92672">::</span><span style="color:#a6e22e">gpar</span>(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+mytablepng <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(tmp, i, counts){
+    <span style="color:#75715e"># pngを開く</span>
+    <span style="color:#a6e22e">png</span>(filename <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34;./&#34;</span>,i,<span style="color:#e6db74">&#34;.png&#34;</span>), width <span style="color:#f92672">=</span> <span style="color:#ae81ff">1200</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">250</span>)
+    <span style="color:#75715e"># grid pageを開く</span>
+    <span style="color:#a6e22e">grid.newpage</span>()
+    .data <span style="color:#f92672">&lt;-</span> tmp[,i]
+    .data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.data.frame</span>(<span style="color:#a6e22e">table</span>(.data, useNA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;no&#34;</span>))
+    <span style="color:#a6e22e">colnames</span>(.data) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;選択肢&#34;</span>,<span style="color:#e6db74">&#34;度数&#34;</span>)
+    <span style="color:#75715e"># 列名を調整</span>
+    .data[,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">columns_adjusted</span>(<span style="color:#a6e22e">as.vector</span>(.data[,<span style="color:#ae81ff">1</span>]), <span style="color:#ae81ff">8</span>)
+    .data <span style="color:#f92672">&lt;-</span> gridExtra<span style="color:#f92672">::</span><span style="color:#a6e22e">tableGrob</span>(<span style="color:#a6e22e">t</span>(.data),theme <span style="color:#f92672">=</span> mytheme)
+    <span style="color:#75715e"># タイトル</span>
+    .title <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;表&#34;</span>,<span style="color:#a6e22e">as.character</span>(counts), <span style="color:#e6db74">&#34;: &#34;</span>, <span style="color:#a6e22e">as.character</span>(i), <span style="color:#e6db74">&#34;の集計結果&#34;</span>), collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>)
+    <span style="color:#a6e22e">grid.text</span>(.title, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>, gp <span style="color:#f92672">=</span> mygp)
+    <span style="color:#a6e22e">grid.draw</span>(.data)
+    <span style="color:#75715e"># pngを解放</span>
+    <span style="color:#a6e22e">dev.off</span>()
+    counts <span style="color:#f92672">&lt;-</span> counts <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+}
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+counts <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+tmp <span style="color:#f92672">&lt;-</span> Arthritis[,<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>)]
+<span style="color:#a6e22e">for </span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(tmp)) {
+  <span style="color:#a6e22e">mytablepng</span>(tmp, i, counts)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>　表1の結果</p>
+<div style="text-align: center"><img src="/images/sub/imgrpng/table1.png"  style="width:80%"></div>
+<p>　日本語文の質問の選択肢など、長いファクター名は見切れたり、重なったりする可能性があります。そのため、適度に改行コードを加えるなどして調整することが必要です。例では、指定文字数ごとに改行コードを挟む処理を行っています。</p>
+<h3 id="4-3-テキストの例">4-3 テキストの例</h3>
+<p>　データ「mtcars」を使った適当な線形回帰分析の結果をpng画像に保存。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># コンソール出力を&#34;mytext.txt&#34;に保存</span>
+<span style="color:#a6e22e">sink</span>(file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mytext.txt&#34;</span>)
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#a6e22e">data</span>(<span style="color:#e6db74">&#34;mtcars&#34;</span>)
+<span style="color:#a6e22e">summary</span>(<span style="color:#a6e22e">lm</span>(mpg<span style="color:#f92672">~</span>.,data<span style="color:#f92672">=</span>mtcars))
+<span style="color:#75715e"># ----------------------------------------------------------------&gt;</span>
+<span style="color:#a6e22e">sink</span>()
+<span style="color:#75715e"># コンソール出力を読み込んでベクトルにする</span>
+texts <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">scan</span>(file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mytext.txt&#34;</span>, what <span style="color:#f92672">=</span> <span style="color:#a6e22e">character</span>(), 
+    sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\n&#34;</span>, skip <span style="color:#f92672">=</span> <span style="color:#ae81ff">0L</span>, nlines <span style="color:#f92672">=</span> <span style="color:#ae81ff">0L</span>, na.strings <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;NA&#34;</span>, 
+    flush <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, strip.white <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, quiet <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, 
+    blank.lines.skip <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, multi.line <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>, comment.char <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, 
+    allowEscapes <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, fileEncoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, encoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;unknown&#34;</span>, 
+    text, skipNul <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+<span style="color:#75715e"># pngを開く</span>
+<span style="color:#a6e22e">png</span>(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./hoge.png&#34;</span>)
+<span style="color:#75715e"># 新しいデバイスを開く</span>
+<span style="color:#a6e22e">par</span>(mar<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>), xpd<span style="color:#f92672">=</span><span style="color:#66d9ef">NA</span>, mgp<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>), oma<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>), ann<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>, adj<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+<span style="color:#a6e22e">plot.new</span>()
+<span style="color:#a6e22e">plot.window</span>(<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># デバイスの中に等間隔にテキストを表示</span>
+counts <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+height <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#a6e22e">length</span>(texts)
+<span style="color:#a6e22e">for </span>(t in <span style="color:#a6e22e">rev</span>(texts)) {
+  <span style="color:#a6e22e">text</span>(<span style="color:#ae81ff">.1</span>, height <span style="color:#f92672">*</span> counts, t, cex<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+  counts <span style="color:#f92672">&lt;-</span> counts <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+}
+<span style="color:#75715e"># pngを解放</span>
+<span style="color:#a6e22e">dev.off</span>()
+</code></pre></td></tr></table>
+</div>
+</div><div style="text-align: center"><img src="/images/sub/imgrpng/hoge.png"  style="width:80%"></div>
+<p>　Rstudioの出力と見比べると、微妙にずれています。調整すると大丈夫そうですが、面倒なのでテキストはGUIから保存する方がいいかもしれません。</p>
+<h3 id="5-参考">5 参考</h3>
+<p>　&ldquo;R で描いたグラフを PNG や PDF に保存する方法&rdquo;<br>
+<a href="https://stats.biopapyrus.jp/r/graph/imagedevice.html">link</a></p>
+<p>　&ldquo;RDocumentation&rdquo;<br>
+　&ldquo;png function&rdquo;<br>
+<a href="https://www.rdocumentation.org/packages/grDevices/versions/3.4.1/topics/png">link</a><br>
+　&ldquo;sink function&rdquo;<br>
+<a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sink">link</a><br>
+　&ldquo;scan function&rdquo;<br>
+<a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/scan">link</a><br>
+　&ldquo;grid package&rdquo;<br>
+<a href="https://www.rdocumentation.org/packages/grid/versions/3.6.2">link</a><br>
+　&ldquo;gridExtra package&rdquo;<br>
+<a href="https://www.rdocumentation.org/packages/gridExtra/versions/2.3">link</a></p>
+<p>　&ldquo;R List of Graphical Devices&rdquo;<br>
+<a href="https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html">link</a></p>
+<p>　&ldquo;How to do in R: load an image file, print text on image, save modified image&rdquo;<br>
+<a href="https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image">link</a></p>
+
+              
+<h3>AUTHORS</h3>
+<p>この文章を書いた人</p>
+<hr>
+
+  <div class="row">
+      <div class="col-sm-3 mx-auto linkbox" style="outline:none;">
+          <br>
+          <img src="https://avatars1.githubusercontent.com/u/61147776" style="margin-left:10px; width:128px; border-radius: 50% 50% 50% 50%">
+          <p class="fullstory"><a href="https://github.com/nakashimas"></a></p>
+      </div>
+      <div class="col-sm-3 mx-auto" style="outline:none;">
+          <br>
+          <h4>nakashimas</h4>
+          <p>student</p> 
+          <p>京都の学生です。</p>
+          <p><a href="https://github.com/nakashimas">MORE</a></p>
+      </div>
+  </div>
+  <hr>
+
+
+            </div>
+            <div class="site-project-single-image">
+              
+            </div>
+            
+<div class="container">
+    <div class="row">
+        <div class="col-4 site-project-single-action-left">
+            
+                <a href="http://nakashimas.github.io/article/other/portablecmd/">
+                    <span class="link-area">
+                        <span data-text="PREV">
+                            PREV
+                        </span>
+                    </span>
+                </a>
+            
+        </div>
+        <div class="col-4 site-project-single-action-center">
+            <a href="../..">
+                <span class="link-area">
+                    <span data-text="LIST">
+                        LIST
+                    </span>
+                </span>
+            </a>
+        </div>
+        <div class="col-4 site-project-single-action">
+            
+                    <a href="http://nakashimas.github.io/article/nasnecobot/nasnecobot_generation/">
+                        <span class="link-area">
+                            <span data-text="NEXT">
+                                NEXT
+                            </span>
+                        </span>
+                    </a>
+            
+        </div>
+    </div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        </main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        
+          <div class="col-12">
+            <div class="site-footer-widget">
+              <h4 class="site-footer-widget-title">
+                <div class="site-footer-logo">
+                  <ul class="site-footer-widget-links">
+                    <li><a href="#top" style="text-decoration: none;">INFO <span style='bottom: 1px; position:relative'>:</span></a></li>
+                  </ul>
+                </div>
+              </h5>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">SITEMAP</h5>
+              <ul class="site-footer-widget-links">
+                
+                  <li><a href="http://nakashimas.github.io/">HOME</a></li>
+                
+                  <li><a href="http://nakashimas.github.io/projects">PROJECTS</a></li>
+                
+                  <li><a href="http://nakashimas.github.io/article">ARTICLE</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">CONTACT</h5>
+              <ul class="site-footer-widget-links">
+                
+                  <li><a href="https://github.com/nakashimas">GitHub</a></li>
+                
+                  <li><a href="https://twitter.com/na_s_p">Twitter</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">ABOUT</h5>
+              <p class="site-footer-widget-description">
+                <span class='blockable'>ここでは、作ったコンテンツのReadmeや、</span><span class='blockable'>Documentsなどを公開しています。</span>
+                <br>
+                <a href="about" class="site-aboutus-cta-min">MORE ></a>
+              </p>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">LICENSE</h5>
+              <p class="site-footer-widget-description">
+                <span class='blockable'>copylight (c) 2020,</span> <span class='blockable'>nakashimas.github.io</span> <span class='blockable'>authors.</span>
+                <br>
+              </p>
+            </div>
+          </div>
+        
+        <div class="col-lg-2 col-12">
+        </div>
+      </div>
+    </div>
+</footer>
+</body>
+
+<script src="http://nakashimas.github.io/other/js/formhandler.min.js"></script>
+
+
+<script src="http://nakashimas.github.io/jquery/js/vendor.min.js"></script>
+
+<script src="https://www.verovio.org/javascript/app/verovio-app.js"></script>
+
+
+<script src="http://nakashimas.github.io/other/js/script.min.js"></script>
+</html>

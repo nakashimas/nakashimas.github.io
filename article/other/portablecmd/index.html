@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>PORTABLE CMD</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  
+  <meta name="author" content="nakashimas">
+  
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  <!-- Bootstrap -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/bootstrap/css/bootstrap.min.css" />
+
+  <!-- font-awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- verovio -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/verovio/css/verovio.min.css" />
+ 
+  <!-- followme -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/followme/css/followme.min.css" />
+
+  <!-- syntaxhighlights -->
+  
+  <link href="http://nakashimas.github.io/other/css/syntax.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheets -->
+  
+  <link href="http://nakashimas.github.io/other/scss/style.min.css" rel="stylesheet" />
+
+
+  
+  <link rel="shortcut icon" href="http://nakashimas.github.io/images/icon/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="http://nakashimas.github.io/images/icon/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg site-navigation">
+    <div class="container">
+      <a class="navbar-brand" href="http://nakashimas.github.io/">
+        <img src="http://nakashimas.github.io/images/icon/favicon.PNG" alt="logo" style = "border-radius: 50% 50% 50% 50%; width: 24px; height: auto;" />
+      </a>
+      
+        <a class="btn" href="" style = "transition: all .3s ease; padding: 15px 18px; position: relative; top: 2px;">INFO <span style='bottom: 1px; position:relative'>:</span></a>
+      
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#sitenavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="sitenavbar">
+        <ul class="navbar-nav ml-auto main-nav">
+           
+           
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/">HOME</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/about">ABOUT</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/article">ARTICLE</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/contacts">CONTACTS</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="http://nakashimas.github.io/projects">
+                      <span class="btn-area">
+                      <span data-text="PROJECTS">
+                          PROJECTS
+                      </span>
+                      </span>
+                  </a>
+                </li>
+             
+          
+        </ul>
+      </div>
+    </div>
+</nav>
+  <main>
+  <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-single-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single">
+            <h1>
+              PORTABLE CMD
+            </h1>
+            <div class="site-project-single-description">
+              <h3 id="1-はじめに">1 はじめに</h3>
+<p>　このページはportable環境のメモです。</p>
+<h3 id="2-問題">2 問題</h3>
+<p>　学校などの組織が用意したアカウントを使って、組織が用意したサーバを介して作業する場合、自前の環境を使いたいことが多々あります。例えば、私は「pipはあるけどgitがない」という問題に直面したときにそう感じました。<br>
+　自前の環境を使う、最も豪華な方法は、ラップトップPCを持ち込むことでしょう。あるいは、仮想マシンを使うことで解決できると思います。しかし、毎日のようにラップトップPCを持ち運んだり、二回osの起動時間を待つことは、かなりの苦痛です。<br>
+　特に、仮想マシンを使う利点は、コンピューターで少し作業する程度の人（私）には、殆どありません。<br>
+　従って、いつも持ち運ぶようなusbメモリに「Portable Git」や「VS Code」などを保存しておいて、環境を汚さずに使用できれば、殆ど問題がないと考えられます。</p>
+<h3 id="3-解決策">3 解決策</h3>
+<h4 id="3-1-方針">3-1 方針</h4>
+<p>　ここで、組織が用意した環境で起こる問題は、ソフトウェアが使うプロキシ設定やパスなどの参照先に原因があります。そして、多くのアプリケーションソフトウェアが使うプロキシ設定やパスなどの参照先は、環境変数によって変わる事が多いです。<br>
+　そのため、バッチファイルに問題ない参照先を設定するコマンドを書き込み、持ち運ぶことで問題を回避しようと思います。</p>
+<h4 id="3-2-用意するもの">3-2 用意するもの</h4>
+<ul>
+<li>持ち運ぶための記憶装置(usbメモリ)</li>
+<li>バッチファイル(.bat)</li>
+<li>持ち運びたいソフトウェア(portable版がある場合はportable版を使用)</li>
+</ul>
+<p>　バッチファイル(.bat)は、テキストファイルを作成して、拡張子を&quot;.bat&quot;に変更することで作成できます。作成したバッチファイルは、持ち運ぶための記憶装置(usbメモリ)の最も浅い階層に保存しておくと便利です。</p>
+<h3 id="4-書き込む内容">4 書き込む内容</h3>
+<h4 id="4-1-proxy設定">4-1 proxy設定</h4>
+<p>　まず、プロキシサーバへのインターネット接続設定を書きます。多くの場合、認証プロキシを通して通信を行うため、プロキシサーバへの接続設定を書いていない場合、gitなどの、ssh接続を行うソフトウェアや、pip、curlコマンド等でプロキシエラーが出力されます。<br>
+　設定の記述方法は、組織のプロキシ設定に則る必要があり、以下のような構成となっています。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@SET HTTP_PROXY <span style="color:#f92672">=</span> http://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
+@SET HTTPS_PROXY <span style="color:#f92672">=</span> https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
+</code></pre></td></tr></table>
+</div>
+</div><p>　ここで、&ldquo;SET&quot;は環境変数を設定するコマンドで、続く&quot;HTTP_PROXY&rdquo;、&ldquo;HTTPS_PROXY&quot;が変数名、&quot;=&ldquo;の後の、&ldquo;https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080&quot;が変数に格納される値です。<br>
+　また、&ldquo;ユーザー名&quot;には組織から与えられているユーザー名を、&ldquo;パスワード&quot;にはパスワードを、&ldquo;proxy.団体名.ドメイン&quot;にはプロキシサーバのホスト名を代入してください。末尾の番号はポート番号なので気にしなくても大丈夫です。</p>
+<h4 id="4-2-path設定">4-2 path設定</h4>
+<p>　続いて、持ち運びたいソフトウェアのパスを通します。以下のコマンドは、環境変数PATHの末尾に持ち運びたいソフトウェアのパスを追記するものです。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@SET PATH <span style="color:#f92672">=</span> %PATH%;ソフトウェアのパス
+</code></pre></td></tr></table>
+</div>
+</div><p>　ここで、&ldquo;ソフトウェアのパス&quot;には、持ち運ぶための記憶装置(usbメモリ)に保存している、持ち運びたいソフトウェアのパスを入力してください。例えば、&ldquo;D:\programfiles\git\bin&quot;以下を参照したい場合は以下のように記述します。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@SET PATH <span style="color:#f92672">=</span> %PATH%;D:<span style="color:#ae81ff">\p</span>rogramfiles<span style="color:#ae81ff">\g</span>it<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\
+</span></code></pre></td></tr></table>
+</div>
+</div><p>　しかし、usbメモリのようなリムーバブルドライブは、環境によってドライブ名が変わるため、絶対パスによる記述では不具合が生じる場合があります。そこで、ドライブルートを取得する命令&rdquo;%~d0&quot;を使って以下のように記述します。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@SET REMOVABLEROOT<span style="color:#f92672">=</span>%~d0
+@SET PATH <span style="color:#f92672">=</span> %PATH%;%REMOVABLEROOT%<span style="color:#ae81ff">\p</span>rogramfiles<span style="color:#ae81ff">\g</span>it<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\
+</span></code></pre></td></tr></table>
+</div>
+</div><p>　また、&quot;%PATH%&ldquo;は、元の環境変数&quot;PATH&quot;を参照するという意味です。これを記述しなかった場合、元から設定されている環境変数、例えば、&quot;%windir%\system32&quot;などが上書きされ、消えてしまいます。&quot;%windir%\system32&quot;にはコマンドプロンプトなどの、重要なソフトウェアが保存されているため、直接参照できないと不便です。</p>
+<h4 id="4-3-path設定他の使い方">4-3 path設定(他の使い方)</h4>
+<p>　一方で、&quot;%PATH%&ldquo;を上書きすることの利点も存在します。例として、ソフトウェアが、管理者権限の設定などで編集できないファイルを参照し、動的に変更を加えている場合などがあてはまります。そのような場合は、以下のように必要な&quot;PATH&quot;設定のみ記述し、参照先を変更することで、管理者権限の制約を回避できる可能性があります。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@SET REMOVABLEROOT<span style="color:#f92672">=</span>%~d0
+@SET PATH <span style="color:#f92672">=</span> %windir%<span style="color:#ae81ff">\s</span>ystem32<span style="color:#ae81ff">\;</span>%REMOVABLEROOT%<span style="color:#ae81ff">\p</span>rogramfiles<span style="color:#ae81ff">\g</span>it<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\
+</span></code></pre></td></tr></table>
+</div>
+</div><p>　Userディレクトリなども以下のように変更できます。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@SET REMOVABLEROOT<span style="color:#f92672">=</span>%~d0
+@SET USERPROFILE<span style="color:#f92672">=</span>%REMOVABLEROOT%<span style="color:#ae81ff">\U</span>ser<span style="color:#ae81ff">\s</span>omeone
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="4-4-コマンドプロンプトの起動">4-4 コマンドプロンプトの起動</h4>
+<p>　しかしながら、上記で設定した環境変数は、バッチファイルの中で宣言したため、バッチ処理が終了すると解放されてしまいます。よって、末尾に以下のコマンドプロンプトを起動するコマンドを加えて、環境変数を保持したままコマンドを入力できるようにします。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@call cmd
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="5-バッチファイルの中身の全体像">5 バッチファイルの中身の全体像</h3>
+<p>　以上の手順を踏まえて編集したバッチファイルは、最終的に以下のような内容になります。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@SET REMOVABLEROOT<span style="color:#f92672">=</span>%~d0
+@SET PATH <span style="color:#f92672">=</span> %PATH%;%REMOVABLEROOT%<span style="color:#ae81ff">\ソ</span>フトウェアのパス
+SET HTTP_PROXY <span style="color:#f92672">=</span> http://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
+SET HTTPS_PROXY <span style="color:#f92672">=</span> https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080
+@call cmd
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="6-参考">6 参考</h3>
+<p>　Windowsコマンドプロンプトで認証プロキシを突破する<br>
+<a href="https://qiita.com/hamham/items/cb658f5a8c74f35255be">link</a></p>
+
+              
+<h3>AUTHORS</h3>
+<p>この文章を書いた人</p>
+<hr>
+
+  <div class="row">
+      <div class="col-sm-3 mx-auto linkbox" style="outline:none;">
+          <br>
+          <img src="https://avatars1.githubusercontent.com/u/61147776" style="margin-left:10px; width:128px; border-radius: 50% 50% 50% 50%">
+          <p class="fullstory"><a href="https://github.com/nakashimas"></a></p>
+      </div>
+      <div class="col-sm-3 mx-auto" style="outline:none;">
+          <br>
+          <h4>nakashimas</h4>
+          <p>student</p> 
+          <p>京都の学生です。</p>
+          <p><a href="https://github.com/nakashimas">MORE</a></p>
+      </div>
+  </div>
+  <hr>
+
+
+            </div>
+            <div class="site-project-single-image">
+              
+            </div>
+            
+<div class="container">
+    <div class="row">
+        <div class="col-4 site-project-single-action-left">
+            
+        </div>
+        <div class="col-4 site-project-single-action-center">
+            <a href="../..">
+                <span class="link-area">
+                    <span data-text="LIST">
+                        LIST
+                    </span>
+                </span>
+            </a>
+        </div>
+        <div class="col-4 site-project-single-action">
+            
+                    <a href="http://nakashimas.github.io/article/other/rpng/">
+                        <span class="link-area">
+                            <span data-text="NEXT">
+                                NEXT
+                            </span>
+                        </span>
+                    </a>
+            
+        </div>
+    </div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        </main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        
+          <div class="col-12">
+            <div class="site-footer-widget">
+              <h4 class="site-footer-widget-title">
+                <div class="site-footer-logo">
+                  <ul class="site-footer-widget-links">
+                    <li><a href="#top" style="text-decoration: none;">INFO <span style='bottom: 1px; position:relative'>:</span></a></li>
+                  </ul>
+                </div>
+              </h5>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">SITEMAP</h5>
+              <ul class="site-footer-widget-links">
+                
+                  <li><a href="http://nakashimas.github.io/">HOME</a></li>
+                
+                  <li><a href="http://nakashimas.github.io/projects">PROJECTS</a></li>
+                
+                  <li><a href="http://nakashimas.github.io/article">ARTICLE</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">CONTACT</h5>
+              <ul class="site-footer-widget-links">
+                
+                  <li><a href="https://github.com/nakashimas">GitHub</a></li>
+                
+                  <li><a href="https://twitter.com/na_s_p">Twitter</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">ABOUT</h5>
+              <p class="site-footer-widget-description">
+                <span class='blockable'>ここでは、作ったコンテンツのReadmeや、</span><span class='blockable'>Documentsなどを公開しています。</span>
+                <br>
+                <a href="about" class="site-aboutus-cta-min">MORE ></a>
+              </p>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">LICENSE</h5>
+              <p class="site-footer-widget-description">
+                <span class='blockable'>copylight (c) 2020,</span> <span class='blockable'>nakashimas.github.io</span> <span class='blockable'>authors.</span>
+                <br>
+              </p>
+            </div>
+          </div>
+        
+        <div class="col-lg-2 col-12">
+        </div>
+      </div>
+    </div>
+</footer>
+</body>
+
+<script src="http://nakashimas.github.io/other/js/formhandler.min.js"></script>
+
+
+<script src="http://nakashimas.github.io/jquery/js/vendor.min.js"></script>
+
+<script src="https://www.verovio.org/javascript/app/verovio-app.js"></script>
+
+
+<script src="http://nakashimas.github.io/other/js/script.min.js"></script>
+</html>

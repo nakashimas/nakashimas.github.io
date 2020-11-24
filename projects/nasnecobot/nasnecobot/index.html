@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>NASNECO BOT</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  
+  <meta name="author" content="nakashimas">
+  
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  <!-- Bootstrap -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/bootstrap/css/bootstrap.min.css" />
+
+  <!-- font-awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- verovio -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/verovio/css/verovio.min.css" />
+ 
+  <!-- followme -->
+  
+  <link rel="stylesheet" href="http://nakashimas.github.io/followme/css/followme.min.css" />
+
+  <!-- syntaxhighlights -->
+  
+  <link href="http://nakashimas.github.io/other/css/syntax.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheets -->
+  
+  <link href="http://nakashimas.github.io/other/scss/style.min.css" rel="stylesheet" />
+
+
+  
+  <link rel="shortcut icon" href="http://nakashimas.github.io/images/icon/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="http://nakashimas.github.io/images/icon/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg site-navigation">
+    <div class="container">
+      <a class="navbar-brand" href="http://nakashimas.github.io/">
+        <img src="http://nakashimas.github.io/images/icon/favicon.PNG" alt="logo" style = "border-radius: 50% 50% 50% 50%; width: 24px; height: auto;" />
+      </a>
+      
+        <a class="btn" href="" style = "transition: all .3s ease; padding: 15px 18px; position: relative; top: 2px;">INFO <span style='bottom: 1px; position:relative'>:</span></a>
+      
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#sitenavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="sitenavbar">
+        <ul class="navbar-nav ml-auto main-nav">
+           
+           
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/">HOME</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/about">ABOUT</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/article">ARTICLE</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="http://nakashimas.github.io/contacts">CONTACTS</a>
+                </li>
+             
+           
+            
+                <li class="nav-item">
+                  <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="http://nakashimas.github.io/projects">
+                      <span class="btn-area">
+                      <span data-text="PROJECTS">
+                          PROJECTS
+                      </span>
+                      </span>
+                  </a>
+                </li>
+             
+          
+        </ul>
+      </div>
+    </div>
+</nav>
+  <main>
+  <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-single-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single">
+            <h1>
+              NASNECO BOT
+            </h1>
+            <div class="site-project-single-description">
+              <h3 id="概要">概要</h3>
+<p>自動作曲bot「茄子ねこ」は、茄子ねこ（@nasneco）に成り代わって作曲したり、呟いたりするTwitter botです。</p>
+<div style="text-align:center"><img src="/images/sub/nasnecobot/profile.png" style="width:80%"></div>
+<p><a href="https://twitter.com/cc_99_ff">Twitterアカウント(@cc_99_ff) &gt;</a></p>
+<h3 id="機能">機能</h3>
+<p>このbotの主な機能は以下の三点です。</p>
+<ul>
+<li>文章の投稿</li>
+<li>楽曲の投稿</li>
+<li>楽曲生成依頼に対する楽曲の投稿</li>
+</ul>
+<p>加えて、Twitterアカウント自体の機能として、次のようなこともします。</p>
+<ul>
+<li>フォローを返す</li>
+</ul>
+<p>なお、広告系アカウント、スパムアカウントはフォローを返さない場合があります。</p>
+<h3 id="稼働状況">稼働状況</h3>
+<div style="text-align:center;">
+    <a class="twitter-timeline" data-width="320" data-height="400" data-chrome="transparent nofooter" data-link-color="#ff8080" href="https://twitter.com/cc_99_ff?ref_src=twsrc%5Etfw">
+        Tweets by cc_99_ff
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<h3 id="使用方法">使用方法</h3>
+<h4 id="楽曲生成依頼">楽曲生成依頼</h4>
+<p>botに対してリプライを送ることによって、楽曲生成を依頼することができます。<br>
+生成された楽曲は、依頼主に対する動画付きのリプライで返されます。</p>
+<p>依頼文の構成は以下の通りです。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music;
+</code></pre></td></tr></table>
+</div>
+</div><p>また、旋律の要件に応じて、オプションが指定できます。<br>
+詳しくは、<a href="/article/nasnecobot/nasneco_generation/">楽曲生成依頼についてのページ</a>を参照してください。</p>
+<h3 id="投稿内容の扱い及び利用上の注意">投稿内容の扱い、及び利用上の注意</h3>
+<h4 id="説明">説明</h4>
+<p>このbotの文章の投稿は、他のTwitterユーザーの投稿から独自に収集したデータと、MCMCによって生成しています。<br>
+また、楽曲の投稿は、開発者が選んだ著作権保護期間が終了したピアノ独奏曲と、茄子ねこ（@nasneco）の楽曲から生成しています。</p>
+<h4 id="責任">責任</h4>
+<p>万一、このbotの投稿及びシステムが損害を発生させた場合には、理由の如何にかかわらず、管理者及び開発者は保証をせず、また、一切の責任を負いません。</p>
+<h4 id="管理">管理</h4>
+<p>投稿内容は、ある程度制御が可能です。そのため、投稿内容に権利侵害や、不適切な内容があれば、下記のお問い合わせ先までご連絡ください。管理者及び開発者の判断により、なるべく修正いたしまします。あるいは、管理者の判断により、指定された投稿の削除を行います。</p>
+<h3 id="お問い合わせ">お問い合わせ</h3>
+<p>以下のような内容で、管理者及び開発者にお問い合わせされる場合は、本サイトの<a href="/contacts/">「CONTACTS」</a>からフォームにメッセージを送信してください。返信が必要な方は、「EMAIL ADDRESS」の項目にメールアドレスを記載してください。</p>
+<ul>
+<li>投稿の削除要請</li>
+<li>このbotや、本サイトに関するメッセージ</li>
+<li>改善点</li>
+<li>質問</li>
+<li>開発への参加</li>
+</ul>
+<h3 id="近況">近況</h3>
+<p>2020/09/19 BOTの動作を管理する機能を改善しました。</p>
+<p>過去の大幅な変更</p>
+<p>2020/04/19 楽曲生成依頼機能の改修をしました。 
+2020/04/19 生成依頼機能の改修をしました。<br>
+2020/04/08 楽曲生成機能の改良をしました。<br>
+2020/03/19 動画投稿機能の修正をしました。<br>
+2020/03/17 フォローを返すようにしました。<br>
+2020/03/16 文章を投稿するようにしました。<br>
+2020/03/07 開発を引き継ぎ、再開しました。<br>
+2019/10/24 稼働を一時止めました。<br>
+2019/10/12 楽曲投稿を始めました。</p>
+<h3 id="改修予定">改修予定</h3>
+<p>楽曲生成モデルの大幅改善</p>
+<p>その他マイナーチェンジ</p>
+<h3 id="質問に対する回答">質問に対する回答</h3>
+<p>まだ質問はありません</p>
+
+              
+<h3>AUTHORS</h3>
+<p>この文章を書いた人</p>
+<hr>
+
+  <div class="row">
+      <div class="col-sm-3 mx-auto linkbox" style="outline:none;">
+          <br>
+          <img src="https://avatars1.githubusercontent.com/u/61147776" style="margin-left:10px; width:128px; border-radius: 50% 50% 50% 50%">
+          <p class="fullstory"><a href="https://github.com/nakashimas"></a></p>
+      </div>
+      <div class="col-sm-3 mx-auto" style="outline:none;">
+          <br>
+          <h4>nakashimas</h4>
+          <p>student</p> 
+          <p>京都の学生です。</p>
+          <p><a href="https://github.com/nakashimas">MORE</a></p>
+      </div>
+  </div>
+  <hr>
+
+  <div class="row">
+      <div class="col-sm-3 mx-auto linkbox" style="outline:none;">
+          <br>
+          <img src="https://pbs.twimg.com/profile_images/1204033436156981248/HutTMW0m_400x400.jpg" style="margin-left:10px; width:128px; border-radius: 50% 50% 50% 50%">
+          <p class="fullstory"><a href="https://twitter.com/nasneco"></a></p>
+      </div>
+      <div class="col-sm-3 mx-auto" style="outline:none;">
+          <br>
+          <h4>nasneco</h4>
+          <p>student</p> 
+          <p>趣味が作曲とかの人</p>
+          <p><a href="https://twitter.com/nasneco">MORE</a></p>
+      </div>
+  </div>
+  <hr>
+
+
+            </div>
+            <div class="site-project-single-image">
+              
+            </div>
+            
+<div class="container">
+    <div class="row">
+        <div class="col-4 site-project-single-action-left">
+            
+        </div>
+        <div class="col-4 site-project-single-action-center">
+            <a href="../..">
+                <span class="link-area">
+                    <span data-text="LIST">
+                        LIST
+                    </span>
+                </span>
+            </a>
+        </div>
+        <div class="col-4 site-project-single-action">
+            
+                    <a href="http://nakashimas.github.io/projects/hatonokaibot/hatonokaibot/">
+                        <span class="link-area">
+                            <span data-text="NEXT">
+                                NEXT
+                            </span>
+                        </span>
+                    </a>
+            
+        </div>
+    </div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        </main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        
+          <div class="col-12">
+            <div class="site-footer-widget">
+              <h4 class="site-footer-widget-title">
+                <div class="site-footer-logo">
+                  <ul class="site-footer-widget-links">
+                    <li><a href="#top" style="text-decoration: none;">INFO <span style='bottom: 1px; position:relative'>:</span></a></li>
+                  </ul>
+                </div>
+              </h5>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">SITEMAP</h5>
+              <ul class="site-footer-widget-links">
+                
+                  <li><a href="http://nakashimas.github.io/">HOME</a></li>
+                
+                  <li><a href="http://nakashimas.github.io/projects">PROJECTS</a></li>
+                
+                  <li><a href="http://nakashimas.github.io/article">ARTICLE</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">CONTACT</h5>
+              <ul class="site-footer-widget-links">
+                
+                  <li><a href="https://github.com/nakashimas">GitHub</a></li>
+                
+                  <li><a href="https://twitter.com/na_s_p">Twitter</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">ABOUT</h5>
+              <p class="site-footer-widget-description">
+                <span class='blockable'>ここでは、作ったコンテンツのReadmeや、</span><span class='blockable'>Documentsなどを公開しています。</span>
+                <br>
+                <a href="about" class="site-aboutus-cta-min">MORE ></a>
+              </p>
+            </div>
+          </div>
+        
+        
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">LICENSE</h5>
+              <p class="site-footer-widget-description">
+                <span class='blockable'>copylight (c) 2020,</span> <span class='blockable'>nakashimas.github.io</span> <span class='blockable'>authors.</span>
+                <br>
+              </p>
+            </div>
+          </div>
+        
+        <div class="col-lg-2 col-12">
+        </div>
+      </div>
+    </div>
+</footer>
+</body>
+
+<script src="http://nakashimas.github.io/other/js/formhandler.min.js"></script>
+
+
+<script src="http://nakashimas.github.io/jquery/js/vendor.min.js"></script>
+
+<script src="https://www.verovio.org/javascript/app/verovio-app.js"></script>
+
+
+<script src="http://nakashimas.github.io/other/js/script.min.js"></script>
+</html>
