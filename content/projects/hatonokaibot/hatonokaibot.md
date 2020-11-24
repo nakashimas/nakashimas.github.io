@@ -2,9 +2,9 @@
 title: "HATONOKAI BOT"
 date: 2019-12-23T20:56:42+06:00
 type: projects
-description: "Artifical Music Composer"
-image: "images/sub/nasnecobot/profile.png"
-category: ["BOT", "MACHINE-LEARNING", "TWITTER", "INSTAGRAM"]
+description: "Our discord bot"
+image: "images/widgets/note_background.PNG"
+category: ["BOT", "DISCORD"]
 project_images: []
 authors: 
     nakashimas:

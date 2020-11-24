@@ -1,9 +1,9 @@
 ---
-title: "NASNECO BOT : GENERATOR"
+title: "NASNECO : GENERATOR"
 date: 2019-12-23T20:56:42+06:00
 type: article
 description: "Generate music using CLI on SNS"
-image: "images/sub/nasnecobot/profile.png"
+image: "images/widgets/note_background.PNG"
 category: ["BOT", "ABC-NOTATION", "CLI"]
 project_images: []
 authors: 

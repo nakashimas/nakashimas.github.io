@@ -2,9 +2,9 @@
 title: "CROCUS"
 date: 2019-12-23T20:56:42+06:00
 type: projects
-description: "Artifical Music Composer"
-image: "images/sub/nasnecobot/profile.png"
-category: ["BOT", "MACHINE-LEARNING", "TWITTER", "INSTAGRAM"]
+description: "Music analysis tool"
+image: "images/widgets/note_background.PNG"
+category: ["CLOSED"]
 project_images: []
 authors: 
     nasneco:

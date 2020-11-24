@@ -3,7 +3,7 @@ title: "PNG ON R LANG"
 date: 2019-12-23T20:56:42+06:00
 type: article
 description: "To management PNG output on R Studio"
-image: "/images/sub/imgrpng/saveaspng1.png"
+image: "images/widgets/note_background.PNG"
 category: ["R-STUDIO", "PNG", "GRAPHIC-DEVICES"]
 project_images: []
 authors: 

@@ -3,7 +3,7 @@ title: "PORTABLE CMD"
 date: 2019-12-23T20:56:42+06:00
 type: article
 description: "Console settings of http / https proxy"
-image: "/images/sub/imgrpng/saveaspng1.png"
+image: "images/widgets/note_background.PNG"
 category: ["HTTPS-PROXY", "WINDOWS-CONSOLE"]
 project_images: []
 authors: 
