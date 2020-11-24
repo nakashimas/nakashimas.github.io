@@ -11,22 +11,21 @@
             </h1>
           </div>
         </div>
-        <div class="col-lg-4">
-        </div>
       </div>
     </div>
   </section>
-  <section class="site-project" id="contacts">
-    <div class="container">
-      <div class="row">
-
-        </div>
-      </div>
-    </div>
-  </section>
+  {{ partial "form.html" . }}
   <section class="site-contacts" id="contacts">
     <div class="container">
       <div class="row">
+        <div class="col-12">
+          {{ with .Site.Params.contacts }}
+            <div class="section-title">
+              <h2 class="text-white">OR ...</h2>
+              <p class="text-white">{{ .subtitle }}</p>
+            </div>
+          {{ end }}
+        </div>
         <div class="col-12">
         </div>
         <div class="col-lg-12 col-md-10 mx-auto">
