@@ -1,7 +1,4 @@
 
-{{ $formhandler := resources.Get "other/js/formhandler.js" | minify }}
-<script src="{{ $formhandler.Permalink }}"></script>
-
 {{ $vendor := resources.Get "jquery/js/vendor.js" | minify }}
 <script src="{{ $vendor.Permalink }}"></script>
 

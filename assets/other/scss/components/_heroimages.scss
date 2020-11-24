@@ -11,6 +11,7 @@
     padding: 200px 0;
   }
   @include mobile{
+    height: 90vh;
     padding: 150px 0;
   }
   &-sustain{
@@ -24,7 +25,7 @@
       @include desktop{
       }
       @include desktop-lg{
-        height: 128px;
+        height: 110px;
       }
       @include mobile{
         height: 110px;
@@ -38,11 +39,42 @@
   }
   &-content{
     h1{
+      @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&display=swap');
+      font-family: 'Elsie Swash Caps', cursive;
+      font-size: 128px;
+      color: #A19490;
+      text-shadow: 0 8px 9px $black, 0px -2px 1px $white;
+      font-weight: 400;
+      letter-spacing: -4px;
+      border-radius: 20px;
+      padding-top: 92px;
+      span{
+        // ":"の位置調整
+        bottom: 12px !important;
+      }
       @include desktop-lg{
-        font-size: 50px;
+        font-size: 92px;
+        color: #A19490;
+        text-shadow: 0 8px 9px $black, 0px -2px 1px $white;
+        font-weight: 400;
+        letter-spacing: -4px;
+        border-radius: 20px;
+        padding-top: 0px;
+        span{
+          bottom: 8px !important;
+        }
       }
       @include mobile{
-        font-size: 40px;
+        font-size: 92px;
+        color: #A19490;
+        text-shadow: 0 8px 9px $black, 0px -2px 1px $white;
+        font-weight: 400;
+        letter-spacing: -4px;
+        border-radius: 20px;
+        padding-top: 0px;
+        span{
+          bottom: 8px !important;
+        }
       }
     }
     h6{
