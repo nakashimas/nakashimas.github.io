@@ -1,5 +1,5 @@
 
-baseURL       = "http://nakashimas.github.io/"
+baseURL       = "https://nakashimas.github.io/"
 languageCode  = "ja"
 title         = "NS HOME"
 summarylength = 32
