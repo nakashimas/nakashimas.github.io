@@ -42,7 +42,7 @@ authors:
 
 楽譜
 
-<div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo1.musicxml</div>
+<div class="verovio-content">/texts/sheetmusics/nasneco_demo1.musicxml</div>
 
 ### Debussy L66 No. 1
 
@@ -55,7 +55,7 @@ authors:
 
 楽譜
 
-<div class="verovio-content">https://nakashimas.github.io/docs/sheetmusics/nasneco_demo2.musicxml</div>
+<div class="verovio-content">/texts/sheetmusics/nasneco_demo2.musicxml</div>
 
 ### 実際に送られた依頼文
 
