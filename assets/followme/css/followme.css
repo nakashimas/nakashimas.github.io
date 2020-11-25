@@ -90,7 +90,7 @@
   .follow-me li a[href*="github.com"]:hover::before         { background-color: #181717; }
   .follow-me li a[href*="plus.google.com"]:hover::before    { background-color: #dc4e41; }
   .follow-me li a[href*="b.hatena.ne.jp"]:hover::before     { background-color: #008fde; }
-  .follow-me li a[href*="instagram.com"]:hover::before      { background-color: #125688; }
+  .follow-me li a[href*="instagram.com"]:hover::before      { background-color: #E1306C; }
   .follow-me li a[href*="last.fm"]:hover::before            { background-color: #d51007; }
   .follow-me li a[href*="linkedin.com"]:hover::before       { background-color: #0077b5; }
   .follow-me li a[href*="nicovideo.jp"]:hover::before       { background-color: #eaeaea; }
