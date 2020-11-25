@@ -3,7 +3,7 @@ title: "NASNECO BOT"
 date: 2019-12-23T20:56:42+06:00
 type: projects
 description: "Artifical Music Composer"
-image: "images/widgets/piano.JPG"
+image: "images/widgets/piano_1748x1181.PNG"
 category: ["BOT", "MACHINE-LEARNING", "TWITTER", "INSTAGRAM"]
 project_images: []
 authors: 

@@ -4,7 +4,7 @@ date                : {{ .Date }}
 draft               : true
 type                : article
 description         : "description"
-image               : "images/widgets/note_background.PNG"
+image               : "images/widgets/note_1748x1181.PNG"
 category            : ["NEW-ARTICLE"]
 project_images      : []
 authors: 
