@@ -1,0 +1,8 @@
+
+{{ $vendor := resources.Get "jquery/js/vendor.js" | minify }}
+<script src="{{ $vendor.Permalink }}"></script>
+
+<script src="https://www.verovio.org/javascript/app/verovio-app.js"></script>
+
+{{ $script := resources.Get "other/js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>

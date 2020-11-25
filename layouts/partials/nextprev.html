@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 site-project-single-action-left">
+            {{ if .PrevInSection }}
+                <a href="{{.PrevInSection.Permalink}}">
+                    <span class="link-area">
+                        <span data-text="PREV">
+                            PREV
+                        </span>
+                    </span>
+                </a>
+            {{ end }}
+        </div>
+        <div class="col-4 site-project-single-action-center">
+            <a href="../..">
+                <span class="link-area">
+                    <span data-text="LIST">
+                        LIST
+                    </span>
+                </span>
+            </a>
+        </div>
+        <div class="col-4 site-project-single-action">
+            {{ if .NextInSection }}
+                    <a href="{{.NextInSection.Permalink}}">
+                        <span class="link-area">
+                            <span data-text="NEXT">
+                                NEXT
+                            </span>
+                        </span>
+                    </a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+

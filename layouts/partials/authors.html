@@ -1,0 +1,21 @@
+
+<h3>AUTHORS</h3>
+<p>この文章を書いた人</p>
+<hr>
+{{ range .Params.authors }}
+  <div class="row">
+      <div class="col-sm-3 mx-auto linkbox" style="outline:none;">
+          <br>
+          <img src="{{ .icon_image }}" style="margin-left:10px; width:128px; border-radius: 50% 50% 50% 50%">
+          <p class="fullstory"><a href="{{ .url }}"></a></p>
+      </div>
+      <div class="col-sm-3 mx-auto" style="outline:none;">
+          <br>
+          <h4>{{ .name | safeHTML }}</h4>
+          <p>{{ .profession | safeHTML }}</p> 
+          <p>{{ .description | safeHTML }}</p>
+          <p><a href="{{ .url }}">MORE</a></p>
+      </div>
+  </div>
+  <hr>
+{{ end }}

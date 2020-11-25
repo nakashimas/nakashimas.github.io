@@ -1,0 +1,28 @@
+
+<section class="site-contacts" id="contacts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{ with .Site.Params.contacts }}
+          <div class="section-title">
+            <h2 class="text-white">{{ .title }}</h2>
+            <p class="text-white">{{ .subtitle }}</p>
+          </div>
+        {{ end }}
+      </div>
+      <div class="col-lg-12 col-md-10 mx-auto">
+        <ul class="follow-me">
+          {{ with .Site.Params.footer.social }}
+            {{ range .link }}
+              <li><a href="{{ .url }}"></a></li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+      <div class="col-12 text-center text-lg-left">
+        <a href="contacts" class="site-aboutus-cta">MORE <span style="bottom: 1px; position:relative">:</span></a>
+      </div>
+    </div>
+    <br>
+  </div>
+</section>

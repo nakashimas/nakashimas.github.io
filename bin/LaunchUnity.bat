@@ -1,1 +1,0 @@
-Unity -projectPath %~dp0/../

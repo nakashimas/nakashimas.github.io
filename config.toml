@@ -1,0 +1,116 @@
+
+baseURL       = "https://nakashimas.github.io/"
+languageCode  = "ja"
+title         = "NS HOME"
+summarylength = 32
+contentDir    = "content"
+assetDir      = "assets"
+publishDir    = "docs"
+disableKinds  = ["RSS", "sitemap"]
+
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    series = "series"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+[menu]
+  [[menu.nav]]
+    name    = "HOME"
+    url     = ""
+    weight  = 1
+  [[menu.nav]]
+    name    = "ABOUT"
+    url     = "about"
+    weight  = 2
+  [[menu.nav]]
+    name    = "ARTICLE"
+    url     = "article"
+    weight  = 2
+  [[menu.nav]]
+    name    = "CONTACTS"
+    url     = "contacts"
+    weight  = 3
+  [[menu.nav]]
+    name    = "PROJECTS"
+    url     = "projects"
+    weight  = 4
+[params]
+  logo = "images/icon/favicon.PNG"
+  dateFormat = "26 FEB 1994"
+  description = "my site"
+  author = "nakashimas"
+
+  [params.banner]
+    enable                = true
+    title                 = "INFO <span style='bottom: 1px; position:relative'>:</span>"
+    subtitle              = ""
+    primary_button        = "PROJECTS"
+    primary_button_url    = "projects"
+
+  [params.aboutus]
+    enable                = true
+    title                 = "ABOUT"
+    subtitle              = "このサイトについて"
+    description_en        = ""
+    description           = "<span class='blockable'>ここでは、作ったコンテンツのReadmeや、</span><span class='blockable'>Documentsなどを公開しています。</span>"
+  
+  [params.projects]
+    enable    = true
+    title     = "PROJECTS"
+    subtitle  = "作ったりしたもの"
+    boximage  = ""
+
+  [params.contacts]
+    enable    = true
+    title     = "CONTACTS"
+    subtitle  = "連絡がつくところ"
+    boximage  = ""
+  
+  [params.footer]
+    # Footer Contact Info
+    [params.footer.sitemap]
+        title   = "SITEMAP"
+        [[params.footer.sitemap.link]]
+            name = "HOME"
+            url  = ""
+        [[params.footer.sitemap.link]]
+            name = "PROJECTS"
+            url  = "projects"
+        [[params.footer.sitemap.link]]
+            name = "ARTICLE"
+            url  = "article"
+    [params.footer.social]
+      title   = "CONTACT"
+      [[params.footer.social.link]]
+          name = "GitHub"
+          url  = "https://github.com/nakashimas"
+      [[params.footer.social.link]]
+          name = "Twitter"
+          url  = "https://twitter.com/na_s_p"
+      [[params.footer.social.link]]
+          name = "Discord"
+          url  = "https://discord.com/invite/"
+      [[params.footer.social.link]]
+          name = "Instagram"
+          url  = "https://instagram.com"
+    [params.footer.license]
+      title        = "LICENSE"
+      description  = "<span class='blockable'>copylight (c) 2020,</span> <span class='blockable'>nakashimas.github.io</span> <span class='blockable'>authors.</span>"
+
+

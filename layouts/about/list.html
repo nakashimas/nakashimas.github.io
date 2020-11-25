@@ -1,0 +1,39 @@
+
+{{ define "main" }}
+  <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="site-project-header-content">
+            <h1>
+              {{ .Title | safeHTML }}
+            </h1>
+          </div>
+        </div>
+        <div class="col-lg-4">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="site-project" id="aboutus">
+    <div class="col-lg-8 mx-auto">
+      <div class="site-project-single">
+        <div class="site-project-single-description">
+          {{ with .Site.Params.aboutus }}
+            <h3>
+              DESCRIPTION
+            </h3>
+            <p>
+              {{ .description_en | safeHTML }}
+              {{ .description | safeHTML }}
+            </p>
+          {{ end }}
+          {{ .Content }}
+          {{ partial "authors.html" . }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ partial "contacts.html" . }}
+{{ end }}
