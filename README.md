@@ -58,7 +58,7 @@ git reset --hard
 git commit --allow-empty -m "initialize gh-pages"
 git push -u origin gh-pages
 git checkout master
-rm -rf docs
+rm -rf docs # or "mkdir docs"
 git worktree add docs gh-pages
 ```
 
@@ -86,11 +86,11 @@ This project is licensed under the terms of the [MIT](./LICENSE).
 
 アセット・APIなど：
 
-|  ASSETS        |  LICENSE                                                        | VERSION      |
-|  :----:        |  :-----:                                                        | :-----:      |
-| bootstrap      |  [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)   |  4.3.1       |
-| awesome-font   |  [SIL OFL 1.1 and MIT](https://fontawesome.com/v4.7.0/license/) |  4.7.0       |
-| svgbackgrounds |  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)      |  2020/11/21  |
+|  ASSETS        |  LICENSE                                                                      | VERSION      |
+|  :----:        |  :-----:                                                                      | :-----:      |
+| bootstrap      |  [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)                 |  4.3.1       |
+| awesome-font   |  [SIL OFL 1.1 and MIT and CC BY 3.0](https://fontawesome.com/license/free)    |  4.7.0       |
+| svgbackgrounds |  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                    |  2020/11/21  |
 
 Hugoテーマ：
 

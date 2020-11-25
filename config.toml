@@ -103,6 +103,9 @@ disableKinds  = ["RSS", "sitemap"]
       [[params.footer.social.link]]
           name = "Twitter"
           url  = "https://twitter.com/na_s_p"
+      [[params.footer.social.link]]
+          name = "Discord"
+          url  = "https://discord.com/invite"
     [params.footer.license]
       title        = "LICENSE"
       description  = "<span class='blockable'>copylight (c) 2020,</span> <span class='blockable'>nakashimas.github.io</span> <span class='blockable'>authors.</span>"

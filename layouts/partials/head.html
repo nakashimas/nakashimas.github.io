@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="{{ $bootstrap.Permalink }}" />
 
   {{ "<!-- font-awesome -->" | safeHTML }}
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  {{ $fontawesome := resources.Get "font-awesome/css/fontawesome.css" | minify }}
+  <link rel="stylesheet" href="{{ $fontawesome.Permalink }}" />
   
   {{ "<!-- verovio -->" | safeHTML }}
   {{ $verovio := resources.Get "verovio/css/verovio.css" | minify }}
