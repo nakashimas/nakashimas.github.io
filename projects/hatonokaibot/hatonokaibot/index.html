@@ -9,10 +9,13 @@
 <meta property="og:description" content="Our discord bot" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nakashimas.github.io/projects/hatonokaibot/hatonokaibot/" />
+<meta property="og:image" content="https://nakashimas.github.io/images/sub/hatonokai/opt_a_file_upload.png" />
 <meta property="article:published_time" content="2019-12-23T20:56:42+06:00" />
 <meta property="article:modified_time" content="2019-12-23T20:56:42+06:00" />
 
-  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nakashimas.github.io/images/sub/hatonokai/opt_a_file_upload.png"/>
+
 <meta name="twitter:title" content="HATONOKAI BOT"/>
 <meta name="twitter:description" content="Our discord bot"/>
 
@@ -124,11 +127,11 @@
               HATONOKAI BOT
             </h1>
             <div class="site-project-single-description">
-              <h3 id="description">Description</h3>
+              <h4 id="description">Description</h4>
 <p>GitHubのリポジトリは非公開のため、説明書として、ここにコマンドの用法を記載しておきます。</p>
-<h3 id="usage">Usage</h3>
-<h3 id="ショートカットコマンド">ショートカットコマンド</h3>
-<h4 id="trpg-ダイスを振る">TRPG: ダイスを振る</h4>
+<h4 id="usage">Usage</h4>
+<h4 id="ショートカットコマンド">ショートカットコマンド</h4>
+<h5 id="trpg-ダイスを振る">TRPG: ダイスを振る</h5>
 <p>例</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -183,10 +186,8 @@
 <span style="color:#75715e"># -&gt; [名前]SANチェック 1d10 結果: 5 判定: なし</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="trpg-pcの情報を操作する">TRPG: PCの情報を操作する</h3>
-<h4 id="基本対象の名前-n--name">基本：対象の名前[-n/&ndash;name]</h4>
-<ul>
-<li>
+</div><h4 id="trpg-pcの情報を操作する">TRPG: PCの情報を操作する</h4>
+<h5 id="基本対象の名前-n--name">基本：対象の名前[-n/&ndash;name]</h5>
 <p><strong>自分のアカウント名で指定する。</strong></p>
 <p>コマンドオプションは「-n」もしくは「&ndash;name」を用いて、直後に参照するアカウント名を入力。<br>
 デフォルト（指定しない場合）は、自分のアカウント名が用いられる。</p>
@@ -198,9 +199,7 @@
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">//pc <span style="color:#f92672">[</span>some options<span style="color:#f92672">]</span> -n yourname
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p><strong>自分のキャラクター名で指定する。</strong></p>
+</div><p><strong>自分のキャラクター名で指定する。</strong></p>
 <p>キャラクター名を使う場合は、名前の頭に「?」をつけてください。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -210,9 +209,7 @@
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">//pc <span style="color:#f92672">[</span>some options<span style="color:#f92672">]</span> -n ?yourpcname
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p><strong>自分のキャラクター名とアカウント名で指定する。</strong></p>
+</div><p><strong>自分のキャラクター名とアカウント名で指定する。</strong></p>
 <p>上記の二つを併用することもできる。<br>
 キャラクターを複数持っている場合は、この方法を使うことが推奨される。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -223,11 +220,7 @@
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">//pc <span style="color:#f92672">[</span>some options<span style="color:#f92672">]</span> -n yourname?yourpcname
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<h4 id="操作プレイヤーの追加-a--add">操作：プレイヤーの追加[-a/&ndash;add]</h4>
-<ul>
-<li>
+</div><h5 id="操作プレイヤーの追加-a--add">操作：プレイヤーの追加[-a/&ndash;add]</h5>
 <p><strong>用意した情報を用いて追加する。</strong></p>
 <p>以下のコマンドをつけて、ファイルを送信する。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -254,19 +247,21 @@
 </div>
 </div><p>コマンドオプションは「-a」もしくは「&ndash;add」</p>
 <p>例</p>
-<img src="https://nakashimas.github.io/img/hatonokai/opt_a_file_upload.png" style="width:100%">
-</li>
-<li>
+<div style="text-align:center"><img src="/images/sub/hatonokai/opt_a_file_upload.png" style="width:80%"></div>
+<br>
 <p><strong>乱数を用いて情報を作成する</strong></p>
 <p>ファイルを添付しなかった場合、乱数を用いて新規作成する。</p>
-<pre><code>//pc -a 
-</code></pre><p>作成された情報及びファイルが返るため、ダウンロードして中身を確認。<br>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">//pc -a 
+</code></pre></td></tr></table>
+</div>
+</div><p>作成された情報及びファイルが返るため、ダウンロードして中身を確認。<br>
 前述の方法でファイルをサーバーに追加する。（追加しない場合、作成結果は破棄される。）</p>
-</li>
-</ul>
-<h4 id="操作プレイヤーの削除-d--delete">操作：プレイヤーの削除[-d/&ndash;delete]</h4>
-<ul>
-<li>
+<h5 id="操作プレイヤーの削除-d--delete">操作：プレイヤーの削除[-d/&ndash;delete]</h5>
 <p><strong>一人分の情報を削除</strong></p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -290,8 +285,6 @@
 </div>
 </div><p>コマンドオプションは「-d」もしくは「&ndash;delete」を用いる。<br>
 何も名前指定がない場合、アカウント名に紐付けされた全てのデータを消去する。</p>
-</li>
-<li>
 <p><strong>複数人分の情報を削除</strong></p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -319,11 +312,7 @@
 <span style="color:#75715e"># -&gt; ＮＡＭＥ　　　　　　　　　　　:    someuser3?name3</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<h4 id="操作プレイヤーの情報を取得-g--get">操作：プレイヤーの情報を取得[-g/&ndash;get]</h4>
-<ul>
-<li>
+</div><h5 id="操作プレイヤーの情報を取得-g--get">操作：プレイヤーの情報を取得[-g/&ndash;get]</h5>
 <p><strong>一人分の情報を取得</strong></p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -347,8 +336,6 @@
 </div>
 </div><p>コマンドオプションは「-g」もしくは「&ndash;get」を用いて、直後に参照するパラメータを入力。<br>
 パラメータ名に「all」を用いると、全てのパラメータを表示する。</p>
-</li>
-<li>
 <p><strong>複数人分の情報を取得</strong></p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -386,9 +373,7 @@
 <span style="color:#75715e"># -&gt; ＮＡＭＥ　　　　　　　　　　　:    somepcname</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p><strong>情報をファイルとして取得</strong></p>
+</div><p><strong>情報をファイルとして取得</strong></p>
 <p>「-f」もしくは「&ndash;file」を指定すると、情報をファイルとして取得することができる。<br>
 この場合、「-g」もしくは「&ndash;get」の指定パラメータは無視されるが、「all」など、何らかの値は入れておく必要がある。</p>
 <p>対象が単体である場合、textファイル（.txt）が返される。</p>
@@ -421,11 +406,7 @@
 <span style="color:#75715e"># -&gt; 集合のファイルが送信されます。</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<h4 id="操作プレイヤーの情報を変更-s--set">操作：プレイヤーの情報を変更[-s/&ndash;set]</h4>
-<ul>
-<li>
+</div><h5 id="操作プレイヤーの情報を変更-s--set">操作：プレイヤーの情報を変更[-s/&ndash;set]</h5>
 <p><strong>一人分の情報を変更</strong></p>
 <p>コマンドオプションは「-s」もしくは「&ndash;set」を用いて、直後に参照するパラメータを入力、次に変更内容を入力。<br>
 変更内容は文字列、数値、単純な演算が入力可能。</p>
@@ -458,7 +439,7 @@
 <li>「 **[num] 」（num乗）</li>
 <li>「 //[num] 」（numによる切り捨て除算）</li>
 <li>「 + 」（1足す）</li>
-<li>「 - 」（1引く）</li>
+<li>「 」（1引く）</li>
 </ul>
 <p>バグがあって、「&ndash;」演算子や「++」演算子の代わりに、「-」や「+」を使用していることに注意。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -481,9 +462,7 @@
 <span style="color:#75715e"># -&gt; クトゥルフ神話　　　　　　　　:    0 -&gt; 1</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p><strong>複数人分の情報を変更</strong></p>
+</div><p><strong>複数人分の情報を変更</strong></p>
 <p>同様に、複数のキャラクターに対して変更を適用させることもできる。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -523,10 +502,8 @@
 <span style="color:#75715e"># -&gt; クトゥルフ神話　　　　　　　　:    0 -&gt; 1</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<h3 id="文字列操作">文字列操作</h3>
-<h4 id="任意の文字列で広げて記述する">任意の文字列で広げて記述する</h4>
+</div><h4 id="文字列操作">文字列操作</h4>
+<h5 id="任意の文字列で広げて記述する">任意の文字列で広げて記述する</h5>
 <p>コマンド「//s」の後に文字を入力すると、スペースで拡張して返信される。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -568,8 +545,8 @@
 <span style="color:#75715e"># -&gt; 列</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="じゃんけん">じゃんけん</h3>
-<h4 id="通常のじゃんけん">通常のじゃんけん</h4>
+</div><h4 id="じゃんけん">じゃんけん</h4>
+<h5 id="通常のじゃんけん">通常のじゃんけん</h5>
 <p>コマンド「//じゃんけん」の後に文字を入力すると、じゃんけんの結果が返信される。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
