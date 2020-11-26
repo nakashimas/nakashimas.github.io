@@ -68,7 +68,7 @@ disableKinds  = ["RSS", "sitemap"]
     title                 = "ABOUT"
     subtitle              = "このサイトについて"
     description_en        = ""
-    description           = "<span class='blockable'>ここでは、作ったコンテンツのReadmeや、</span><span class='blockable'>Documentsなどを公開しています。</span>"
+    description           = "<span class='blockable'>ここでは、作ったコンテンツの</span><span class='blockable'>Readmeや、</span><span class='blockable'>Documentsなどを</span><span class='blockable'>公開しています。</span>"
   
   [params.projects]
     enable    = true
