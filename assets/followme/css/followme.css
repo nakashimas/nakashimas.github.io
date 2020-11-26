@@ -3,11 +3,16 @@
 /* follow-me https://moonnote.hateblo.jp/entry/2015/12/03/200718 */
 /* Font Awesome 5 用に改造 */
 @media screen and (min-width:0px){
+  /* ---------------------------------------  ----------------------------- */
+  /* ---------------------------------------  ----------------------------- */
   .follow-me {
     list-style: none;
     margin: 0 0 -8px;
-    overflow: hidden;
     padding: 0;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
   .follow-me li {
     float: left;
