@@ -66,7 +66,7 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 ```
 
 また、旋律の要件に応じて、オプションが指定できます。  
-詳しくは、[楽曲生成依頼についてのページ](/article/nasnecobot/nasneco_generation/)を参照してください。
+詳しくは、[楽曲生成依頼についてのページ](/article/nasnecobot/nasnecobot_generation)を参照してください。
 
 ### 投稿内容の扱い、及び利用上の注意
 
