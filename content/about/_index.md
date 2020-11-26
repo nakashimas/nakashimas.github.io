@@ -21,7 +21,7 @@ authors:
 <span class='blockable'>また、このサイトは、</span>
 <span class='blockable'><a href="https://docs.github.com/ja/free-pro-team@latest/github/working-with-github-pages">GitHub Pages</a>で公開されていて、</span>
 <span class='blockable'>ソースコードは<a href="https://github.com/nakashimas/nakashimas.github.io">GitHub</a>に投稿されているので、</span>
-<span class='blockable'>公開されているコンテンツは自由にダウンロードすることが</span><span class='blockable'>できるようになっています。</span>
+<span class='blockable'>公開されているコンテンツは</span><span class='blockable'>自由にダウンロードすることが</span><span class='blockable'>できるようになっています。</span>
 
 <a href="https://github.com/nakashimas/nakashimas.github.io" class="site-project-cta" style="margin-top: 0px;">MORE <span style="bottom: 1px; position:relative">:</span></a>
 
