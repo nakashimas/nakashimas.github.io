@@ -118,6 +118,19 @@
 </nav>
   <main>
   <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-single-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single-header-content">
+            <h1>
+              BOT GENERATOR
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="site-project-single-section">
     <div class="container">
       <div class="row">
@@ -127,10 +140,10 @@
               BOT GENERATOR
             </h1>
             <div class="site-project-single-description">
-              <h3 id="概要">概要</h3>
+              <h4 id="概要">概要</h4>
 <p>本ページでは、自動作曲bot「茄子ねこ」の楽曲生成依頼の詳細について説明します。</p>
 <p>自動作曲bot「茄子ねこ」のその他の機能については、<a href="/projects/nasnecobot/nasnecobot/">トップページ</a>を参照してください。</p>
-<h3 id="楽曲生成依頼">楽曲生成依頼</h3>
+<h4 id="楽曲生成依頼">楽曲生成依頼</h4>
 <p>botに対してリプライを送ることによって、楽曲生成を依頼することができます。<br>
 生成された楽曲は、依頼主に対する動画付きのリプライで返されます。</p>
 <p>依頼文の構成は以下の通りです。</p>
@@ -142,8 +155,8 @@
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music;
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="オプション付き楽曲生成依頼">オプション付き楽曲生成依頼</h3>
-<h3 id="構成">構成</h3>
+</div><h4 id="オプション付き楽曲生成依頼">オプション付き楽曲生成依頼</h4>
+<h4 id="構成">構成</h4>
 <p>旋律の要件に応じて、オプションが指定できます。<br>
 オプションの記述方法は、<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>に準拠しており、ABC楽譜の表現の一部を共有しています。<br>
 構成は以下の通りです。</p>
@@ -158,7 +171,7 @@
 </div><p>headerおよびbodyは、それぞれABC曲の曲ヘッダ（情報フィールド）、曲本体（音楽コード）を保持し、区切り文字「?」によって区別されます。<br>
 （従って、各要素に「?」を値として含めることはできません。）</p>
 <p>これらのオプション全体には、Twitterの現時点での制約である、2バイト（≒全角漢字かな交じり）文字で140字以内、半角英数字で280字以内の表記でなければならないという制限があります。</p>
-<h3 id="曲ヘッダ">曲ヘッダ</h3>
+<h4 id="曲ヘッダ">曲ヘッダ</h4>
 <p>曲ヘッダの各要素（T：曲タイトル、M：拍子、など）は、「[key]=&quot;[value]&quot;」の構成で表現され、headerおよびbodyと同じく、区切り文字「?」を用いて複数の要素の定義が可能です。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -179,7 +192,7 @@
 </div>
 </div><p>これらの文字列は、半角英数字の利用が推奨されます。ただし、一部の要素、例えば<a href="#T%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">Tオプション</a>、<a href="#C%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">Cオプション</a>の値は、全角文字の利用が非推奨ではありません。</p>
 <p>また、<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>と比べて、記述に注意が必要な項目は、<a href="#%E6%9B%B2%E3%83%98%E3%83%83%E3%83%80%E3%81%AE%E6%83%85%E5%A0%B1">オプションの各要素-曲ヘッダの情報</a>を参照してください。</p>
-<h3 id="曲本体">曲本体</h3>
+<h4 id="曲本体">曲本体</h4>
 <p>上記の構成の中で、曲ヘッダの構文に当てはまらないものは、曲本体として扱われます。<br>
 曲本体は、いくつかの小節線と音符、その他の装飾で表現され、何らかの<a href="#%E5%B0%8F%E7%AF%80%E7%B7%9A">小節線</a>で終了します。<a href="#M%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">拍子無し音楽</a>の場合でも、終止線を入力することが必要です。<br>
 例として、2小節の楽譜は以下のように記述されます。</p>
@@ -193,11 +206,11 @@
 </div>
 </div><p>これらの文字列は、半角英数字の利用が推奨されます。</p>
 <p>また、楽譜の各要素の記述方法は、<a href="#%E6%9B%B2%E6%9C%AC%E4%BD%93%E3%81%AE%E6%83%85%E5%A0%B1">オプションの各要素-曲本体の情報</a>を参照してください。</p>
-<h3 id="具体例">具体例</h3>
+<h4 id="具体例">具体例</h4>
 <p><a href="https://nakashimas.github.io/docs/works/nasneco_example.html">楽曲生成依頼の例のページ</a>では、オプション付き楽曲生成依頼の具体例として、いくつかのクラシック音楽を写譜したものや、実際にあった依頼文を紹介しています。</p>
-<h3 id="使用可能なオプションの各要素">使用可能なオプションの各要素</h3>
-<h3 id="曲ヘッダの情報">曲ヘッダの情報</h3>
-<h4 id="tオプション">Tオプション</h4>
+<h4 id="使用可能なオプションの各要素">使用可能なオプションの各要素</h4>
+<h4 id="曲ヘッダの情報">曲ヘッダの情報</h4>
+<h5 id="tオプション">Tオプション</h5>
 <p>Tオプションは曲のタイトルを定義します。<br>
 タイトルは空白がエスケープされ、左詰めになります。<br>
 Tオプションが指定されなかった場合のデフォルト値は、「NoTitle」となります。</p>
@@ -209,7 +222,7 @@ Tオプションが指定されなかった場合のデフォルト値は、「N
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?T<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;NoTitle&#34;</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="cオプション">Cオプション</h4>
+</div><h5 id="cオプション">Cオプション</h5>
 <p>Cオプションは作曲者名を定義します。<br>
 作曲者名は空白がエスケープされ、左詰めになります。<br>
 Cオプションが指定されなかった場合のデフォルト値は、「Unknown」となります。</p>
@@ -221,7 +234,7 @@ Cオプションが指定されなかった場合のデフォルト値は、「U
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?C<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Unknown&#34;</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="mオプション">Mオプション</h4>
+</div><h5 id="mオプション">Mオプション</h5>
 <p>Mオプションは拍子を定義します。<br>
 拍子は<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 拍子無し「none」が指定されない限り、冒頭ではない小節において、Mオプションに準じて休符の自動補完が働きます。<br>
@@ -234,7 +247,7 @@ Mオプションが指定されなかった場合のデフォルト値は、「4
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?M<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4/4&#34;</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="lオプション">Lオプション</h4>
+</div><h5 id="lオプション">Lオプション</h5>
 <p>Lオプションは音符の長さの基準値を定義します。<br>
 長さの基準値は全音符を「1/1」とした分数で表現し、「[fraction]」と記述します。<br>
 Lオプションが指定されなかった場合のデフォルト値は、<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の標準の推定方法に則り、定義されます。</p>
@@ -247,7 +260,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?L<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1/8&#34;</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="qオプション">Qオプション</h4>
+</div><h5 id="qオプション">Qオプション</h5>
 <p>Qオプションはテンポ(：bpm)を定義します。<br>
 <a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>でサポートされている標準の表現「[fractions] = [counts]」は、bpmとしての表記「1/4 = [counts]」のみサポートされています。<br>
 仮にその他の表記が用いられている場合にも、「1/4 = [counts]」と記載されている前提で処理されることに注意してください。</p>
@@ -303,10 +316,10 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?Q<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Andante&#34;</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="その他のオプション">その他のオプション</h4>
+</div><h5 id="その他のオプション">その他のオプション</h5>
 <p>上記以外のオプションも設定可能ですが、現在、出力に全く影響しません。</p>
-<h3 id="曲本体の情報">曲本体の情報</h3>
-<h4 id="エスケープされる文字">エスケープされる文字</h4>
+<h4 id="曲本体の情報">曲本体の情報</h4>
+<h5 id="エスケープされる文字">エスケープされる文字</h5>
 <p>半角スペース「 」、バッククォート「`」はエスケープされます。<br>
 これらの文字は、可読性を上げるために以下のような利用が可能です。</p>
 <p>使用例</p>
@@ -319,7 +332,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 </code></pre></td></tr></table>
 </div>
 </div><p>なお、参考までに、<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>において、バッククォートは同じくエスケープされますが、半角スペースは連桁の非結合を表します。</p>
-<h4 id="小節線">小節線</h4>
+<h5 id="小節線">小節線</h5>
 <p>小節線は<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 具体的には、以下の7種類の表現方法があります。</p>
 <table>
@@ -378,7 +391,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?<span style="color:#f92672">[</span>notes<span style="color:#f92672">]</span>|<span style="color:#f92672">[</span>notes<span style="color:#f92672">]</span>:|;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="繰り返しの基準点">繰り返しの基準点</h4>
+</div><h5 id="繰り返しの基準点">繰り返しの基準点</h5>
 <p>繰り返しの基準点は<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 具体的には、以下の2種類の表現方法があります。</p>
 <table>
@@ -411,7 +424,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?<span style="color:#f92672">[</span>notes<span style="color:#f92672">]</span>|<span style="color:#f92672">[</span>1<span style="color:#f92672">[</span>notes<span style="color:#f92672">]</span>:|<span style="color:#f92672">[</span>2<span style="color:#f92672">[</span>notes<span style="color:#f92672">]</span>|<span style="color:#f92672">[</span>notes<span style="color:#f92672">]</span>|<span style="color:#f92672">]</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="長さ">長さ</h4>
+</div><h5 id="長さ">長さ</h5>
 <p>長さは<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 具体的には、長さの基準値Lを「1」とした分数で表現し、音程表記の後に「[fraction]」と記述します。なお、「1/2」は「/」と省略可能です。<br>
 また、「///」が「/8」に等しいように、論理的な拡張が可能です。</p>
@@ -428,7 +441,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <p>しかし、結果としてtwitterの動画の長さ制限140秒を超える長さや、midiの最小分解能480に満たない長さは、出力に影響を与えません。</p>
 <p>また、<a href="#M%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">前述</a>の通り、Mオプションに準じて、長さの合計が小節の長さに足りない分は、休符が補完されます。<br>
 逆に、長さの合計が小節の長さを超過する場合は、小節の長さが延長されます。</p>
-<h4 id="連符">連符</h4>
+<h5 id="連符">連符</h5>
 <p>連符は<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 具体的には、適応させる音符群の、音程表記及び臨時記号類の前に、「([counts]」と記述します。</p>
 <p>また、拡張的な表現として、「([counts p]:[counts q]:[counts r]」がサポートされています。pはp連符であることを、qは長さの基準値Lを1とした場合の分割前の長さを、rは適応させる個数を指定します。なお、p以外の数値は省略可能です。</p>
@@ -449,7 +462,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?<span style="color:#f92672">(</span>3:2:3abca2b2c2|<span style="color:#f92672">]</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="ブロークンリズム">ブロークン・リズム</h4>
+</div><h5 id="ブロークンリズム">ブロークン・リズム</h5>
 <p>ブロークン・リズムは<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 具体的には、二つの音符の表記の間に「&gt;」あるいは「&lt;」を記述します。</p>
 <p><a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の標準では、「&gt;」は区切られた前の音符と後の音符の長さの比が3:1であることを表し、「&lt;」はその逆を表すと説明されていますが、<br>
@@ -463,7 +476,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?a2&lt;a2a2&gt;a2|<span style="color:#f92672">]</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="臨時記号類">臨時記号類</h4>
+</div><h5 id="臨時記号類">臨時記号類</h5>
 <p>臨時記号類は<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 具体的には、以下の5種類の表現方法があります。</p>
 <table>
@@ -514,7 +527,7 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 </code></pre></td></tr></table>
 </div>
 </div><p>なお、現在、調号の設定は反映されないため、key=C（ハ長調もしくはイ短調）で記述してください。</p>
-<h4 id="音程">音程</h4>
+<h5 id="音程">音程</h5>
 <p>音程は<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記が利用可能です。<br>
 具体的には、中央ハ(midi 60, 88鍵盤の24個目の白鍵, C4)をCとして、順にD(midi 62), E(midi 64), F(midi 65), G(midi 67), A(midi 69), B(midi 71)と表現し、小文字で表記することで1オクターブ上を表します。</p>
 <p>加えて、<a href="#%E8%87%A8%E6%99%82%E8%A8%98%E5%8F%B7%E9%A1%9E">上記</a>の臨時記号類の変化を受け付け、<a href="https://ja.m.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89MIDI%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">標準MIDIファイル</a>が表現可能なpitch、0~127に対応する音程が表現可能です。（対応する文字列は「C,,,,,」~「g'''」）</p>
@@ -537,9 +550,9 @@ Lオプションが指定されなかった場合のデフォルト値は、<a h
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@cc_99_ff music?M<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;none&#34;</span>?C,,D,,E,,zF,,G,,A,,B,,|<span style="color:#f92672">]</span>;
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="装飾音符">装飾音符</h4>
+</div><h5 id="装飾音符">装飾音符</h5>
 <p>装飾音符（アッチャカトゥーラ及びアポジャトゥーラ）は現在サポートされておらず、<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>の表記「{[notes]}」もしくは「{/[notes]}」で表された部分は全てエスケープされます。</p>
-<h4 id="その他">その他</h4>
+<h5 id="その他">その他</h5>
 <p>その他の<a href="https://ja.m.wikipedia.org/wiki/ABC%E8%A8%98%E8%AD%9C%E6%B3%95">ABC記譜法</a>でサポートされている表記で、現在botがサポートしていない表現は、トリル等の装飾を含め、複数存在します。<br>
 そのような表現の該当箇所は殆どがエスケープされますが、一部表記はエラーメッセージが返されます。</p>
 

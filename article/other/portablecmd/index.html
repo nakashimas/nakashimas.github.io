@@ -115,6 +115,19 @@
 </nav>
   <main>
   <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-single-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single-header-content">
+            <h1>
+              PORTABLE CMD
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="site-project-single-section">
     <div class="container">
       <div class="row">
@@ -124,26 +137,26 @@
               PORTABLE CMD
             </h1>
             <div class="site-project-single-description">
-              <h3 id="1-はじめに">1 はじめに</h3>
+              <h4 id="1-はじめに">1 はじめに</h4>
 <p>　このページはportable環境のメモです。</p>
-<h3 id="2-問題">2 問題</h3>
+<h4 id="2-問題">2 問題</h4>
 <p>　学校などの組織が用意したアカウントを使って、組織が用意したサーバを介して作業する場合、自前の環境を使いたいことが多々あります。例えば、私は「pipはあるけどgitがない」という問題に直面したときにそう感じました。<br>
 　自前の環境を使う、最も豪華な方法は、ラップトップPCを持ち込むことでしょう。あるいは、仮想マシンを使うことで解決できると思います。しかし、毎日のようにラップトップPCを持ち運んだり、二回osの起動時間を待つことは、かなりの苦痛です。<br>
 　特に、仮想マシンを使う利点は、コンピューターで少し作業する程度の人（私）には、殆どありません。<br>
 　従って、いつも持ち運ぶようなusbメモリに「Portable Git」や「VS Code」などを保存しておいて、環境を汚さずに使用できれば、殆ど問題がないと考えられます。</p>
-<h3 id="3-解決策">3 解決策</h3>
-<h4 id="3-1-方針">3-1 方針</h4>
+<h4 id="3-解決策">3 解決策</h4>
+<h5 id="3-1-方針">3-1 方針</h5>
 <p>　ここで、組織が用意した環境で起こる問題は、ソフトウェアが使うプロキシ設定やパスなどの参照先に原因があります。そして、多くのアプリケーションソフトウェアが使うプロキシ設定やパスなどの参照先は、環境変数によって変わる事が多いです。<br>
 　そのため、バッチファイルに問題ない参照先を設定するコマンドを書き込み、持ち運ぶことで問題を回避しようと思います。</p>
-<h4 id="3-2-用意するもの">3-2 用意するもの</h4>
+<h5 id="3-2-用意するもの">3-2 用意するもの</h5>
 <ul>
 <li>持ち運ぶための記憶装置(usbメモリ)</li>
 <li>バッチファイル(.bat)</li>
 <li>持ち運びたいソフトウェア(portable版がある場合はportable版を使用)</li>
 </ul>
 <p>　バッチファイル(.bat)は、テキストファイルを作成して、拡張子を&quot;.bat&quot;に変更することで作成できます。作成したバッチファイルは、持ち運ぶための記憶装置(usbメモリ)の最も浅い階層に保存しておくと便利です。</p>
-<h3 id="4-書き込む内容">4 書き込む内容</h3>
-<h4 id="4-1-proxy設定">4-1 proxy設定</h4>
+<h4 id="4-書き込む内容">4 書き込む内容</h4>
+<h5 id="4-1-proxy設定">4-1 proxy設定</h5>
 <p>　まず、プロキシサーバへのインターネット接続設定を書きます。多くの場合、認証プロキシを通して通信を行うため、プロキシサーバへの接続設定を書いていない場合、gitなどの、ssh接続を行うソフトウェアや、pip、curlコマンド等でプロキシエラーが出力されます。<br>
 　設定の記述方法は、組織のプロキシ設定に則る必要があり、以下のような構成となっています。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -158,7 +171,7 @@
 </div>
 </div><p>　ここで、&ldquo;SET&quot;は環境変数を設定するコマンドで、続く&quot;HTTP_PROXY&rdquo;、&ldquo;HTTPS_PROXY&quot;が変数名、&quot;=&ldquo;の後の、&ldquo;https://ユーザー名.パスワード@proxy.団体名.ドメイン:8080&quot;が変数に格納される値です。<br>
 　また、&ldquo;ユーザー名&quot;には組織から与えられているユーザー名を、&ldquo;パスワード&quot;にはパスワードを、&ldquo;proxy.団体名.ドメイン&quot;にはプロキシサーバのホスト名を代入してください。末尾の番号はポート番号なので気にしなくても大丈夫です。</p>
-<h4 id="4-2-path設定">4-2 path設定</h4>
+<h5 id="4-2-path設定">4-2 path設定</h5>
 <p>　続いて、持ち運びたいソフトウェアのパスを通します。以下のコマンドは、環境変数PATHの末尾に持ち運びたいソフトウェアのパスを追記するものです。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -189,7 +202,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div><p>　また、&quot;%PATH%&ldquo;は、元の環境変数&quot;PATH&quot;を参照するという意味です。これを記述しなかった場合、元から設定されている環境変数、例えば、&quot;%windir%\system32&quot;などが上書きされ、消えてしまいます。&quot;%windir%\system32&quot;にはコマンドプロンプトなどの、重要なソフトウェアが保存されているため、直接参照できないと不便です。</p>
-<h4 id="4-3-path設定他の使い方">4-3 path設定(他の使い方)</h4>
+<h5 id="4-3-path設定他の使い方">4-3 path設定(他の使い方)</h5>
 <p>　一方で、&quot;%PATH%&ldquo;を上書きすることの利点も存在します。例として、ソフトウェアが、管理者権限の設定などで編集できないファイルを参照し、動的に変更を加えている場合などがあてはまります。そのような場合は、以下のように必要な&quot;PATH&quot;設定のみ記述し、参照先を変更することで、管理者権限の制約を回避できる可能性があります。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -212,7 +225,7 @@
 @SET USERPROFILE<span style="color:#f92672">=</span>%REMOVABLEROOT%<span style="color:#ae81ff">\U</span>ser<span style="color:#ae81ff">\s</span>omeone
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="4-4-コマンドプロンプトの起動">4-4 コマンドプロンプトの起動</h4>
+</div><h5 id="4-4-コマンドプロンプトの起動">4-4 コマンドプロンプトの起動</h5>
 <p>　しかしながら、上記で設定した環境変数は、バッチファイルの中で宣言したため、バッチ処理が終了すると解放されてしまいます。よって、末尾に以下のコマンドプロンプトを起動するコマンドを加えて、環境変数を保持したままコマンドを入力できるようにします。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -222,7 +235,7 @@
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">@call cmd
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="5-バッチファイルの中身の全体像">5 バッチファイルの中身の全体像</h3>
+</div><h4 id="5-バッチファイルの中身の全体像">5 バッチファイルの中身の全体像</h4>
 <p>　以上の手順を踏まえて編集したバッチファイルは、最終的に以下のような内容になります。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -240,7 +253,7 @@ SET HTTPS_PROXY <span style="color:#f92672">=</span> https://ユーザー名.パ
 @call cmd
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="6-参考">6 参考</h3>
+</div><h4 id="6-参考">6 参考</h4>
 <p>　Windowsコマンドプロンプトで認証プロキシを突破する<br>
 <a href="https://qiita.com/hamham/items/cb658f5a8c74f35255be">link</a></p>
 

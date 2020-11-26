@@ -115,6 +115,19 @@
 </nav>
   <main>
   <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-single-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single-header-content">
+            <h1>
+              PNG ON R LANG
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="site-project-single-section">
     <div class="container">
       <div class="row">
@@ -124,23 +137,23 @@
               PNG ON R LANG
             </h1>
             <div class="site-project-single-description">
-              <h3 id="1-はじめに">1 はじめに</h3>
+              <h4 id="1-はじめに">1 はじめに</h4>
 <p>　このページはR言語でいろいろな出力をpng形式で保存する方法のメモです。png形式以外にも、jpegやpdf、bitmapで保存できますが、簡単のためpng形式のみを記録します。<br>
 　もっと良い方法が分かった場合、追記、修正します。</p>
 <p>　R version 3.6.2 (2019-12-12)</p>
-<h3 id="2-guiで保存する方法">2 GUIで保存する方法</h3>
-<h4 id="2-1-グラフ">2-1 グラフ</h4>
+<h4 id="2-guiで保存する方法">2 GUIで保存する方法</h4>
+<h5 id="2-1-グラフ">2-1 グラフ</h5>
 <p>　Rstudioの場合、表示されたグラフを右クリックすることで、画像を保存する選択肢を表示できます。</p>
 <div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng1.png"  style="width:80%"></div>
 <div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng2.png"  style="width:80%"></div>
 <p>　右クリック　→　「Save image as &hellip;」を選択　→　保存先を選択</p>
 <p>　といった手順で保存することができます。</p>
-<h4 id="2-2表">2-2　表</h4>
+<h5 id="2-2表">2-2　表</h5>
 <p>　クリップボードを使います。画面のスクリーンショットを撮るか、コンソールへの出力をコピーしてExcelなどでレイアウトを整えます。</p>
-<h4 id="2-3-テキスト">2-3 テキスト</h4>
+<h5 id="2-3-テキスト">2-3 テキスト</h5>
 <p>　コンソールへの出力テキスト(&ldquo;cat()&ldquo;や&quot;summary()&ldquo;による出力)を保存する場合も、表と同じく、クリップボードを使います。画面のスクリーンショットを撮るか、出力をコピーしてExcelなどでレイアウトを整えます。</p>
-<h3 id="3-スクリプトで保存する方法">3 スクリプトで保存する方法</h3>
-<h4 id="3-1-グラフ">3-1 グラフ</h4>
+<h4 id="3-スクリプトで保存する方法">3 スクリプトで保存する方法</h4>
+<h5 id="3-1-グラフ">3-1 グラフ</h5>
 <p>　グラフをpng画像に直接出力するためには、以下のような記述が使えます。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -233,7 +246,7 @@ y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><
 </code></pre></td></tr></table>
 </div>
 </div><div style="text-align: center"><img src="/images/sub/imgrpng/graph2x2.png"  style="width:80%"></div>
-<h4 id="3-2表">3-2　表</h4>
+<h5 id="3-2表">3-2　表</h5>
 <p>　この&quot;png()&ldquo;関数は、出力先を置き換えるものであると説明しましたが、より正確には、RStudioGDでグラフィックデバイスを開くものです。つまり、グラフィックデバイスにグラフを描画する&quot;plot()&ldquo;などは&quot;png()&ldquo;関数でpng画像の出力が可能ですが、&ldquo;print()&ldquo;や&quot;cat()&ldquo;を使った出力は、上記の方法ではサポートされないということです。<br>
 　しかし、逆に、グラフィックデバイスに出力するように設定することで、大抵の出力をpng画像として保存することができます。</p>
 <p>　tableやdataframeなどの表示も、デフォルトではグラフィックデバイスに出力されないため、上記の方法ではpng画像の出力ができませんが、以下のような方法でグラフィックデバイスに出力するようにすると、png画像としての保存ができます。</p>
@@ -296,7 +309,7 @@ my.data <span style="color:#f92672">&lt;-</span> gridExtra<span style="color:#f9
 <span style="color:#a6e22e">grid.draw</span>(my.data)
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="3-3-テキスト">3-3 テキスト</h4>
+</div><h5 id="3-3-テキスト">3-3 テキスト</h5>
 <p>　以上のような方法で、強引にグラフィックデバイスに出力すると、コンソールへの出力テキストもpng画像として直接保存できます。<br>
 　まず、コンソール出力を部分的に取得するために、&ldquo;sink()&ldquo;関数を使って、コンソール出力をテキストファイルに書き込みます。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -380,8 +393,8 @@ height <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</s
 <span style="color:#a6e22e">dev.off</span>()
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="4-使用例">4 使用例</h3>
-<h4 id="4-1-グラフの例">4-1 グラフの例</h4>
+</div><h4 id="4-使用例">4 使用例</h4>
+<h5 id="4-1-グラフの例">4-1 グラフの例</h5>
 <p>　データ「Arthritis」の全ての項目の単純集計結果をグラフとして保存。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -422,7 +435,7 @@ tmp <span style="color:#f92672">&lt;-</span> Arthritis[,<span style="color:#a6e2
 </div><p>　図1の結果</p>
 <div style="text-align: center"><img src="/images/sub/imgrpng/graph1.png"  style="width:80%"></div>
 <p>　Wordに貼る場合、図表番号はWrod側で自動割り当てしてくれるので、Rで図に題名を付けておく理由はあまりないかもしれません。</p>
-<h4 id="4-2-表の例">4-2 表の例</h4>
+<h5 id="4-2-表の例">4-2 表の例</h5>
 <p>　データ「Arthritis」の全ての項目の単純集計結果を表として保存。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -553,7 +566,7 @@ tmp <span style="color:#f92672">&lt;-</span> Arthritis[,<span style="color:#a6e2
 </div><p>　表1の結果</p>
 <div style="text-align: center"><img src="/images/sub/imgrpng/table1.png"  style="width:80%"></div>
 <p>　日本語文の質問の選択肢など、長いファクター名は見切れたり、重なったりする可能性があります。そのため、適度に改行コードを加えるなどして調整することが必要です。例では、指定文字数ごとに改行コードを挟む処理を行っています。</p>
-<h3 id="4-3-テキストの例">4-3 テキストの例</h3>
+<h4 id="4-3-テキストの例">4-3 テキストの例</h4>
 <p>　データ「mtcars」を使った適当な線形回帰分析の結果をpng画像に保存。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -621,7 +634,7 @@ height <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</s
 </div>
 </div><div style="text-align: center"><img src="/images/sub/imgrpng/hoge.png"  style="width:80%"></div>
 <p>　Rstudioの出力と見比べると、微妙にずれています。調整すると大丈夫そうですが、面倒なのでテキストはGUIから保存する方がいいかもしれません。</p>
-<h3 id="5-参考">5 参考</h3>
+<h4 id="5-参考">5 参考</h4>
 <p>　&ldquo;R で描いたグラフを PNG や PDF に保存する方法&rdquo;<br>
 <a href="https://stats.biopapyrus.jp/r/graph/imagedevice.html">link</a></p>
 <p>　&ldquo;RDocumentation&rdquo;<br>
