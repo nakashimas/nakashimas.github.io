@@ -5,7 +5,8 @@ type: projects
 description: "Artifical Music Composer"
 image: "images/widgets/piano_1748x1181.PNG"
 category: ["BOT", "ML", "SNS"]
-project_images: []
+images: []
+docs_images: []
 authors: 
     nakashimas:
         name: "nakashimas"
@@ -21,15 +22,16 @@ authors:
         url: "https://twitter.com/nasneco"
 ---
 
-### 概要
+#### 概要
 
 自動作曲bot「茄子ねこ」は、茄子ねこ（@nasneco）に成り代わって作曲したり、呟いたりするTwitter botです。
 
 <div style="text-align:center"><img src="/images/sub/nasnecobot/profile.png" style="width:80%"></div>
+<br>
 
 [Twitterアカウント(@cc_99_ff) >](https://twitter.com/cc_99_ff)
 
-### 機能
+#### 機能
 
 このbotの主な機能は以下の三点です。
 
@@ -43,18 +45,20 @@ authors:
 
 なお、広告系アカウント、スパムアカウントはフォローを返さない場合があります。
 
-### 稼働状況
+#### 稼働状況
 
+<br>
 <div style="text-align:center;">
     <a class="twitter-timeline" data-width="320" data-height="400" data-chrome="transparent nofooter" data-link-color="#ff8080" href="https://twitter.com/cc_99_ff?ref_src=twsrc%5Etfw">
         Tweets by cc_99_ff
     </a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+<br>
 
-### 使用方法
+#### 使用方法
 
-#### 楽曲生成依頼
+##### 楽曲生成依頼
 
 botに対してリプライを送ることによって、楽曲生成を依頼することができます。  
 生成された楽曲は、依頼主に対する動画付きのリプライで返されます。
@@ -68,22 +72,22 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 また、旋律の要件に応じて、オプションが指定できます。  
 詳しくは、[楽曲生成依頼についてのページ](/article/nasnecobot/nasnecobot_generation)を参照してください。
 
-### 投稿内容の扱い、及び利用上の注意
+#### 投稿内容の扱い、及び利用上の注意
 
-#### 説明
+##### 説明
 
 このbotの文章の投稿は、他のTwitterユーザーの投稿から独自に収集したデータと、MCMCによって生成しています。  
 また、楽曲の投稿は、開発者が選んだ著作権保護期間が終了したピアノ独奏曲と、茄子ねこ（@nasneco）の楽曲から生成しています。  
 
-#### 責任
+##### 責任
 
 万一、このbotの投稿及びシステムが損害を発生させた場合には、理由の如何にかかわらず、管理者及び開発者は保証をせず、また、一切の責任を負いません。  
 
-#### 管理
+##### 管理
 
 投稿内容は、ある程度制御が可能です。そのため、投稿内容に権利侵害や、不適切な内容があれば、下記のお問い合わせ先までご連絡ください。管理者及び開発者の判断により、なるべく修正いたしまします。あるいは、管理者の判断により、指定された投稿の削除を行います。
 
-### お問い合わせ
+#### お問い合わせ
 
 以下のような内容で、管理者及び開発者にお問い合わせされる場合は、本サイトの[「CONTACTS」](/contacts/)からフォームにメッセージを送信してください。返信が必要な方は、「EMAIL ADDRESS」の項目にメールアドレスを記載してください。  
 
@@ -93,7 +97,7 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 - 質問
 - 開発への参加
 
-### 近況
+#### 近況
 
 2020/09/19 BOTの動作を管理する機能を改善しました。 
 
@@ -109,13 +113,13 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 2019/10/24 稼働を一時止めました。  
 2019/10/12 楽曲投稿を始めました。  
 
-### 改修予定
+#### 改修予定
 
 楽曲生成モデルの大幅改善
 
 その他マイナーチェンジ
 
-### 質問に対する回答
+#### 質問に対する回答
 
 まだ質問はありません
 

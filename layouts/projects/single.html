@@ -1,20 +1,30 @@
 
 {{ define "main" }}
   <section class="site-hero-sustain"><div></div></section>
+  <section class="site-project-single-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single-header-content">
+            <h1>
+              {{ .Title | safeHTML }}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="site-project-single-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="site-project-single">
-            <h1>
-              {{ .Title }}
-            </h1>
             <div class="site-project-single-description">
               {{ .Content }}
               {{ partial "authors.html" . }}
             </div>
             <div class="site-project-single-image">
-              {{ range .Params.project_images }}
+              {{ range .Params.docs_images }}
               <img src="{{ . | absURL }}" alt="project image">
               {{ end }}
             </div>
