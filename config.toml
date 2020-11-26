@@ -52,8 +52,9 @@ disableKinds  = ["RSS", "sitemap"]
     weight  = 4
 [params]
   logo = "images/icon/favicon.PNG"
-  dateFormat = "26 FEB 1994"
-  description = "my site"
+  images = []
+  dateFormat = "FEB 18, 2020"
+  description = "Here, we publish the README, DOCUMENTS, etc. of the contents we have made."
   author = "nakashimas"
 
   [params.banner]
