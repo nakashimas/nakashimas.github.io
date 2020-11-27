@@ -60,7 +60,7 @@ disableKinds  = ["RSS", "sitemap"]
   [params.banner]
     enable                = true
     title                 = "INFO <span style='bottom: 1px; position:relative'>:</span>"
-    subtitle              = ""
+    subtitle              = "README, DOCS, DEMO, etc."
     primary_button        = "PROJECTS"
     primary_button_url    = "projects"
 

@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Montserrat:300,400,500,600,700&display=swap');
 
+
+
 .site-hero{
   position: relative;
   height: 100vh;
@@ -14,8 +16,12 @@
     height: auto;
     padding: 200px 0;
   }
+  @include desktop-lg{
+    height: 100vh;
+    padding: 150px 0;
+  }
   @include mobile{
-    height: 90vh;
+    height: 100vh;
     padding: 150px 0;
   }
   &-sustain{
@@ -42,48 +48,58 @@
     }
   }
   &-content{
+    @include mobile{
+      margin-top: 150px;
+    }
+    @include desktop-lg{
+      margin-top: 150px;
+    }
     h1{
-      font-family: 'Elsie Swash Caps', 'Montserrat', 'Segoe UI', sans-serif;
+      // font-family: 'Elsie Swash Caps', 'Montserrat', 'Segoe UI', sans-serif;
       font-size: 128px;
-      color: #A19490;
-      text-shadow: 0 8px 9px $black, 0px -2px 1px $white;
+      color: white;
+      mix-blend-mode: multiply;
+      text-shadow: 
+        7px 11px 0 $black, 
+        6px 10px 0 $black,
+        5px  9px 0 $black, 
+        4px  8px 0 $black, 
+        3px  7px 0 $black, 
+        2px  6px 0 $black, 
+        1px  5px 0 $black;
       font-weight: 900;
+      animation: fadeIn 2.5s linear forwards;
       letter-spacing: -4px;
       border-radius: 20px;
       padding-top: 92px;
+      &::selection {
+        background: transparent;
+      }
       span{
         // ":"の位置調整
         bottom: 12px !important;
+        &::selection {
+          background: transparent;
+        }
       }
       @include desktop-lg{
         font-size: 92px;
-        color: #A19490;
-        text-shadow: 0 8px 9px $black, 0px -2px 1px $white;
-        font-weight: 900;
         letter-spacing: -4px;
-        border-radius: 20px;
-        padding-top: 0px;
-        span{
-          bottom: 8px !important;
-        }
-      }
-      @include mobile{
-        font-size: 92px;
-        color: #A19490;
-        text-shadow: 0 8px 9px $black, 0px -2px 1px $white;
-        font-weight: 900;
-        letter-spacing: -4px;
-        border-radius: 20px;
         padding-top: 0px;
         span{
           bottom: 8px !important;
         }
       }
     }
-    h6{
-      margin-bottom: 75px;
+    h5{
+      color: $primary-color;
+      opacity: 0.7;
+      margin-bottom: 18vh;
+      &::selection {
+        display: none;
+      }
       @include desktop-lg{
-        margin-bottom: 150px;
+        margin-bottom: 18vh;
       }
     }
     &-buttons{
