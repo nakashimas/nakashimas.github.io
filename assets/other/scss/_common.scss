@@ -118,3 +118,56 @@ div.highlight{
 .twitter-mention-button{
   width: 200px !important;
 }
+
+.table-of-contents{
+  details{
+    summary{
+      outline:none;
+    }
+    ul{
+      list-style: none;
+      table-layout: auto;
+      display: flex;
+      align-items: left !important;
+      -webkit-align-items: left !important;
+      justify-content: flex-start !important;
+      -webkit-justify-content: flex-start !important;
+      flex-direction: column;
+      margin: 0;
+      margin-left: 0px;
+      margin-right: auto;
+      padding: 20px 0 0 0;
+      ul{
+        padding: 0;
+        margin-left: 50px;
+        @include mobile{
+          margin-left: 25px;
+        }
+        li{
+          a{
+            overflow: hidden !important;
+            font-size: 0.8rem;
+          }
+        }
+      }
+      li{
+        text-align: left;
+        float: left;
+        margin: 0;
+        padding: 0;
+        span.tree{
+          &-branch{
+            position: relative;
+            top: 2px;
+          }
+        }
+        a{
+          overflow: hidden !important;
+          padding: 8px 45px 8px 45px;
+          transition: all .3s ease;
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
