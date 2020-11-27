@@ -10,7 +10,7 @@ authors:
         url: "https://github.com/nakashimas"
 ---
 
-### ABOUT THIS WEBSITE
+#### ABOUT THIS WEBSITE
 
 こんにちは !
 
@@ -25,19 +25,19 @@ authors:
 
 <a href="https://github.com/nakashimas/nakashimas.github.io" class="site-project-cta" style="margin-top: 0px;">MORE <span style="bottom: 1px; position:relative">:</span></a>
 
-### ABOUT PROJECTS
+#### ABOUT PROJECTS
 
 <span class='blockable'><a href="/projects">PROJECTS</a>では、</span>
-<span class='blockable'>作ったものの紹介や、説明書を公開しています。</span>
+<span class='blockable'>作ったものの紹介や、説明書を</span><span class='blockable'>公開しています。</span>
 
 
 
 <a href="/projects" class="site-project-cta" style="margin-top: 0px;">MORE <span style="bottom: 1px; position:relative">:</span></a>
 
-### ABOUT ARTICLE
+#### ABOUT ARTICLE
 
 <span class='blockable'><a href="/article">ARTICLE</a>では、</span>
-<span class='blockable'>作ったもののDemoや、コラムなどを公開しています。</span>
+<span class='blockable'>作ったもののDemoや、コラムなどを</span><span class='blockable'>公開しています。</span>
 
 
 <a href="/article" class="site-project-cta" style="margin-top: 0px;">MORE <span style="bottom: 1px; position:relative">:</span></a>

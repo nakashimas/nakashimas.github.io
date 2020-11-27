@@ -6,7 +6,8 @@ type                : article
 description         : "description"
 image               : "images/widgets/note_1748x1181.PNG"
 category            : ["NEW-ARTICLE"]
-project_images      : []
+images              : []
+docs_images         : []
 authors: 
     author1: 
         name        : "author1"

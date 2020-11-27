@@ -2,11 +2,12 @@
 title               : "{{ replace .Name "-" " " | title }}"
 date                : {{ .Date }}
 draft               : true
-type                : article
+type                : projects
 description         : "description"
 image               : "images/widgets/note_1748x1181.PNG"
-category            : ["NEW-ARTICLE"]
-project_images      : []
+category            : ["NEW-PROJECT"]
+images              : []
+docs_images         : []
 authors: 
     author1: 
         name        : "author1"

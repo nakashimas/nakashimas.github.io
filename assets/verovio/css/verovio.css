@@ -1,12 +1,14 @@
 @media screen and (min-width:0px){
   .verovio-content{
-    border: 1px solid #ffefef;
-    min-height: 800px;
+    display: block;
+    margin: 0 !important;
+    width: 100%;
+    min-height: 512px;
   }
   .vrv-ui-wrapper .vrv-ui-toolbar {
     width: 100%;
     overflow: auto;
-    background: #ff8080;
+    background-color: #ff8080;
     min-height: 36px;
   }
 }

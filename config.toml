@@ -109,7 +109,7 @@ disableKinds  = ["RSS", "sitemap"]
           url  = "https://discord.com/invite/"
       [[params.footer.social.link]]
           name = "Instagram"
-          url  = "https://instagram.com"
+          url  = "https://www.instagram.com/naka.shima.s/"
     [params.footer.license]
       title        = "LICENSE"
       description  = "<span class='blockable'>copylight (c) 2020,</span> <span class='blockable'>nakashimas.github.io</span> <span class='blockable'>authors.</span>"

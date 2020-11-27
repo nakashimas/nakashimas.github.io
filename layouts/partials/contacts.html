@@ -11,13 +11,15 @@
         {{ end }}
       </div>
       <div class="col-lg-12 col-md-10 mx-auto">
-        <ul class="table-responsive follow-me">
-          {{ with .Site.Params.footer.social }}
-            {{ range .link }}
-              <li><a href="{{ .url }}"></a></li>
+        <div class="follow-me-container">
+          <ul class="follow-me">
+            {{ with .Site.Params.footer.social }}
+              {{ range .link }}
+                <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer"></a></li>
+              {{ end }}
             {{ end }}
-          {{ end }}
-        </ul>
+          </ul>
+        </div>
       </div>
       <div class="col-12 text-center text-lg-left">
         <a href="/contacts" class="site-aboutus-cta">MORE <span style="bottom: 1px; position:relative">:</span></a>
