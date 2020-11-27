@@ -72,8 +72,8 @@ png(filename = "graph.png", width = 500, height = 500)
 # ---------------------------------------------------------------->
 x <- 1:10
 y <- 1:10
-# 描画
-plot(x, y)
+# 描画　
+　plot(x, y)
 # ---------------------------------------------------------------->
 # pngを解放
 dev.off()
@@ -91,8 +91,8 @@ png(filename = "graph.png", width = 500, height = 500)
 par(mfrow = c(2,2))
 x <- 1:10
 y <- 1:10
-# 描画
-plot(x, y)
+# 描画　
+　plot(x, y)
 plot(x, y)
 plot(x, y)
 plot(x, y)
@@ -208,8 +208,8 @@ tmp <- Arthritis[,c(2,3,5)]
 for (i in colnames(tmp)) {
   png(filename = paste(c(counts,".png"), collapse = ""), width = 500, height = 500)
   # -------------------------------------------------------------->
-  # 描画
-  my.data <- table(tmp[,i])
+  # 描画　
+　  my.data <- table(tmp[,i])
   barplot(my.data, main = paste(c("図", as.character(counts), ": ", as.character(i)), collapse = ""))
   # -------------------------------------------------------------->
   # pngを解放

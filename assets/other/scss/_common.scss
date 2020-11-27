@@ -145,7 +145,6 @@ div.highlight{
         }
         li{
           a{
-            overflow: hidden !important;
             font-size: 0.8rem;
           }
         }
@@ -162,8 +161,7 @@ div.highlight{
           }
         }
         a{
-          overflow: hidden !important;
-          padding: 8px 45px 8px 45px;
+          padding: 8px 32px 8px 32px;
           transition: all .3s ease;
           color: $text-color;
         }
