@@ -48,14 +48,13 @@
     }
   }
   &-content{
-    @include mobile{
-      margin-top: 150px;
-    }
     @include desktop-lg{
-      margin-top: 150px;
+      margin-top: 16vh;
+    }
+    @include mobile{
+      margin-top: 8vh;
     }
     h1{
-      // font-family: 'Elsie Swash Caps', 'Montserrat', 'Segoe UI', sans-serif;
       font-size: 128px;
       color: white;
       mix-blend-mode: multiply;
@@ -92,7 +91,7 @@
       }
     }
     h5{
-      color: $primary-color;
+      color: $secondary-color;
       opacity: 0.7;
       margin-bottom: 18vh;
       &::selection {
