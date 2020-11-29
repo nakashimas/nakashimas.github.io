@@ -2,6 +2,7 @@
 title: "CROCUS"
 date: 2019-12-23T20:56:42+06:00
 type: projects
+draft               : true
 description: "Music analysis tool"
 image: "images/widgets/note_1748x1181.PNG"
 category: ["CLOSED"]
