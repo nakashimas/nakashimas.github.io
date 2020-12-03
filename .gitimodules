@@ -1,4 +1,4 @@
 [submodule "docs"]
     path = docs
-    url = https://github.com/nakashimas/nakashimas.github.io
+    url = https://github.com/nakashimas/nakashimas.github.io.git
     branch = gh-pages
