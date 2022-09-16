@@ -107,15 +107,19 @@ footer .line{
 article .line.line-left{
     &>div{
         .container-ribbon{
+            height: 100%;
             width: 0px;
             right: 0%;
             border-left: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            border-bottom: 0px solid var(--bs-dark);
         }
     }
     &.line-show{
         &>div{
             .container-ribbon{
                 width: var(--container-ribbon-weight-show);
+                height: calc(100% + var(--grid-gutter) * 2);
+                border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
             }
         }
     }
@@ -131,15 +135,19 @@ article .line.line-left{
 article .line.line-right{
     &>div{
         .container-ribbon{
+            height: 100%;
             width: 0px;
             left: 0%;
             border-right: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            border-bottom: 0px solid var(--bs-dark);
         }
     }
     &.line-show{
         &>div{
             .container-ribbon{
                 width: calc(var(--container-ribbon-weight) * 4);
+                height: calc(100% + var(--grid-gutter) * 2);
+                border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
             }
         }
     }

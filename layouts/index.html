@@ -27,14 +27,20 @@
         {{ end }}
 
         <div class="bg-light">
-            <div class="container-title">
+            <div class="container-content bg-light">
                 <h2>{{ .Title }}</h2>
-                <span>{{ delimit .Params.category ", " }}</span>
-            </div>
-            <div class="container-content">
+                <p>
+                    <h2></h2>
+                    {{ delimit .Params.category ", " }}
+                </p>
+                {{/*  {{ partial "context/toc.html" . }}  */}}
                 {{ .Content }}
             </div>
-            <div class="container-ribbon bg-light h-100">
+            <div class="container-title">
+                <h1>{{ .Title }}</h1>
+            </div>
+            <div class='container-ribbon'>
+                <div class="ribbon-icons bg-light"></div>
             </div>
         </div>
         

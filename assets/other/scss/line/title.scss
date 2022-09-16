@@ -13,7 +13,7 @@
         overflow: hidden;
         transition: all 0.2s ease-in-out 0.2s;
         &>svg{
-            fill: var(--bs-dark);
+            fill: var(--bs-gray);
             width: calc(var(--container-line-y-weight) * 0.5);
             height: calc(var(--container-line-y-weight) * 0.5);
             position: absolute;
@@ -24,6 +24,7 @@
             font-size: 25vw;
             font-family: var(--bs-font-monospace) !important;
             color: var(--bs-gray);
+            white-space: nowrap;
             transition: var(--title-text-transition), color 0.2s ease-in-out 0.2s;
         }
     }
@@ -50,9 +51,14 @@
             fill: var(--bs-dark);
             left: calc(var(--container-line-x-weight) / 2 - var(--grid-gutter));
         }
+        &>h1{
+            color: var(--bs-dark);
+        }
     }
-    
-    &.length-1:not(.length-overwrite-6):not(.line-show), &.length-overwrite-1:not(.line-show){
+}
+
+footer, header{
+    .length-1:not(.length-overwrite-6):not(.line-show), .length-overwrite-1:not(.line-show){
         .container-title{
             &>h1{
                 font-size: 0px;
@@ -97,7 +103,6 @@ header .line-show .container-title>h1, header .length-overwrite-6 .container-tit
     height: auto !important;
     padding-right: calc(var(--container-line-y-weight) - var(--container-ribbon-weight));
     padding-left: calc(var(--container-ribbon-weight-show) + var(--grid-gutter) * 2);
-    color: var(--bs-dark);
     transition: var(--title-text-transition), color 0.6s ease-in-out 0.2s;
 }
 
@@ -106,6 +111,5 @@ footer .line-show .container-title>h1{
     height: auto !important;
     padding-right: calc(var(--grid-gutter) * 2);
     padding-left: calc(var(--container-ribbon-weight-show) + var(--grid-gutter) * 2);
-    color: var(--bs-dark);
     transition: var(--title-text-transition), color 0.6s ease-in-out 0.2s;
 }
