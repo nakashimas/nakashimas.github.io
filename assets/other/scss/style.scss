@@ -1,23 +1,24 @@
-@import "variables";
+@charset "utf-8";
+@import "mixin.scss";
+@import "line/line.scss";
+@import "line/navigation.scss";
+@import "line/ribbon.scss";
+@import "line/title.scss";
 
-@import "typography";
+#portfolio-background{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+    padding-top: 50%;
+    &>h1{
+        color: #f8f9fa;
+    }
+}
 
-@import "mixins";
-
-@import "buttons";
-
-@import "common";
-
-@import "components/navigation";
-
-@import "components/heroimages";
-
-@import "components/aboutus";
-
-@import "components/blocks";
-
-@import "components/project";
-
-@import "components/contacts";
-
-@import "components/footer";
+.container-content{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

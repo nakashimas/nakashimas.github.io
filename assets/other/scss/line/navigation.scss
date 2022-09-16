@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@for $i from 1 through 6 {
+    #navigation-items .length-overwrite-#{$i}{
+        transition: all 0.2s ease-in-out 0.4s;
+    }
+}
+
+#navigation-button{
+    overflow: hidden;
+    position: relative;
+    
+    .icon-bar{
+        display: block;
+        transition: 
+            width 0.2s ease-in-out 0.2s,
+            margin-left 0.2s ease-in-out 0.2s;
+        &:nth-child(1){
+            transition: all 0.2s ease-in-out 0.2s;
+        }
+    }
+    
+    &.navigation-button-collapsed{
+        .icon-bar{
+            width: 100%;
+            height: calc(var(--container-ribbon-weight) - var(--grid-gutter) / 8);
+
+            &:not(:last-child){
+                border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            }            
+        }
+    }
+
+    &:not(.navigation-button-collapsed){
+        .icon-bar{
+            width: 100%;
+
+            &:nth-child(1){
+                position: absolute;
+                transform-origin: top left;
+                width: var(--navigation-width);
+                top: 0;
+                left: 0;
+                height: 0;
+                border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+                transform: rotate(var(--navigation-deg));
+                transition: all 0.2s ease-in-out 0.2s, width 0.3s ease-in-out 0.2s;
+            }
+
+            &:nth-child(2){
+                position: absolute;
+                transform-origin: top right;
+                width: var(--navigation-width);
+                top: 0;
+                right: 0;
+                height: 0;
+                border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+                transform: rotate(calc(0deg - var(--navigation-deg)));
+                transition: all 0.2s ease-in-out 0.2s, width 0.3s ease-in-out 0.2s;
+            }
+
+            &:not(:nth-child(1)):not(:nth-child(2)){
+                position: relative;
+                width: 0;
+                height: calc(var(--container-ribbon-weight) - var(--grid-gutter) / 8);
+                margin-left: 50%;
+                border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            }
+
+            &:nth-child(3){
+                height: calc(var(--container-ribbon-weight) * 3 - var(--grid-gutter) / 8 * 3) !important;
+            }
+        }
+    }
+}

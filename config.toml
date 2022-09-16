@@ -57,61 +57,8 @@ disableKinds  = ["RSS", "sitemap"]
   description = "Here, we publish the README, DOCUMENTS, etc. of the contents we have made."
   author = "nakashimas"
 
-  [params.banner]
-    enable                = true
-    title                 = "INFO <span style='bottom: 1px; position:relative'>:</span>"
-    subtitle              = "README, DOCS, DEMO, etc."
-    primary_button        = "PROJECTS"
-    primary_button_url    = "projects"
-
-  [params.aboutus]
-    enable                = true
-    title                 = "ABOUT"
-    subtitle              = "このサイトについて"
-    description_en        = ""
-    description           = "<span class='blockable'>ここでは、作ったコンテンツの</span><span class='blockable'>Readmeや、</span><span class='blockable'>Documentsなどを</span><span class='blockable'>公開しています。</span>"
-  
-  [params.projects]
-    enable    = true
-    title     = "PROJECTS"
-    subtitle  = "作ったりしたもの"
-    boximage  = ""
-
-  [params.contacts]
-    enable    = true
-    title     = "CONTACTS"
-    subtitle  = "連絡がつくところ"
-    boximage  = ""
-  
-  [params.footer]
-    # Footer Contact Info
-    [params.footer.sitemap]
-        title   = "SITEMAP"
-        [[params.footer.sitemap.link]]
-            name = "HOME"
-            url  = ""
-        [[params.footer.sitemap.link]]
-            name = "PROJECTS"
-            url  = "projects"
-        [[params.footer.sitemap.link]]
-            name = "ARTICLE"
-            url  = "article"
-    [params.footer.social]
-      title   = "CONTACT"
-      [[params.footer.social.link]]
-          name = "GitHub"
-          url  = "https://github.com/nakashimas"
-      [[params.footer.social.link]]
-          name = "Twitter"
-          url  = "https://twitter.com/na_s_p"
-      [[params.footer.social.link]]
-          name = "Discord"
-          url  = "https://discord.com/invite/"
-      [[params.footer.social.link]]
-          name = "Instagram"
-          url  = "https://www.instagram.com/naka.shima.s/"
-    [params.footer.license]
-      title        = "LICENSE"
-      description  = "<span class='blockable'>copylight (c) 2020,</span> <span class='blockable'>nakashimas.github.io</span> <span class='blockable'>authors.</span>"
+  [params.main]
+    data_content_length = ["1223122311", "2233222223"]
+    data_navigation_length = ["231223", "131111"]
 
 
