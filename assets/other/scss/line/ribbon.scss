@@ -6,6 +6,38 @@
             position: absolute;
             padding: 0%;
             transition: all 0.2s ease-in-out 0.2s;
+            
+            .ribbon-icons{
+                align-content: flex-end;
+                vertical-align: bottom;
+                width: 100%;
+                height: 100%;
+                background-color: var(--bs-light);
+                
+                &>div{
+                    width: 0%;
+                    height: auto;
+                    position: absolute;
+                    top: auto;
+                    bottom: 0px;
+                    overflow: visible;
+                    transition: all 0.2s ease-in-out 0.2s;
+
+                    .ribbon-icon{
+                        position: relative;
+                        display: block;
+                        padding-left: 10%;
+                        padding-right: 10%;
+                        padding-bottom: 10%;
+                        width: 100%;
+                        height: auto;
+                        
+                        svg{
+                            fill: var(--bs-dark);
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -13,6 +45,26 @@
         &>div{
             .container-ribbon{
                 border: 0px solid var(--bs-dark) !important;
+
+                &>div{
+                    width: 0%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    &.line-show{
+        &>div{
+            .container-ribbon{
+                .ribbon-icons{
+                    background-color: inherit;
+                    
+                    &>div{
+                        width: 100%;
+                        overflow: visible;
+                    }
+                }
             }
         }
     }

@@ -280,7 +280,7 @@ window.addEventListener('load', async function() {
             await changePage(page);
             if(searchParams.has('content')){
                 const lines = getCurrentPage().children;
-                const num = parseInt(searchParams.get('content'));
+                const num = parseInt(searchParams.get('content')) - 1;
                 if(lines.length > num){
                     await toggleShow(lines[num]);
                 }
