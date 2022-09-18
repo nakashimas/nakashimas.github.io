@@ -25,9 +25,10 @@ disableKinds  = ["RSS", "sitemap"]
     lineAnchors = ""
     lineNoStart = 1
     lineNos = true
+    noClasses = false
+    pygmentsUseClasses = true
+    pygmentsCodefences = true
     lineNumbersInTable = true
-    noClasses = true
-    style = "monokai"
     tabWidth = 4
 [menu]
   [[menu.nav]]
@@ -58,7 +59,7 @@ disableKinds  = ["RSS", "sitemap"]
   author = "nakashimas"
 
   [params.main]
-    data_content_length = ["1223122311", "2233222223"]
-    data_navigation_length = ["231223", "131111"]
+    data_content_length = ["1223122311", "2211111111"]
+    data_navigation_length = ["231223", "132445"]
 
 
