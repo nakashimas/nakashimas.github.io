@@ -20,6 +20,7 @@
     --bs-dark: #212529;
     --bs-light: #f8f9fa;
     --bs-gray: #dee2e6;
+    --bs-danger: #dc3545;
     --container-line-x-count: 5;
     --container-line-y-count: 7;
     --container-line-x-weight: calc(100vw / var(--container-line-x-count));
@@ -37,10 +38,12 @@
         --bs-dark: #f8f9fa;
         --bs-light: #212529;
         --bs-gray: #343a40;
+        --bs-danger: #ffc107;
     }
 }
 
 html, body {
+    color: var(--bs-dark);
     height: 100%;
     margin: 0;
 }
