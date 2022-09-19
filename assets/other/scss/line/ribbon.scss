@@ -1,6 +1,35 @@
 @charset "utf-8";
 
 .line{
+    &.line-x>div .container-ribbon .ribbon-icons{
+        align-content: flex-end;
+        vertical-align: top;
+
+        div{
+            width: 0%;
+            height: 0%;
+            .ribbon-icon{
+                width: 0%;
+                height: 0%;
+            }
+        }
+    }
+    &.line-y>div .container-ribbon .ribbon-icons{
+        align-content: flex-end;
+        vertical-align: bottom;
+
+        div{
+            width: 0%;
+            height: 0%;
+            transform-origin: bottom left ;
+            transform: rotate(90deg) translate(-95%, 0);
+            .ribbon-icon{
+                width: 0%;
+                height: 0%;
+            }
+        }
+    }
+    
     &>div{
         .container-ribbon{
             position: absolute;
@@ -8,15 +37,11 @@
             transition: all 0.2s ease-in-out 0.2s;
             
             .ribbon-icons{
-                align-content: flex-end;
-                vertical-align: bottom;
                 width: 100%;
                 height: 100%;
                 background-color: var(--bs-light);
                 
                 &>div{
-                    width: 0%;
-                    height: auto;
                     position: absolute;
                     top: auto;
                     bottom: 0px;
@@ -29,8 +54,7 @@
                         padding-left: 10%;
                         padding-right: 10%;
                         padding-bottom: 10%;
-                        width: 100%;
-                        height: auto;
+                        transition: all 0.2s ease-in-out 0.2s;
                         
                         svg{
                             fill: var(--bs-dark);
@@ -45,9 +69,22 @@
         &>div{
             .container-ribbon{
                 border: 0px solid var(--bs-dark) !important;
-
-                &>div{
-                    width: 0%;
+            }
+        }
+        &.line-x{
+            div{
+                .ribbon-icons{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                }
+            }
+        }
+        &.line-y{
+            div{
+                .ribbon-icons{
+                    width: 100%;
+                    height: 100%;
                     overflow: hidden;
                 }
             }
@@ -59,11 +96,26 @@
             .container-ribbon{
                 .ribbon-icons{
                     background-color: inherit;
-                    
-                    &>div{
-                        width: 100%;
-                        overflow: visible;
-                    }
+                }
+            }
+        }
+        &.line-x>div .container-ribbon .ribbon-icons{
+            div{
+                width: var(--container-ribbon-weight-show);
+                height: auto;
+                .ribbon-icon{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        &.line-y>div .container-ribbon .ribbon-icons{
+            div{
+                width: var(--container-ribbon-weight-show);
+                height: auto;
+                .ribbon-icon{
+                    width: auto;
+                    height: 100%;
                 }
             }
         }
