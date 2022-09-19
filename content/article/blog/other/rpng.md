@@ -18,38 +18,38 @@ authors:
 
 #### 1 はじめに
 
-　このページはR言語でいろいろな出力をpng形式で保存する方法のメモです。png形式以外にも、jpegやpdf、bitmapで保存できますが、簡単のためpng形式のみを記録します。  
-　もっと良い方法が分かった場合、追記、修正します。
+このページはR言語でいろいろな出力をpng形式で保存する方法のメモです。png形式以外にも、jpegやpdf、bitmapで保存できますが、簡単のためpng形式のみを記録します。  
+もっと良い方法が分かった場合、追記、修正します。
 
-　R version 3.6.2 (2019-12-12)
+R version 3.6.2 (2019-12-12)
 
 #### 2 GUIで保存する方法
 
 ##### 2-1 グラフ
 
-　Rstudioの場合、表示されたグラフを右クリックすることで、画像を保存する選択肢を表示できます。
+Rstudioの場合、表示されたグラフを右クリックすることで、画像を保存する選択肢を表示できます。
 
 <div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng1.png"  style="width:80%"></div>
 
 <div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng2.png"  style="width:80%"></div>
 
-　右クリック　→　「Save image as ...」を選択　→　保存先を選択
+右クリック　→　「Save image as ...」を選択　→　保存先を選択
 
-　といった手順で保存することができます。
+といった手順で保存することができます。
 
 ##### 2-2　表
 
-　クリップボードを使います。画面のスクリーンショットを撮るか、コンソールへの出力をコピーしてExcelなどでレイアウトを整えます。
+クリップボードを使います。画面のスクリーンショットを撮るか、コンソールへの出力をコピーしてExcelなどでレイアウトを整えます。
 
 ##### 2-3 テキスト
 
-　コンソールへの出力テキスト("cat()"や"summary()"による出力)を保存する場合も、表と同じく、クリップボードを使います。画面のスクリーンショットを撮るか、出力をコピーしてExcelなどでレイアウトを整えます。
+コンソールへの出力テキスト("cat()"や"summary()"による出力)を保存する場合も、表と同じく、クリップボードを使います。画面のスクリーンショットを撮るか、出力をコピーしてExcelなどでレイアウトを整えます。
 
 #### 3 スクリプトで保存する方法
 
 ##### 3-1 グラフ
 
-　グラフをpng画像に直接出力するためには、以下のような記述が使えます。
+グラフをpng画像に直接出力するためには、以下のような記述が使えます。
 
 ```r
 # pngを開く
@@ -63,8 +63,8 @@ png(filename = "graph.png", width = 500, height = 500)
 dev.off()
 ```
 
-　"png()"関数は、出力先を"filename"引数に指定したpng画像（ここでは、「graph.png」）に置き換えるものです。また、"dev.off()"関数は置き換え状態を解除するもので、この関数を末尾に記述しておかないと、後に続く出力命令が全て"filename"引数のpng画像に上書きされます。  
-　例えば、散布図を描画する場合は以下のようになります。
+"png()"関数は、出力先を"filename"引数に指定したpng画像（ここでは、「graph.png」）に置き換えるものです。また、"dev.off()"関数は置き換え状態を解除するもので、この関数を末尾に記述しておかないと、後に続く出力命令が全て"filename"引数のpng画像に上書きされます。  
+例えば、散布図を描画する場合は以下のようになります。
 
 ```r
 # pngを開く
@@ -73,7 +73,7 @@ png(filename = "graph.png", width = 500, height = 500)
 x <- 1:10
 y <- 1:10
 # 描画　
-　plot(x, y)
+plot(x, y)
 # ---------------------------------------------------------------->
 # pngを解放
 dev.off()
@@ -81,7 +81,7 @@ dev.off()
 
 <div style="text-align: center"><img src="/images/sub/imgrpng/graph1x1.png"  style="width:80%"></div>
 
-　また、通常の出力と同様に、"par()"関数を使えば、複数のグラフを一つのpng画像に出力することもできます。
+また、通常の出力と同様に、"par()"関数を使えば、複数のグラフを一つのpng画像に出力することもできます。
 
 ```r
 # pngを開く
@@ -92,7 +92,7 @@ par(mfrow = c(2,2))
 x <- 1:10
 y <- 1:10
 # 描画　
-　plot(x, y)
+plot(x, y)
 plot(x, y)
 plot(x, y)
 plot(x, y)
@@ -105,12 +105,12 @@ dev.off()
 
 ##### 3-2　表
 
-　この"png()"関数は、出力先を置き換えるものであると説明しましたが、より正確には、RStudioGDでグラフィックデバイスを開くものです。つまり、グラフィックデバイスにグラフを描画する"plot()"などは"png()"関数でpng画像の出力が可能ですが、"print()"や"cat()"を使った出力は、上記の方法ではサポートされないということです。  
-　しかし、逆に、グラフィックデバイスに出力するように設定することで、大抵の出力をpng画像として保存することができます。  
+この"png()"関数は、出力先を置き換えるものであると説明しましたが、より正確には、RStudioGDでグラフィックデバイスを開くものです。つまり、グラフィックデバイスにグラフを描画する"plot()"などは"png()"関数でpng画像の出力が可能ですが、"print()"や"cat()"を使った出力は、上記の方法ではサポートされないということです。  
+しかし、逆に、グラフィックデバイスに出力するように設定することで、大抵の出力をpng画像として保存することができます。  
 
-　tableやdataframeなどの表示も、デフォルトではグラフィックデバイスに出力されないため、上記の方法ではpng画像の出力ができませんが、以下のような方法でグラフィックデバイスに出力するようにすると、png画像としての保存ができます。
+tableやdataframeなどの表示も、デフォルトではグラフィックデバイスに出力されないため、上記の方法ではpng画像の出力ができませんが、以下のような方法でグラフィックデバイスに出力するようにすると、png画像としての保存ができます。
 
-　標準ライブラリの「grid」と「gridExtra」を使うため、序盤にロードしておきます。  
+標準ライブラリの「grid」と「gridExtra」を使うため、序盤にロードしておきます。  
 
 ```r
 library(gridExtra)
@@ -135,7 +135,7 @@ dev.off()
 
 <div style="text-align: center"><img src="/images/sub/imgrpng/tablemono.png"  style="width:80%"></div>
 
-　ここでは、表示したいテーブルを"my.table"と定義しています。タイトルなどのテキストも、"grid.text()"関数を用いて以下のように記述できます。
+ここでは、表示したいテーブルを"my.table"と定義しています。タイトルなどのテキストも、"grid.text()"関数を用いて以下のように記述できます。
 
 ```r
 my.title <- "表1: my.dataの集計結果"
@@ -146,8 +146,8 @@ grid.draw(my.data)
 
 ##### 3-3 テキスト
 
-　以上のような方法で、強引にグラフィックデバイスに出力すると、コンソールへの出力テキストもpng画像として直接保存できます。  
-　まず、コンソール出力を部分的に取得するために、"sink()"関数を使って、コンソール出力をテキストファイルに書き込みます。  
+以上のような方法で、強引にグラフィックデバイスに出力すると、コンソールへの出力テキストもpng画像として直接保存できます。  
+まず、コンソール出力を部分的に取得するために、"sink()"関数を使って、コンソール出力をテキストファイルに書き込みます。  
 
 ```r
 # コンソール出力を"mytext.txt"に保存
@@ -160,9 +160,9 @@ sink(file="mytext.txt")
 sink()
 ```
 
-　"sink()"関数は、"png()"関数と同様に、以降の出力を全て対象の出力先に保存してしまいます。そのため、末尾に引数無しの"sink()"関数を記載して、デフォルトの出力先に変更しておきます。  
+"sink()"関数は、"png()"関数と同様に、以降の出力を全て対象の出力先に保存してしまいます。そのため、末尾に引数無しの"sink()"関数を記載して、デフォルトの出力先に変更しておきます。  
 
-　次に、"scan()"関数を使って、保存したテキストファイルを改行コードごとに分けたベクトルを作成します。
+次に、"scan()"関数を使って、保存したテキストファイルを改行コードごとに分けたベクトルを作成します。
 
 ```r
 # コンソール出力を読み込んでベクトルにする
@@ -174,7 +174,7 @@ texts <- scan(file = "mytext.txt", what = character(),
     text, skipNul = FALSE)
 ```
 
-　最後に、グラフィックデバイスを開いて等間隔にテキストを出力します。
+最後に、グラフィックデバイスを開いて等間隔にテキストを出力します。
 
 ```r
 # pngを開く
@@ -198,7 +198,7 @@ dev.off()
 
 ##### 4-1 グラフの例
 
-　データ「Arthritis」の全ての項目の単純集計結果をグラフとして保存。
+データ「Arthritis」の全ての項目の単純集計結果をグラフとして保存。
 
 ```r
 library(vcd)
@@ -209,7 +209,7 @@ for (i in colnames(tmp)) {
   png(filename = paste(c(counts,".png"), collapse = ""), width = 500, height = 500)
   # -------------------------------------------------------------->
   # 描画　
-　  my.data <- table(tmp[,i])
+  my.data <- table(tmp[,i])
   barplot(my.data, main = paste(c("図", as.character(counts), ": ", as.character(i)), collapse = ""))
   # -------------------------------------------------------------->
   # pngを解放
@@ -218,15 +218,15 @@ for (i in colnames(tmp)) {
 }
 ```
 
-　図1の結果
+図1の結果
 
 <div style="text-align: center"><img src="/images/sub/imgrpng/graph1.png"  style="width:80%"></div>
 
-　Wordに貼る場合、図表番号はWrod側で自動割り当てしてくれるので、Rで図に題名を付けておく理由はあまりないかもしれません。
+Wordに貼る場合、図表番号はWrod側で自動割り当てしてくれるので、Rで図に題名を付けておく理由はあまりないかもしれません。
 
 ##### 4-2 表の例
 
-　データ「Arthritis」の全ての項目の単純集計結果を表として保存。
+データ「Arthritis」の全ての項目の単純集計結果を表として保存。
 
 ```r
 library(vcd)
@@ -291,15 +291,15 @@ for (i in 1:length(tmp)) {
 }
 ```
 
-　表1の結果
+表1の結果
 
 <div style="text-align: center"><img src="/images/sub/imgrpng/table1.png"  style="width:80%"></div>
 
-　日本語文の質問の選択肢など、長いファクター名は見切れたり、重なったりする可能性があります。そのため、適度に改行コードを加えるなどして調整することが必要です。例では、指定文字数ごとに改行コードを挟む処理を行っています。
+日本語文の質問の選択肢など、長いファクター名は見切れたり、重なったりする可能性があります。そのため、適度に改行コードを加えるなどして調整することが必要です。例では、指定文字数ごとに改行コードを挟む処理を行っています。
 
 #### 4-3 テキストの例
 
-　データ「mtcars」を使った適当な線形回帰分析の結果をpng画像に保存。
+データ「mtcars」を使った適当な線形回帰分析の結果をpng画像に保存。
 
 ```r
 # コンソール出力を"mytext.txt"に保存
@@ -335,28 +335,28 @@ dev.off()
 
 <div style="text-align: center"><img src="/images/sub/imgrpng/hoge.png"  style="width:80%"></div>
 
-　Rstudioの出力と見比べると、微妙にずれています。調整すると大丈夫そうですが、面倒なのでテキストはGUIから保存する方がいいかもしれません。
+Rstudioの出力と見比べると、微妙にずれています。調整すると大丈夫そうですが、面倒なのでテキストはGUIから保存する方がいいかもしれません。
 
 #### 5 参考
 
-　"R で描いたグラフを PNG や PDF に保存する方法"  
+"R で描いたグラフを PNG や PDF に保存する方法"  
 [link](https://stats.biopapyrus.jp/r/graph/imagedevice.html)
 
-　"RDocumentation"  
-　"png function"  
+"RDocumentation"  
+"png function"  
 [link](https://www.rdocumentation.org/packages/grDevices/versions/3.4.1/topics/png)  
-　"sink function"  
+"sink function"  
 [link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sink)  
-　"scan function"  
+"scan function"  
 [link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/scan)  
-　"grid package"  
+"grid package"  
 [link](https://www.rdocumentation.org/packages/grid/versions/3.6.2)  
-　"gridExtra package"  
+"gridExtra package"  
 [link](https://www.rdocumentation.org/packages/gridExtra/versions/2.3)
 
-　"R List of Graphical Devices"  
+"R List of Graphical Devices"  
 [link](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html)
 
-　"How to do in R: load an image file, print text on image, save modified image"  
+"How to do in R: load an image file, print text on image, save modified image"  
 [link](https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image)
 

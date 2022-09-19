@@ -1,7 +1,7 @@
 ---
 title: "NASNECO BOT"
 date: 2019-12-23T20:56:42+06:00
-type: projects
+type: article
 description: "Artifical Music Composer"
 image: "images/widgets/piano_1748x1181.PNG"
 category: ["BOT", "ML", "SNS"]
@@ -23,16 +23,15 @@ authors:
 ---
 
 #### 概要　
-　
+
 自動作曲bot「茄子ねこ」は、茄子ねこ（@nasneco）に成り代わって作曲したり、呟いたりするTwitter botです。
 
 <div style="text-align:center"><img src="/images/sub/nasnecobot/profile.png" style="width:80%"></div>
-<br>
 
 [Twitterアカウント(@cc_99_ff) >](https://twitter.com/cc_99_ff)
 
 #### 機能　
-　
+
 このbotの主な機能は以下の三点です。
 
 - 文章の投稿
@@ -48,8 +47,8 @@ authors:
 #### 稼働状況
 
 <br>
-<div style="text-align:center;">
-    <a class="twitter-timeline" data-width="320" data-height="400" data-chrome="transparent nofooter" data-link-color="#ff8080" href="https://twitter.com/cc_99_ff?ref_src=twsrc%5Etfw">
+<div>
+    <a class="twitter-timeline" data-width="512" data-height="800" data-chrome="transparent nofooter" data-link-color="#ff8080" href="https://twitter.com/cc_99_ff?ref_src=twsrc%5Etfw">
         Tweets by cc_99_ff
     </a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -75,16 +74,16 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 #### 投稿内容の扱い、及び利用上の注意
 
 ##### 説明　
-　
+
 このbotの文章の投稿は、他のTwitterユーザーの投稿から独自に収集したデータと、MCMCによって生成しています。  
 また、楽曲の投稿は、開発者が選んだ著作権保護期間が終了したピアノ独奏曲と、茄子ねこ（@nasneco）の楽曲から生成しています。  
 
 ##### 責任　
-　
+
 万一、このbotの投稿及びシステムが損害を発生させた場合には、理由の如何にかかわらず、管理者及び開発者は保証をせず、また、一切の責任を負いません。  
 
 ##### 管理　
-　
+
 投稿内容は、ある程度制御が可能です。そのため、投稿内容に権利侵害や、不適切な内容があれば、下記のお問い合わせ先までご連絡ください。管理者及び開発者の判断により、なるべく修正いたしまします。あるいは、管理者の判断により、指定された投稿の削除を行います。
 
 #### お問い合わせ
@@ -98,7 +97,7 @@ botに対してリプライを送ることによって、楽曲生成を依頼�
 - 開発への参加
 
 #### 近況　
-　
+
 2020/09/19 BOTの動作を管理する機能を改善しました。 
 
 過去の大幅な変更
