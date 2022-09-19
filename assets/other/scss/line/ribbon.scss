@@ -13,6 +13,10 @@
                 height: 0%;
             }
         }
+        .icons-top{
+            top: 25vw;
+            bottom: auto;
+        }
     }
     &.line-y>div .container-ribbon .ribbon-icons{
         align-content: flex-end;
@@ -28,6 +32,16 @@
                 height: 0%;
             }
         }
+        .icons-top{
+            top: 0px;
+            bottom: auto;
+            left: auto;
+            right: 0px;
+        }
+        .icons-bottom{
+            left: 0px;
+            right: auto;
+        }
     }
     
     &>div{
@@ -35,6 +49,7 @@
             position: absolute;
             padding: 0%;
             transition: all 0.2s ease-in-out 0.2s;
+            pointer-events: auto !important; // さわるな
             
             .ribbon-icons{
                 width: 100%;
@@ -43,8 +58,6 @@
                 
                 &>div{
                     position: absolute;
-                    top: auto;
-                    bottom: 0px;
                     overflow: visible;
                     transition: all 0.2s ease-in-out 0.2s;
 
@@ -60,6 +73,11 @@
                             fill: var(--bs-dark);
                         }
                     }
+                }
+
+                .icons-bottom{
+                    top: auto;
+                    bottom: 0px;
                 }
             }
         }
@@ -249,7 +267,7 @@ article .line.line-right{
     &.line-show{
         &>div{
             .container-ribbon{
-                width: calc(var(--container-ribbon-weight) * 4);
+                width: var(--container-ribbon-weight-show);
                 height: calc(100% + var(--grid-gutter) * 2);
                 border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
             }

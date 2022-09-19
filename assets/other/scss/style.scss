@@ -26,6 +26,7 @@
         overflow: hidden scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        pointer-events: auto !important;
     }
 
     &.line-show .scroll::-webkit-scrollbar{
@@ -94,7 +95,7 @@
             color 0.2s ease-in-out 0.6s;
         
         *{
-            pointer-events: all;
+            pointer-events: auto !important;
         }
 
         h2, h3, h4, h5, h6, img, table, .highlight{
@@ -127,7 +128,6 @@ footer, header{
     }
 
     .line-show .container-content{
-        margin-top: calc(var(--container-ribbon-weight-show) + 1rem) !important;
         padding-left: 18vw;
     }
 
@@ -137,6 +137,16 @@ footer, header{
         overflow: hidden;
         transition: all 0.2s ease-in-out 0.6s;
     }
+}
+
+footer .line-show .container-content{
+    margin-top: calc(var(--container-ribbon-weight-show) + 1rem) !important;
+    padding-left: 15vw !important;
+}
+
+header .line-show .container-content{
+    margin-top: calc(var(--container-line-y-weight) / 4) !important;
+    padding-left: 15vw !important;
 }
 
 #contacts-form{
@@ -155,14 +165,18 @@ footer, header{
     }
 }
 
-@media screen and (min-width:512px){
+@media screen and (min-width:900px){
     .line{
         &.line-show .scroll{
             padding-left: 3%;
             .container-content{
-                padding-left: 15%;
-                width: 75%;
+                padding-left: 10%;
+                width: 80%;
             }
         }
     }
+}
+
+.card{
+    border-color: var(--bs-dark);
 }

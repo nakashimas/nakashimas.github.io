@@ -1,7 +1,7 @@
 ---
 title: "HATONOKAI BOT"
 date: 2019-12-23T20:56:42+06:00
-type: article
+type: work
 description: "Our discord bot"
 image: "images/widgets/note_1748x1181.PNG"
 category: ["BOT", "DISCORD"]

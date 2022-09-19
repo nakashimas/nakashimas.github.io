@@ -1,7 +1,7 @@
 ---
 title: "BOT GENERATOR"
 date: 2019-12-23T20:56:42+06:00
-type: article
+type: blog
 description: "Generate music using CLI on SNS"
 image: "images/widgets/note_1748x1181.PNG"
 category: ["BOT", "ABC-NOTATION", "CLI"]

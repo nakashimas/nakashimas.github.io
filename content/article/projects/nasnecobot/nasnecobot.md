@@ -1,7 +1,7 @@
 ---
 title: "NASNECO BOT"
 date: 2019-12-23T20:56:42+06:00
-type: article
+type: work
 description: "Artifical Music Composer"
 image: "images/widgets/piano_1748x1181.PNG"
 category: ["BOT", "ML", "SNS"]

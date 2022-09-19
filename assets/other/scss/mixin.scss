@@ -21,14 +21,18 @@
     --bs-light: #f8f9fa;
     --bs-gray: #dee2e6;
     --bs-danger: #dc3545;
+
     --container-line-x-count: 5;
     --container-line-y-count: 7;
     --container-line-x-weight: calc(100vw / var(--container-line-x-count));
     --container-line-y-weight: calc(var(--vh, 100vh) / var(--container-line-y-count));
+    
     --container-hidden-weight: 1.5rem;
     --container-ribbon-weight: calc(var(--container-line-y-weight) / 8);
     --container-ribbon-weight-show: calc(var(--container-hidden-weight) * 2);
+    
     --grid-gutter: 0.125rem;
+    
     --bs-font-monospace: Megrim,"Noto Sans",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --bs-gradient: "Noto Sans",Roboto,system-ui,-apple-system,"Segoe UI","Helvetica Neue",Arial,"Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }

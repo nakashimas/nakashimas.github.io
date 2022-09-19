@@ -35,10 +35,7 @@
         {{ end }}
 
         <div class="bg-light">
-            <div class="scroll">
-                <div class="container-title">
-                    <h1>{{ .Title }}</h1>
-                </div>
+            <div class="scroll" onclick="event.stopPropagation()">
                 <div class="container-content">
                     <h2>{{ .Title }}</h2>
                     <p>
@@ -47,6 +44,9 @@
                     {{/*  {{ partial "context/toc.html" . }}  */}}
                     {{ .Content }}
                 </div>
+            </div>
+            <div class="container-title">
+                <h1>{{ .Title }}</h1>
             </div>
             <div class='container-ribbon'>
                 <div class="ribbon-icons">
@@ -71,14 +71,14 @@
                 {{ end }}
 
                 <div class="bg-light">
-                    <div class="scroll">
-                        <div class="container-title">
-                            <h1></h1>
-                        </div>
+                    <div class="scroll" onclick="event.stopPropagation()">
                         <div class="container-content">
                             <h2></h2>
                             <p></p>
                         </div>
+                    </div>
+                    <div class="container-title">
+                        <h1></h1>
                     </div>
                     <div class='container-ribbon'>
                         <div class="ribbon-icons"><div></div></div>

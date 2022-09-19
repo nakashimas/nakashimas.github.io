@@ -1,12 +1,13 @@
 @charset "utf-8";
 
 .line{
+    display: inline-block;
     position: absolute;
     transition: all 0.2s ease-in-out 0.2s;
     width: calc(var(--container-line-x-weight));
     height: calc(var(--container-line-y-weight));
     padding: var(--grid-gutter);
-    pointer-events: all !important;
+    pointer-events: none;
     
     &>div{
         overflow: hidden;
@@ -16,9 +17,12 @@
     }
 }
 
+.line:not(.line-show):not(.line-hidden){
+    pointer-events: auto;
+}
+
 .line-hidden{
     transition: all 0.2s ease-in-out 0.2s;
-    pointer-events: none !important;
     
     &.line-x{
         width: var(--container-hidden-weight) !important;
@@ -127,7 +131,6 @@
         width: calc(var(--container-line-x-weight) * var(--container-line-x-count));
         height: calc(var(--container-line-y-weight) * var(--container-line-y-count));
         padding: calc(var(--container-hidden-weight) + var(--grid-gutter));
-        pointer-events: none;
     }
     &.line-top{
         left: 0 !important;

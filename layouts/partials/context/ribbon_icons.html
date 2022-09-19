@@ -1,5 +1,16 @@
-<div>
-    {{ $content_url := .content_url}}
+
+{{ $content_url := .content_url}}
+
+<div class="icons-top">
+    {{/*  Twitter  */}}
+    {{printf "<a class='ribbon-icon'>" | safeHTML }}
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+    </svg>
+    </a>
+</div>
+<div class="icons-bottom" onclick="event.stopPropagation()">
     {{/*  Twitter  */}}
     {{printf "<a class='ribbon-icon' href='https://twitter.com/intent/tweet?url=%[1]s' target='_blank' rel='noopener norefferer'>" $content_url | safeHTML }}
     <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-twitter" viewBox="0 0 16 16">
