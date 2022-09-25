@@ -1,4 +1,20 @@
 @charset "utf-8";
+
+@media screen and (min-width:0px){
+    .line .container-title h1{
+        width: 45vh;
+        font-size: 25vw;
+    }
+}
+
+@media screen and (min-width:830px){
+    main .line .container-title h1{
+        width: 45vw;
+        font-size: 16vh;
+        transform: translate(0, -12.5%);
+    }
+}
+
 .line{
     .container-title{
         --title-text-transition: 
@@ -20,8 +36,6 @@
             transition: all 0.2s ease-in-out 0.2s;
         }
         &>h1{
-            width: 45vh;
-            font-size: 25vw;
             font-family: var(--bs-font-monospace) !important;
             color: var(--bs-gray);
             white-space: nowrap;

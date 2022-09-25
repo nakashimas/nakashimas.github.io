@@ -1,5 +1,9 @@
 
 /* Background */ 
+.highlight{
+    margin-bottom: 1rem;
+}
+
 .highlight, .highlight>*, code{
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
@@ -91,3 +95,17 @@
 /* GenericTraceback */ .chroma .gt {  }
 /* GenericUnderline */ .chroma .gl {  }
 /* TextWhitespace */ .chroma .w {  }
+
+pre{
+    padding: 0px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+pre::-webkit-scrollbar{
+    display: none;
+}
+
+.highlight td.lntd{
+    padding-right: 0.5em !important;
+}
