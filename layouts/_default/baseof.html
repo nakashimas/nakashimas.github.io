@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
     {{- partial "context/head.html" . -}}
+    {{ printf "<!--" | safeHTML }}
+    {{ printf "* ============================================================ *" | safeHTML }}
+    {{ printf "* | \\ | |     | |           | |   (_)                          *" | safeHTML }}
+    {{ printf "* |  \\| | __ _| | ____ _ ___| |__  _ _ __ ___   __ _ ___       *" | safeHTML }}
+    {{ printf "* | . ` |/ _` | |/ / _` / __| '_ \\| | '_ ` _ \\ / _` / __|      *" | safeHTML }}
+    {{ printf "* | |\\  | (_| |   < (_| \\__ \\ | | | | | | | | | (_| \\__ \\      *" | safeHTML }}
+    {{ printf "* |_| \\_|\\__,_|_|\\_\\__,_|___/_| |_|_|_| |_| |_|\\__,_|___/      *" | safeHTML }}
+    {{ printf "*  / ____(_) | | |  | |     | |    (_)                         *" | safeHTML }}
+    {{ printf "* | |  __ _| |_| |__| |_   _| |__   _  ___                     *" | safeHTML }}
+    {{ printf "* | | |_ | | __|  __  | | | | '_ \\ | |/ _ \\                    *" | safeHTML }}
+    {{ printf "* | |__| | | |_| |  | | |_| | |_) || | (_) |                   *" | safeHTML }}
+    {{ printf "*  \\_____|_|\\__|_|  |_|\\__,_|_.__(_)_|\\___/                    *" | safeHTML }}
+    {{ printf "* ============================================================ *" | safeHTML }}
+    {{ printf "-->" | safeHTML }}
     <body class="bg-dark">
         {{- partial "header/header.html" . -}}
         <main id="main" data-page-number="1">

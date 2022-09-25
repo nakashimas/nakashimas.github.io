@@ -6,6 +6,7 @@ summarylength = 32
 contentDir    = "content"
 assetDir      = "assets"
 publishDir    = "docs"
+canonifyurls  = true
 disableKinds  = ["RSS", "sitemap"]
 
 
