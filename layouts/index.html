@@ -1,11 +1,100 @@
 {{ define "main" }}
+    {{ partial "hero/hero.html" . }}
 
-{{ partial "heroimage.html" . }}
+    {{ $pages := $.Site.RegularPages }}
+    {{ $first_page := 2 }}
+    {{ $line_counts := 10 }}
+    {{ $page_counts := len $pages }}
 
-{{ partial "aboutus.html" . }}
+    {{ range $index, $page := $pages}}
+        {{/*  線のカウント  */}}
+        {{$line_num := add (mod $index $line_counts) 1}}
+        {{$line_num_string := string $line_num}}
+        {{$page_num := add (div (sub $index (mod $index $line_counts)) $line_counts) $first_page}}
+        {{$page_num_string := string $page_num}}
 
-{{ partial "projects.html" . }}
+        {{/*  長さの取得  */}}
+        {{$data_content_length := index .Site.Params.main.data_content_length (sub $page_num $first_page)}}
+        {{$data_navigation_length := index .Site.Params.main.data_navigation_length (sub $page_num $first_page)}}
 
-{{ partial "contacts.html" . }}
+        {{/*  URLの定義  */}}
+        {{$content_url := printf "https://nakashimas.github.io/?page=%[1]s%[2]scontent=%[3]s" $page_num_string "%26" $line_num_string}}
 
+        {{/*  開始タグ  */}}
+        {{if eq (mod $index $line_counts) 0}}
+            {{printf "<article id='page-%[1]s' class='h-100 w-100 bg-dark' data-content-length='%[2]s' data-navigation-length='%[3]s'>" $page_num_string $data_content_length $data_navigation_length | safeHTML }}
+        {{ end }}
+        
+        {{if le ($line_num) (div $line_counts 2)}}
+            {{ "<!-- left line -->" | safeHTML }}
+            {{printf "<div class='line line-x line-%[1]s line-%[1]s-%[2]s length-1 line-hidden' onclick='toggleShow(this)'>" "left" $line_num_string | safeHTML }}
+        {{ else }}
+            {{ "<!-- right line -->" | safeHTML }}
+            {{$new_line_num := string (sub (add $line_num 1) (div $line_counts 2))}}
+            {{printf "<div class='line line-x line-%[1]s line-%[1]s-%[2]s length-1 line-hidden' onclick='toggleShow(this)'>" "right" $new_line_num | safeHTML }}
+        {{ end }}
+
+        <div class="bg-light">
+            <div class="scroll" onclick="event.stopPropagation()">
+                <div class="container-content">
+                    <h2>{{ .Title }}</h2>
+                    <p>
+                        {{ delimit .Params.category ", " }}
+                    </p>
+                    {{/*  {{ partial "context/toc.html" . }}  */}}
+                    {{ .Content }}
+                    {{ partial "footer/contentfooter" . }}
+                </div>
+            </div>
+            <div class="container-title">
+                <h1>{{ .Title }}</h1>
+            </div>
+            <div class='container-ribbon'>
+                <div class="ribbon-icons">
+                    {{ partial "context/ribbon_icons.html" (dict "content_url" $content_url) }}
+                </div>
+            </div>
+        </div>
+        
+        {{printf "</div>" | safeHTML }}
+
+        {{if and (eq $index (sub (len $pages) 1)) (lt (mod $index $line_counts) (sub $line_counts 1))}}
+            {{range $val := seq (sub (sub $line_counts (mod $index $line_counts)) 1)}}
+                {{$dummy_line_num := add $line_num $val}}
+                {{$dummy_line_num_string := string $dummy_line_num}}
+
+                {{if le ($dummy_line_num) (div $line_counts 2)}}
+                    {{printf "<div class='line line-x line-%[1]s line-%[1]s-%[2]s length-1 line-hidden' onclick='changePage(%[3]s)'>" "left" $dummy_line_num_string $page_num_string | safeHTML }}
+                {{ else }}
+                    {{ "<!-- right line -->" | safeHTML }}
+                    {{$new_dummy_line_num := string (sub (add $dummy_line_num 1) (div $line_counts 2))}}
+                    {{printf "<div class='line line-x line-%[1]s line-%[1]s-%[2]s length-1 line-hidden' onclick='changePage(%[3]s)'>" "right" $new_dummy_line_num $page_num_string | safeHTML }}
+                {{ end }}
+
+                <div class="bg-light">
+                    <div class="scroll" onclick="event.stopPropagation()">
+                        <div class="container-content">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="container-title">
+                        <h1></h1>
+                    </div>
+                    <div class='container-ribbon'>
+                        <div class="ribbon-icons"><div></div></div>
+                    </div>
+                </div>
+                
+                {{printf "</div>" | safeHTML }}
+            {{ end }}
+            {{printf "</article>" | safeHTML }}
+        {{ end }}
+        {{/*  終了タグ  */}}
+        {{if eq (mod $index $line_counts) (sub $line_counts 1)}}
+            {{printf "</article>" | safeHTML }}
+        {{ end }}
+    {{ end }}
+
+    {{ partial "portfolio/portfolio.html" . }}
 {{ end }}

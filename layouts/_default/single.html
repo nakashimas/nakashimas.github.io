@@ -1,3 +1,27 @@
 {{ define "main" }}
 
+{{ $target_title := .Title }}
+{{ $pages := $.Site.RegularPages }}
+{{ $first_page := 2 }}
+{{ $line_counts := 10 }}
+{{ $page_counts := len $pages }}
+{{ range $index, $page := $pages}}
+    {{$line_num := add (mod $index $line_counts) 1}}
+    {{$line_num_string := string $line_num}}
+    {{$page_num := add (div (sub $index (mod $index $line_counts)) $line_counts) $first_page}}
+    {{$page_num_string := string $page_num}}
+
+    {{/*  長さの取得  */}}
+    {{$data_content_length := index .Site.Params.main.data_content_length (sub $page_num $first_page)}}
+    {{$data_navigation_length := index .Site.Params.main.data_navigation_length (sub $page_num $first_page)}}
+
+    {{/*  URLの定義  */}}
+    {{ if eq $target_title $page.Title}}
+        {{ $content_url := printf "/?page=%[1]s&content=%[2]s" $page_num_string $line_num_string }}
+        <script>
+            window.onload = setTimeout("location.href='{{ $content_url }}'", 0)
+        </script>
+    {{ end }}
+{{ end }}
+
 {{ end }}

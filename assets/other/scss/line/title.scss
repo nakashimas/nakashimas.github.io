@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+@media screen and (min-width:0px){
+    .line .container-title h1{
+        width: 45vh;
+        font-size: 25vw;
+    }
+}
+
+@media screen and (min-width:830px){
+    main .line .container-title h1{
+        width: 45vw;
+        font-size: 16vh;
+        transform: translate(0, -12.5%);
+    }
+}
+
+.line{
+    .container-title{
+        --title-text-transition: 
+            width 0.2s ease-in-out 0.2s, 
+            height 0.2s ease-in-out 0.2s, 
+            padding 0.2s ease-in-out 0.2s, 
+            text-align 0.2s ease-in-out 0.2s, 
+            font-size 0.2s ease-in-out 0.2s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out 0.2s;
+        &>svg{
+            fill: var(--bs-gray);
+            width: calc(var(--container-line-y-weight) * 0.5);
+            height: calc(var(--container-line-y-weight) * 0.5);
+            position: absolute;
+            transition: all 0.2s ease-in-out 0.2s;
+        }
+        &>h1{
+            font-family: var(--bs-font-monospace) !important;
+            color: var(--bs-gray);
+            white-space: nowrap;
+            transition: var(--title-text-transition), color 0.2s ease-in-out 0.2s;
+        }
+    }
+
+    &.line-right .container-title h1{
+        padding-left: 1rem;
+    }
+    
+    &.line-hidden .container-title{
+        width: 0px !important;
+        height: 0px !important;
+        &>svg{
+            left: 100%;
+            width: 0px;
+            height: 0px;
+        }
+        &>h1{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    &.line-show .container-title{
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        &>svg{
+            fill: var(--bs-dark);
+            left: calc(var(--container-line-x-weight) / 2 - var(--grid-gutter));
+        }
+        &>h1{
+            color: var(--bs-dark);
+        }
+    }
+}
+
+footer, header{
+    .length-1:not(.length-overwrite-6):not(.line-show), .length-overwrite-1:not(.line-show){
+        .container-title{
+            &>h1{
+                font-size: 0px;
+            }
+        }
+    }
+}
+
+footer .container-title>svg{
+    top: calc(100% - var(--container-line-y-weight) / 2);
+    bottom: auto;
+    left: calc(var(--container-line-x-weight) / 2 - var(--grid-gutter));
+    right: auto;
+    transform: translate(-50%, 0%) translate(0, -50%);
+}
+
+header .container-title>svg{
+    top: calc(var(--container-line-y-weight) / 2);
+    bottom: auto;
+    left: calc(var(--container-line-x-weight) / 2 - var(--grid-gutter));
+    right: auto;
+    transform: translate(-50%, 0%) translate(0, -50%);
+}
+
+header .container-title>h1{
+    text-align: right;
+    padding-right: calc(var(--grid-gutter) * 2);
+    padding-left: calc(var(--container-ribbon-weight) / 2 + var(--grid-gutter) * 2);
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-100%, -18%);
+}
+
+footer .container-title>h1{
+    padding-right: calc(var(--grid-gutter) * 2);
+    padding-left: calc(var(--container-ribbon-weight) / 2 + var(--grid-gutter) * 2);
+    transform-origin: top left;
+    transform: rotate(90deg) translate(0, -80%);
+}
+
+header .line-show .container-title>h1, header .length-overwrite-6 .container-title>h1{
+    width: 94vh !important;
+    height: auto !important;
+    padding-right: calc(var(--container-line-y-weight) - var(--container-ribbon-weight));
+    padding-left: calc(var(--container-ribbon-weight-show) + var(--grid-gutter) * 2);
+    transition: var(--title-text-transition), color 0.6s ease-in-out 0.2s;
+}
+
+footer .line-show .container-title>h1{
+    width: 94vh !important;
+    height: auto !important;
+    padding-right: calc(var(--grid-gutter) * 2);
+    padding-left: calc(var(--container-ribbon-weight-show) + var(--grid-gutter) * 2);
+    transition: var(--title-text-transition), color 0.6s ease-in-out 0.2s;
+}

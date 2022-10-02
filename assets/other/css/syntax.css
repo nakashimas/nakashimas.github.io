@@ -1,9 +1,17 @@
 
 /* Background */ 
+.highlight{
+    margin-bottom: 1rem;
+}
+
+.highlight, .highlight>*, code{
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
 .chroma {
-    color: #F1F6F1;
-    background-color: #321616;
-    max-height: 400px; /* Change to your desired max height */
+    color: var(--bs-light) !important;
+    background-color: var(--bs-dark) !important;
+    min-height: 32px;
+    max-height: 1024px;
     overflow-y: scroll;
 }
 /* Other */ .chroma .x {  }
@@ -87,3 +95,17 @@
 /* GenericTraceback */ .chroma .gt {  }
 /* GenericUnderline */ .chroma .gl {  }
 /* TextWhitespace */ .chroma .w {  }
+
+pre{
+    padding: 0px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+pre::-webkit-scrollbar{
+    display: none;
+}
+
+.highlight td.lntd{
+    padding-right: 0.5em !important;
+}
