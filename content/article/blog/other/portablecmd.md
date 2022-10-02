@@ -118,5 +118,4 @@ SET HTTPS_PROXY = https://ユーザー名.パスワード@proxy.団体名.ドメ
 
 #### 6 参考
 
-Windowsコマンドプロンプトで認証プロキシを突破する  
-[link](https://qiita.com/hamham/items/cb658f5a8c74f35255be)
+Windowsコマンドプロンプトで認証プロキシを突破する [link](https://qiita.com/hamham/items/cb658f5a8c74f35255be)

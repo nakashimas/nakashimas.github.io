@@ -26,8 +26,8 @@ authors:
 
 本ページでは、自動作曲bot「茄子ねこ」の楽曲生成依頼の詳細について説明します。
 
-楽曲生成依頼の機能については、[楽曲生成依頼についてのページ](/article/nasnecobot/nasnecobot_example/)を参照してください。  
-また、自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](/projects/nasnecobot/nasnecobot/)を参照してください。
+楽曲生成依頼の機能については、[楽曲生成依頼についてのページ](/article/blog/nasnecobot/nasnecobot_generation/)を参照してください。  
+また、自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](/article/project/nasnecobot/nasnecobot/)を参照してください。
 
 #### 実在する楽曲の例
 

@@ -339,24 +339,16 @@ Rstudioの出力と見比べると、微妙にずれています。調整する�
 
 #### 5 参考
 
-"R で描いたグラフを PNG や PDF に保存する方法"  
-[link](https://stats.biopapyrus.jp/r/graph/imagedevice.html)
+"R で描いたグラフを PNG や PDF に保存する方法" [link](https://stats.biopapyrus.jp/r/graph/imagedevice.html)
 
-"RDocumentation"  
-"png function"  
-[link](https://www.rdocumentation.org/packages/grDevices/versions/3.4.1/topics/png)  
-"sink function"  
-[link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sink)  
-"scan function"  
-[link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/scan)  
-"grid package"  
-[link](https://www.rdocumentation.org/packages/grid/versions/3.6.2)  
-"gridExtra package"  
-[link](https://www.rdocumentation.org/packages/gridExtra/versions/2.3)
+"RDocumentation" 
+"png function" [link](https://www.rdocumentation.org/packages/grDevices/versions/3.4.1/topics/png)  
+"sink function" [link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sink)  
+"scan function" [link](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/scan)  
+"grid package" [link](https://www.rdocumentation.org/packages/grid/versions/3.6.2)  
+"gridExtra package" [link](https://www.rdocumentation.org/packages/gridExtra/versions/2.3)
 
-"R List of Graphical Devices"  
-[link](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html)
+"R List of Graphical Devices" [link](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html)
 
-"How to do in R: load an image file, print text on image, save modified image"  
-[link](https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image)
+"How to do in R: load an image file, print text on image, save modified image" [link](https://stackoverflow.com/questions/23807021/how-to-do-in-r-load-an-image-file-print-text-on-image-save-modified-image)
 

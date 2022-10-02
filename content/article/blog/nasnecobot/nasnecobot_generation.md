@@ -26,7 +26,7 @@ authors:
 
 本ページでは、自動作曲bot「茄子ねこ」の楽曲生成依頼の詳細について説明します。
 
-自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](/projects/nasnecobot/nasnecobot/)を参照してください。
+自動作曲bot「茄子ねこ」のその他の機能については、[トップページ](/article/project/nasnecobot/nasnecobot/)を参照してください。
 
 #### 楽曲生成依頼
 
@@ -90,7 +90,7 @@ headerおよびbodyは、それぞれABC曲の曲ヘッダ（情報フィール�
 
 #### 具体例
 
-[楽曲生成依頼の例のページ](https://nakashimas.github.io/docs/works/nasneco_example.html)では、オプション付き楽曲生成依頼の具体例として、いくつかのクラシック音楽を写譜したものや、実際にあった依頼文を紹介しています。  
+[楽曲生成依頼の例のページ](/article/blog/nasnecobot/nasnecobot_example/)では、オプション付き楽曲生成依頼の具体例として、いくつかのクラシック音楽を写譜したものや、実際にあった依頼文を紹介しています。  
 
 #### 使用可能なオプションの各要素
 
