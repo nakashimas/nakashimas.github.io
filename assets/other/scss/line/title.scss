@@ -4,18 +4,11 @@
     .line .container-title h1{
         width: 45vh;
         font-size: 25vw;
+        transform: translate(0, -10%);
     }
 }
 
 @media screen and (min-width:465px){
-    main .line .container-title h1{
-        width: 45vw;
-        font-size: 16vh;
-        transform: translate(0, -24%);
-    }
-}
-
-@media screen and (min-width:830px){
     main .line .container-title h1{
         width: 45vw;
         font-size: 16vh;
