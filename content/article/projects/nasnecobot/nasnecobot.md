@@ -26,7 +26,7 @@ authors:
 
 自動作曲bot「茄子ねこ」は、茄子ねこ（@nasneco）に成り代わって作曲したり、呟いたりするTwitter botです。
 
-<div style="text-align:center"><img src="/images/sub/nasnecobot/profile.png" style="width:80%"></div>
+<div class="image"><img src="/images/sub/nasnecobot/profile.png"></div>
 
 [Twitterアカウント(@cc_99_ff) >](https://twitter.com/cc_99_ff)
 
@@ -47,7 +47,7 @@ authors:
 #### 稼働状況
 
 <br>
-<div>
+<div class="image">
     <a class="twitter-timeline" data-width="512" data-height="800" data-chrome="transparent nofooter" data-link-color="#ff8080" href="https://twitter.com/cc_99_ff?ref_src=twsrc%5Etfw">
         Tweets by cc_99_ff
     </a>

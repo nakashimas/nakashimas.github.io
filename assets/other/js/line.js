@@ -251,8 +251,9 @@ window.addEventListener('load', async function() {
     onWindowResize();
     if(searchParams.has('page')){
         const page = searchParams.get('page');
-        if(page == '99'){
-        }else if(page == '0'){
+        if (page == '99') {
+            await changePage(page);
+        } else if(page == '0') {
             if(searchParams.has('content')){
                 const num = searchParams.get('content');
                 switch(num){
@@ -276,7 +277,7 @@ window.addEventListener('load', async function() {
                         break;
                 }
             }
-        }else{
+        } else {
             await changePage(page);
             if(searchParams.has('content')){
                 const lines = getCurrentPage().children;

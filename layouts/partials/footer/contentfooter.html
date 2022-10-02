@@ -3,7 +3,36 @@
         <div class="col-12">
             <hr/>
         </div>
-        <div class="col-12">
+        {{ if (isset .Params "authors") | and (not (eq .Params.authors "")) }}
+            <div class="col-12 mb-2">
+                <div>
+                    <h2>AUTHORS</h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                {{ range .Params.authors }}
+                    <div class="row mb-3" onclick="location.href='{{ .url }}'">
+                        <div class="col-5 col-md-4 col-xl-2">
+                            <div class="image">
+                                <img src="{{ .icon_image }}" style="border-radius: 50% 50% 50% 50%">
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8 col-xl-10">
+                            <h4 class="mb-1">{{ .name | safeHTML }}</h4>
+                            <div class="text-muted mb-3">{{ .profession | safeHTML }}</div>
+                            <div class="mb-1">{{ .description | safeHTML }}</div>
+                            <div class="mb-1"><a href="{{ .url }}" target="_blank" rel="noopener norefferer">profile</a></div>
+                        </div>
+                    </div>
+                {{ end }}
+                </div>
+            </div>
+            <div class="col-12">
+                <hr/>
+            </div>
+        {{ end }}
+        <div class="col-12 mb-2">
             <div>
                 <h2>MORE...</h2>
             </div>

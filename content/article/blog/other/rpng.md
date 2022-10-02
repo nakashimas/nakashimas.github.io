@@ -29,9 +29,9 @@ R version 3.6.2 (2019-12-12)
 
 Rstudioの場合、表示されたグラフを右クリックすることで、画像を保存する選択肢を表示できます。
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng1.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/saveaspng1.png"></div>
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/saveaspng2.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/saveaspng2.png"></div>
 
 右クリック　→　「Save image as ...」を選択　→　保存先を選択
 
@@ -79,7 +79,7 @@ plot(x, y)
 dev.off()
 ```
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/graph1x1.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/graph1x1.png"></div>
 
 また、通常の出力と同様に、"par()"関数を使えば、複数のグラフを一つのpng画像に出力することもできます。
 
@@ -101,7 +101,7 @@ plot(x, y)
 dev.off()
 ```
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/graph2x2.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/graph2x2.png"></div>
 
 ##### 3-2　表
 
@@ -133,7 +133,7 @@ grid.draw(my.data)
 dev.off()
 ```
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/tablemono.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/tablemono.png"></div>
 
 ここでは、表示したいテーブルを"my.table"と定義しています。タイトルなどのテキストも、"grid.text()"関数を用いて以下のように記述できます。
 
@@ -220,7 +220,7 @@ for (i in colnames(tmp)) {
 
 図1の結果
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/graph1.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/graph1.png"></div>
 
 Wordに貼る場合、図表番号はWrod側で自動割り当てしてくれるので、Rで図に題名を付けておく理由はあまりないかもしれません。
 
@@ -293,7 +293,7 @@ for (i in 1:length(tmp)) {
 
 表1の結果
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/table1.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/table1.png"></div>
 
 日本語文の質問の選択肢など、長いファクター名は見切れたり、重なったりする可能性があります。そのため、適度に改行コードを加えるなどして調整することが必要です。例では、指定文字数ごとに改行コードを挟む処理を行っています。
 
@@ -333,7 +333,7 @@ for (t in rev(texts)) {
 dev.off()
 ```
 
-<div style="text-align: center"><img src="/images/sub/imgrpng/hoge.png"  style="width:80%"></div>
+<div class="image"><img src="/images/sub/imgrpng/hoge.png"></div>
 
 Rstudioの出力と見比べると、微妙にずれています。調整すると大丈夫そうですが、面倒なのでテキストはGUIから保存する方がいいかもしれません。
 

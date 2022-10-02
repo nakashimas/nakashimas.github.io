@@ -43,6 +43,10 @@
         }
     }
 
+    &.line-right .container-title h1{
+        padding-left: 1rem;
+    }
+    
     &.line-hidden .container-title{
         width: 0px !important;
         height: 0px !important;
