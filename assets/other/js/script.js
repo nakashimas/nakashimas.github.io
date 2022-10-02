@@ -1,4 +1,15 @@
 $(document).ready(function() {
+	if( !localStorage.getItem('disp_popup') ) {
+		localStorage.setItem('disp_popup', 'on');
+		$("body").addClass('first-time');
+
+		applyPage(getPage("1"), (elm) => {
+			elm.addEventListener("click", function() {
+				showTutorialAbbr();
+			});
+		});
+	}
+
 	prepareBoxes();
 	VerovioUpdate(true);
 
@@ -130,6 +141,41 @@ function prepareBoxes() {
 			}
 			fullstories[k].parentNode.onkeypress = fullstories[k].parentNode.onclick;
 		}
+	}
+}
+
+async function showTutorial(elm){
+	elm.classList.add('play');
+	buttons.style.display = 'none';
+	pList = new Array();
+	for (i of elm.getElementsByClassName('row')){
+		if (i.classList.contains('parent')) {
+			for (j of pList){
+				j.style.opacity = 0.2;
+			}
+		}
+		if (elm.classList.contains('play')) {
+			i.classList.add("show");
+		}
+		await sleep(2.4);
+		pList.push(i);
+	}
+	await sleep(4.8);
+	closeTutorial(elm);
+}
+
+function closeTutorial(elm){
+	for (i of elm.getElementsByClassName('row')) {
+		i.classList.remove("show");
+	}
+	elm.classList.remove('play');
+}
+
+function showTutorialAbbr(){
+	const tutorial = document.getElementById('site-hero-overlay');
+	if (tutorial.classList.contains('play')) {
+		closeTutorial(tutorial);
+		// チュートリアル中断メッセージを出す場合以下に記述
 	}
 }
 // ------------------------------------------------------------------------>

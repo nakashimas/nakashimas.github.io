@@ -1,0 +1,46 @@
+
+<section class="site-project" id="contacts-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2>MESSAGE FORM</h2>
+                    <p>
+                        <span class='blockable'>メッセージを送信できます。</span>
+                        <span class='blockable text-danger'><strong>*</strong>必須</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12">
+                <!-- google formを変更した場合の変更箇所 -->
+                <!-- action要素を編集する -->
+                <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeeyvjcfFwatkXrav9XfyVhGs-bOUHb_6r4f4iMOBXZE0NAOA/formResponse" target="_self" method="POST" id="mG61Hd">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">NAME <strong class="text-danger">*</strong></label>
+                        <!-- name要素を編集する -->
+                        <input type="text"  class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter your name" name="entry.466368967" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">EMAIL ADDRESS</label>
+                        <!-- name要素を編集する -->
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email" name="entry.40964619">
+                        <small id="emailHelp" class="form-text">
+                            <span class='blockable'>If you need a reply, please be sure to fill out.</span>
+                            <span class='blockable'>(We'll never share your email with anyone else.)</span>
+                        </small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">MESSAGE <strong class="text-danger">*</strong></label>
+                        <!-- name要素を編集する -->
+                        <textarea rows="13" cols="60" type="text"  class="form-control" id="message" aria-describedby="emailHelp" placeholder="Enter your message" name="entry.1904817854" required></textarea>
+                    </div>
+                    <!-- <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="" autocomplete="off" required>
+                        <label class="form-check-label" for="" id="form-message-agree">Check me out</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-dark" id="form-message-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

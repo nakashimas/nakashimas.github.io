@@ -1,0 +1,43 @@
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h2>RECENTLY</h2>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h4>最新記事</h4>
+                        </div>
+                    </div>
+                    {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+                    <a class="col-12 col-sm-6 col-xl-3 mb-2" onclick="location.href='{{ .RelPermalink }}'">{{ .Date.Format "2006/01/02" }} {{ .Title }}</a>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h4>今後の取り組み</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-2">
+                        <div>このサイトの修正作業</div>
+                    </div>
+                    <div class="col-12 mb-2">
+                        <div>予測モデルの作成 1件</div>
+                    </div>
+                    <div class="col-12 mb-2">
+                        <div>クラウドの勉強 習作 1件</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ partial "footer/contentfooter" . }}
+    </div>
+</section>
