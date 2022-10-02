@@ -11,7 +11,7 @@
     main .line .container-title h1{
         width: 45vw;
         font-size: 16vh;
-        transform: translate(0, -25%);
+        transform: translate(0, -24%);
     }
 }
 
@@ -19,7 +19,7 @@
     main .line .container-title h1{
         width: 45vw;
         font-size: 16vh;
-        transform: translate(0, -12.5%);
+        transform: translate(0, -13%);
     }
 }
 
@@ -52,7 +52,7 @@
     }
 
     &.line-right .container-title h1{
-        padding-left: 1em;
+        padding-left: 1rem;
     }
     
     &.line-hidden .container-title{
