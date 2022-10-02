@@ -1,7 +1,7 @@
 ---
 title: "HATONOKAI BOT"
 date: 2019-12-23T20:56:42+06:00
-type: projects
+type: work
 description: "Our discord bot"
 image: "images/widgets/note_1748x1181.PNG"
 category: ["BOT", "DISCORD"]
@@ -117,7 +117,7 @@ GitHubのリポジトリは非公開のため、説明書として、ここに�
 
 例
 
-<div style="text-align:center"><img src="/images/sub/hatonokai/opt_a_file_upload.png" style="width:80%"></div>
+<div class="image"><img src="/images/sub/hatonokai/opt_a_file_upload.png"></div>
 <br>
 
 **乱数を用いて情報を作成する** 

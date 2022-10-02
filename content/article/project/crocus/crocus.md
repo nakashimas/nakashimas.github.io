@@ -1,8 +1,8 @@
 ---
 title: "CROCUS"
 date: 2019-12-23T20:56:42+06:00
-type: projects
-draft               : true
+type: work
+draft: true
 description: "Music analysis tool"
 image: "images/widgets/note_1748x1181.PNG"
 category: ["CLOSED"]
@@ -18,13 +18,13 @@ authors:
 ---
 
 #### 説明　
-　
+
 楽曲分析支援ツール「Crocus」は、古典的楽曲分析をサポートし、趣味などで音楽を扱う人に示唆のあるデータを視覚的に提示します。
 
 [Crocus >](https://github.com/nakashimas/Crocus)
 
 #### 機能　
-　
+
 主な機能は以下の通りです。
 
 - 音のpitchや長さの情報の提示
