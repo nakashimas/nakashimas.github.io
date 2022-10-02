@@ -22,14 +22,14 @@
     z-index: 999;
     .balloon {
         height: auto !important;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: 1em;
+        margin-bottom: 1em;
         &>div:first-child{
             text-align: right !important;
         }
         .image {
             display: inline-block;
-            width: 5rem;
+            width: 5em;
             margin-bottom: 0px !important;
             img{
                 width: 90%;
@@ -45,20 +45,20 @@
         .says {
             display: inline-block;
             position: relative;
-            margin-top: 0.5rem; 
-            margin-left: 1rem;
-            padding: 1rem 0.8rem;
-            border-radius: 0.8rem;
+            margin-top: 0.5em; 
+            margin-left: 1em;
+            padding: 1em 0.8em;
+            border-radius: 0.8em;
             background: var(--bs-dark);
 
             &:after {
                 content: "";
                 display: inline-block;
                 position: absolute;
-                top: 0.8rem; 
-                left: -1.2rem;
-                border: 0.6rem solid transparent;
-                border-right: 1.2rem solid var(--bs-dark);
+                top: 0.8em; 
+                left: -1.2em;
+                border: 0.6em solid transparent;
+                border-right: 1.2em solid var(--bs-dark);
 
                 -webkit-transform: rotate(32deg);
                 transform: rotate(32deg);
@@ -71,12 +71,12 @@
             }
         }
         &.parent{
-            margin-top: 1rem;
-            margin-bottom: -0.5rem;
+            margin-top: 1em;
+            margin-bottom: -0.5em;
         }
         &.child{
-            margin-top: -0.5rem;
-            margin-bottom: -0.5rem;
+            margin-top: -0.5em;
+            margin-bottom: -0.5em;
             .image {
                 visibility: hidden;
             }
@@ -85,9 +85,9 @@
 }
 
 #comments{
-    padding-top: 9.26rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-top: 9.26em;
+    padding-left: 3em;
+    padding-right: 3em;
     height: 100%;
 
     .row:not(.show){
@@ -149,7 +149,7 @@
             height: calc(var(--container-line-y-weight) * 0.5);
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0);
-            box-shadow: -0.1rem 0 2rem var(--bs-danger);
+            box-shadow: -0.1em 0 2em var(--bs-danger);
             transform: translate(-50%, 0%) translate(0, -50%);
 
             svg{

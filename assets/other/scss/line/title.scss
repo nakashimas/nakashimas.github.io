@@ -7,6 +7,14 @@
     }
 }
 
+@media screen and (min-width:465px){
+    main .line .container-title h1{
+        width: 45vw;
+        font-size: 16vh;
+        transform: translate(0, -25%);
+    }
+}
+
 @media screen and (min-width:830px){
     main .line .container-title h1{
         width: 45vw;
@@ -44,7 +52,7 @@
     }
 
     &.line-right .container-title h1{
-        padding-left: 1rem;
+        padding-left: 1em;
     }
     
     &.line-hidden .container-title{

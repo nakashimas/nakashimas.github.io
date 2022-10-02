@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+@media screen and (min-width:830px){
+    .line-x>div .container-ribbon .ribbon-icons{
+        top: 25vw;
+        bottom: auto;
+    }
+}
+
 .line{
     &.line-x>div .container-ribbon .ribbon-icons{
         align-content: flex-end;
