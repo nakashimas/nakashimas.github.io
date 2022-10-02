@@ -118,6 +118,35 @@ footer, header{
     }
 }
 
-header .line-show .container-title>h1{
+header .line-show .container-title>h1, header .length-overwrite-6 .container-title>h1{
     padding-left: var(--container-line-y-weight);
+}
+
+@media screen and (min-width:0px){
+    footer{
+        .line-show .container-title>h1{
+            padding-left: calc(var(--container-ribbon-weight) + var(--grid-gutter) * 4);
+        }
+    }
+}
+
+@media screen and (min-width:465px){
+    footer{
+        .line-show .container-title>h1{
+            padding-left: calc(var(--container-ribbon-weight) + var(--grid-gutter));
+        }
+    }
+    header{
+        .line-show .container-title>h1{
+            padding-left: calc(var(--container-ribbon-weight) + var(--grid-gutter) * 3);
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+    header{
+        .line-show .container-title>h1{
+            padding-left: 0;
+        }
+    }
 }
