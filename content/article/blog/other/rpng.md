@@ -2,6 +2,7 @@
 title: "PNG ON R LANG"
 date: 2019-12-23T20:56:42+06:00
 type: blog
+draft: true
 description: "To management PNG output on R Studio"
 image: "images/widgets/note_1748x1181.PNG"
 category: ["R-STUDIO", "PNG", "GRAPHIC-DEVICES"]

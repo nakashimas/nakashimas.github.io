@@ -2,6 +2,7 @@
 title: "PORTABLE CMD"
 date: 2019-12-23T20:56:42+06:00
 type: blog
+draft: true
 description: "Console settings of http / https proxy"
 image: "images/widgets/note_1748x1181.PNG"
 category: ["HTTPS-PROXY", "WINDOWS-CONSOLE"]
