@@ -29,7 +29,9 @@ authors:
 
 #### Usage
 
-このBOTのメインの機能は、Pythonによって作成されたスクリプトファイルで構成されています。
+[Instagram](https://instagram.com/abs.tragram?igshid=OGQ5ZDc2ODk2ZA==)にて稼働の様子を確認できます。
+
+また、このBOTのメインの機能は、Pythonによって作成されたスクリプトファイルで構成されています。
 従って、Pythonライブラリとして扱うこともできます。
 
 for pip install :
