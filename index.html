@@ -214,6 +214,32 @@
                     </div>
                 
             
+                
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                
+                
+                    <div class="col-12 col-sm-6 col-xl-3" onclick="location.href='\/?page=2\u0026content=2'">
+                        <div class="card w-100 mb-2 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">ABSTRAGRAM</h5>
+                                <h6 class="card-subtitle mb-2">BOT, INSTAGRAM</h6>
+                                <p class="card-text">Our discord bot</p>
+                                <a class="card-link" href="https://nakashimas.github.io/?page=2&amp;content=2">show details ...</a>
+                            </div>
+                        </div>
+                    </div>
+                
+            
         </div>
         <div class="content-footer mt-3">
     <div class="row">
@@ -314,6 +340,21 @@
         
 
         <div class="row">
+            
+                
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                
+                
             
                 
                 
@@ -1123,8 +1164,8 @@
                         </div>
                         <div class="col-7 col-md-8 col-xl-10">
                             <h4 class="mb-1">nakashimas</h4>
-                            <div class="text-muted mb-3">student</div>
-                            <div class="mb-1">京都の学生です。</div>
+                            <div class="text-muted mb-3">programmer</div>
+                            <div class="mb-1">大阪のUX愛好家</div>
                             <div class="mb-1"><a href="https://github.com/nakashimas" target="_blank" rel="noopener norefferer">profile</a></div>
                         </div>
                     </div>
@@ -1137,7 +1178,7 @@
                         </div>
                         <div class="col-7 col-md-8 col-xl-10">
                             <h4 class="mb-1"><span class='blockable'>ramu-ne</span></h4>
-                            <div class="text-muted mb-3">student</div>
+                            <div class="text-muted mb-3">programmer</div>
                             <div class="mb-1"></div>
                             <div class="mb-1"><a href="https://github.com/ramune2332" target="_blank" rel="noopener norefferer">profile</a></div>
                         </div>
@@ -1219,30 +1260,179 @@
         </div>
 
         
-            
-                
-                
+        
+        
+    
+        
+        
+        
+        
+        
 
-                
-                    <div class='line line-x line-left line-left-2 length-1 line-hidden' onclick='changePage(2)'>
-                
+        
+        
+        
 
-                <div class="bg-light">
-                    <div class="scroll" onclick="event.stopPropagation()">
-                        <div class="container-content">
-                            <h2></h2>
-                            <p></p>
+        
+        
+
+        
+        
+        
+        
+            <!-- left line -->
+            <div class='line line-x line-left line-left-2 length-1 line-hidden' onclick='toggleShow(this)'>
+        
+
+        <div class="bg-light">
+            <div class="scroll" onclick="event.stopPropagation()">
+                <div class="container-content">
+                    <h2>ABSTRAGRAM</h2>
+                    <p>
+                        BOT, INSTAGRAM
+                    </p>
+                    
+                    <h4 id="description">Description</h4>
+<p>「Abstragram」は、抽象を表す「Abstract」と、「Instagram」のかばん語です。
+世間一般で語られている、トレンドキーワードを検索したときに、人々が目にする画面の情報を要約し、比率を基に抽象画像を生成します。
+そして、生成した画像をInstagramに投稿し、BOTとして働きます。</p>
+<p>まず、トレンドキーワードはGoogle Trends APIとTwitter APIを使用して収集されます。
+得られたキーワードをGoogle画像検索と、Google検索に入力し、公開されている画像や、WEBサイトのスクリーンショットを獲得します。
+そして、画像から色の出現頻度を取得し、画面にどれほどの比率でその色が含まれているのか算出します。</p>
+<p>抽象画像はPiet Mondrianの<a href="https://fr.wikipedia.org/wiki/Composition_avec_grand_plan_rouge,_jaune,_noir,_gris_et_bleu">『Composition』</a>に似せて、複数の長方形とその座標として生成します。
+さらには、生成された長方形を、面積の大きさと、トレンドキーワードの色の出現比率が対応するように塗りつぶします。</p>
+<h4 id="usage">Usage</h4>
+<p><a href="https://instagram.com/abs.tragram?igshid=OGQ5ZDc2ODk2ZA==">Instagram</a>にて稼働の様子を確認できます。</p>
+<p>また、このBOTのメインの機能は、Pythonによって作成されたスクリプトファイルで構成されています。
+従って、Pythonライブラリとして扱うこともできます。</p>
+<p>for pip install :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">pip install git+https://github.com/nakashimas/abstragram
+</code></pre></td></tr></table>
+</div>
+</div><p>インストール後、ライブラリをインストールし、抽象画像生成用のインスタンスを作成し、検索対象となるトレンドキーワードを入力します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-py" data-lang="py"><span class="kn">import</span> <span class="nn">abstragram</span>
+<span class="n">_abs</span> <span class="o">=</span> <span class="n">abstragram</span><span class="o">.</span><span class="n">Abstragram</span><span class="p">([</span><span class="s2">&#34;what is abstragram&#34;</span><span class="p">,</span> <span class="s2">&#34;abstragram is good&#34;</span><span class="p">])</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="note">Note</h4>
+<p>Twitter APIの有料化、Instagramの自動化規制の強化により、BOTとしては機能しなくなりました。
+画像生成とGoogleによるトレンドの取得は機能します。</p>
+
+                    <div class="content-footer mt-3">
+    <div class="row">
+        <div class="col-12">
+            <hr/>
+        </div>
+        
+            <div class="col-12 mb-2">
+                <div>
+                    <h2>AUTHORS</h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                
+                    <div class="row mb-3" onclick="location.href='https:\/\/github.com\/nakashimas'">
+                        <div class="col-5 col-md-4 col-xl-2">
+                            <div class="image">
+                                <img src="https://avatars1.githubusercontent.com/u/61147776" style="border-radius: 50% 50% 50% 50%">
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8 col-xl-10">
+                            <h4 class="mb-1">nakashimas</h4>
+                            <div class="text-muted mb-3">programmer</div>
+                            <div class="mb-1">大阪のUX愛好家</div>
+                            <div class="mb-1"><a href="https://github.com/nakashimas" target="_blank" rel="noopener norefferer">profile</a></div>
                         </div>
                     </div>
-                    <div class="container-title">
-                        <h1></h1>
-                    </div>
-                    <div class='container-ribbon'>
-                        <div class="ribbon-icons"><div></div></div>
-                    </div>
-                </div>
                 
                 </div>
+            </div>
+            <div class="col-12">
+                <hr/>
+            </div>
+        
+        <div class="col-12 mb-2">
+            <div>
+                <h2>MORE...</h2>
+            </div>
+        </div>
+        <div class="col-12 content-footer-content">
+            <div class="row">
+                <a class="col-12 col-sm-6 col-xl-3 mb-2" href="https://nakashimas.github.io/">HOME</a>
+            </div>
+            <div class="row">
+                <a class="col-12 col-sm-6 col-xl-3 mb-2" href="https://nakashimas.github.io/?page=0&content=1">WORKS</a>
+            </div>
+            <div class="row">
+                <a class="col-12 col-sm-6 col-xl-3 mb-2" href="https://nakashimas.github.io/?page=0&content=2">BLOGS</a>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="container-title">
+                <h1>ABSTRAGRAM</h1>
+            </div>
+            <div class='container-ribbon'>
+                <div class="ribbon-icons">
+                    
+
+
+<div class="icons-top">
+    
+    <a class='ribbon-icon'>
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+    </svg>
+    </a>
+</div>
+<div class="icons-bottom" onclick="event.stopPropagation()">
+    
+    <a class='ribbon-icon' href='https://twitter.com/intent/tweet?url=https://nakashimas.github.io/?page=2%26content=2' target='_blank' rel='noopener norefferer'>
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+    </svg>
+    </a>
+    
+    <a class='ribbon-icon' href='http://www.facebook.com/share.php?u=https://nakashimas.github.io/?page=2%26content=2' target='_blank' rel='noopener norefferer'>
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+    </svg>
+    </a>
+    
+    <a class='ribbon-icon' href='https://social-plugins.line.me/lineit/share?url=https://nakashimas.github.io/?page=2%26content=2' target='_blank' rel='noopener norefferer'>
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-line" viewBox="0 0 16 16">
+        <path d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0ZM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157Zm.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156h-.562Zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832a.17.17 0 0 0-.013-.015v-.001a.139.139 0 0 0-.01-.01l-.003-.003a.092.092 0 0 0-.011-.009h-.001L7.88 4.79l-.003-.002a.029.029 0 0 0-.005-.003l-.008-.005h-.002l-.003-.002-.01-.004-.004-.002a.093.093 0 0 0-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.154.154 0 0 0 .039.038l.001.001.01.006.004.002a.066.066 0 0 0 .008.004l.007.003.005.002a.168.168 0 0 0 .01.003h.003a.155.155 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156h-.561Zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.155.155 0 0 0-.108.044h-.001l-.001.002-.002.003a.155.155 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.155.155 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z"/>
+    </svg>
+    </a>
+    
+    <a class='ribbon-icon' href='https://www.instagram.com/naka.shima.s' target='_blank' rel='noopener norefferer'>
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+    </svg>
+    </a>
+</div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        
             
                 
                 
@@ -1506,6 +1696,8 @@
                     </div>
                     
                     <a class="col-12 col-sm-6 col-xl-3 mb-2" onclick="location.href='\/article\/project\/hatonokaibot\/hatonokaibot\/'">2019/12/23 HATONOKAI BOT</a>
+                    
+                    <a class="col-12 col-sm-6 col-xl-3 mb-2" onclick="location.href='\/article\/project\/abstragram\/abstragram\/'">0001/01/01 ABSTRAGRAM</a>
                     
                 </div>
             </div>
