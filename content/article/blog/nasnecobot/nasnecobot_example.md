@@ -11,13 +11,13 @@ docs_images: []
 authors: 
     nakashimas:
         name: "nakashimas"
-        profession: "student"
-        description: "京都の学生です。"
+        profession: "programmer"
+        description: "大阪のUX愛好家"
         icon_image: "https://avatars1.githubusercontent.com/u/61147776"
         url: "https://github.com/nakashimas"
     nasneco:
         name: "nasneco"
-        profession: "student"
+        profession: "programmer"
         description: "趣味が作曲とかの人"
         icon_image: "https://pbs.twimg.com/profile_images/1204033436156981248/HutTMW0m_400x400.jpg"
         url: "https://twitter.com/nasneco"

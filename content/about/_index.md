@@ -4,8 +4,8 @@ date: 2020-11-19T13:45:06+06:00
 authors: 
     nakashimas:
         name: "nakashimas"
-        profession: "student"
-        description: "京都の学生です。"
+        profession: "programmer"
+        description: "大阪のUX愛好家"
         icon_image: "https://avatars1.githubusercontent.com/u/61147776"
         url: "https://github.com/nakashimas"
 ---
