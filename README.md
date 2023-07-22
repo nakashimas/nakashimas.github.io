@@ -73,6 +73,12 @@ cd ..
 git push -u origin gh-pages
 ```
 
+ローカル環境でのテスト
+
+```sh
+hugo server
+```
+
 
 ## License
 

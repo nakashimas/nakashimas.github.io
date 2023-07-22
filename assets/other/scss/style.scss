@@ -8,14 +8,42 @@
 @import "content/hero.scss";
 
 #portfolio-background{
-    top: 0;
-    left: 0;
+    display: inline-block;
+    visibility: visible;
     position: absolute;
-    width: 100vw;
-    height: 100%;
-    text-align: center;
-    padding-top: 50%;
-    &>h1{
-        color: #f8f9fa;
+    
+    padding-left: calc(var(--container-hidden-weight) + var(--grid-gutter));
+    padding-right: calc(var(--container-hidden-weight) + var(--grid-gutter));
+    padding-top: calc(var(--grid-gutter) + var(--container-line-y-weight));
+    padding-bottom: calc(var(--grid-gutter) + var(--container-line-y-weight));
+
+    &>div{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+main:not([data-page-number="99"]) {
+    #portfolio-background{
+        transition: height 0.4s ease-in-out 0.8s, width 0.4s ease-in-out 0.2s, padding 0.4s ease-in-out 0.8s;
+        width: 0;
+        height: 0;
+        padding: 0;
+    }
+}
+
+main[data-page-number="99"] {
+    #portfolio-background {
+        transition: height 0.4s ease-in-out 0.8s, width 0.4s ease-in-out 0.2s;
+        width: calc(var(--container-line-x-weight) * var(--container-line-x-count));
+        height: calc(var(--container-line-y-weight) * var(--container-line-y-count));
+    }
+    .line-x {
+        width: var(--container-hidden-weight) !important;
+    }
+    .container-ribbon{
+        border: 0px solid var(--bs-dark) !important;
     }
 }

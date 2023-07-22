@@ -207,9 +207,8 @@ function onNavigationButton(){
 
 // ------------------------------------------------------------------------------------------------>
 
-async function showPortfolio(){
+async function togglePortfolio(){
     await changePage("99");
-    document.getElementById("portfolio-background").style.visibility = "visible";
     await sleep(0.4);
     toggleHiddenAll();
 }
