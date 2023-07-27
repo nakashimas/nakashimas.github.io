@@ -34,6 +34,7 @@ article#page-99 #portfolio-background {
     }
 
     .portfolio-section {
+        overflow: hidden;
         scroll-snap-align: start;
         width: 100%;
         height: calc(var(--container-line-y-weight) * var(--container-line-y-count) - var(--container-line-y-weight) * 2);
@@ -53,13 +54,42 @@ article#page-99 #portfolio-background {
         }
     }
 
-    .portfolio-section-heading{
-        width: 100%;
-        height: 100%;
-    }
-
     #portfolio-introduction-hero {
         height: calc(var(--container-line-y-weight) * 2);
+        
+        &>div{
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            width: calc(var(--container-line-x-weight) * 4 - var(--grid-gutter) * 4) !important;
+            height: calc(var(--container-line-y-weight) * 2);
+            border-left: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            border-radius: 0 var(--container-ribbon-weight);
+        }
+    }
+
+    #portfolio-introduction-heading {
+        height: calc(var(--container-line-y-weight) - var(--grid-gutter) * 2);
+    }
+
+    #portfolio-introduction-main {
+        &>div{
+            position: absolute;
+            left: 0;
+            width: calc(var(--container-line-x-weight) * 4 - var(--grid-gutter) * 4) !important;
+            height: calc(var(--container-line-y-weight) * 2);
+            border-top: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            border-right: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
+            border-radius: 0 var(--container-ribbon-weight);
+
+            overflow: hidden scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
     }
 
     .portfolio-introduction-hero-svg-wrapper{
@@ -73,8 +103,52 @@ article#page-99 #portfolio-background {
             left: 0;
             width: 100%;
             height: 100%;
-            max-height: calc(var(--container-line-y-weight));
+            max-height: calc(var(--container-line-y-weight) - var(--container-ribbon-weight) * 2);
+
+            &>g{
+                stroke-width: calc(var(--grid-gutter) / 2) !important;
+            }
         }
+    }
+
+    #portfolio-introduction-arrow {
+        position: absolute;
+        bottom: calc(var(--container-ribbon-weight));
+        left: calc(var(--container-line-x-weight) * 4 - var(--grid-gutter) * 4 + var(--container-ribbon-weight) / 2);
+        
+        &>span{
+            position: absolute;
+            bottom: calc(var(--container-line-y-weight) + var(--container-ribbon-weight));
+            left: -0.375em;
+            
+            color: var(--bs-dark);
+            letter-spacing: 0.25em;
+    
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+        }
+    
+        &:before {
+            content: "";
+            position: absolute;
+            background: var(--bs-dark);
+            bottom: 0;
+            right: -0.375em;
+            width: calc(var(--grid-gutter) / 2);
+            height: 1.25em;
+            transform: skewX(-31deg);
+        }
+    
+        &:after{
+            content:"";
+            position: absolute;
+            background: var(--bs-dark);
+            bottom: 0;
+            right: 0;
+            width: calc(var(--grid-gutter) / 2);
+            height: calc(var(--container-line-y-weight) + var(--container-ribbon-weight));
+          }
     }
 }
 
@@ -84,6 +158,10 @@ main:not([data-page-number="99"][is-open="false"]) {
         width: 0;
         height: 0;
         padding: 0;
+
+        #portfolio-introduction-arrow {
+            bottom: 90vh;
+        }
     }
 }
 
