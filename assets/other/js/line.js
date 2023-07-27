@@ -103,6 +103,10 @@ function getFooter(){
     return document.getElementById("footer");
 }
 
+function getMain(){
+    return document.getElementById("main");
+}
+
 // ------------------------------------------------------------------------------------------------>
 
 function toggleHiddenAll(){
@@ -111,12 +115,18 @@ function toggleHiddenAll(){
 
 function toggleShow(elm){
     if (!isNavigationCollapsed){
-        onNavigationButton()
+        onNavigationButton();
     }
     toggleHiddenAll();
     popLengthOverwriteAll();
     elm.classList.toggle("line-hidden");
     elm.classList.toggle("line-show");
+
+    if (getMain().getAttribute("is-open") == "true"){
+        getMain().setAttribute("is-open", "false");
+    } else {
+        getMain().setAttribute("is-open", "true");
+    }
 }
 
 function removeHiddenAll(){
@@ -175,6 +185,7 @@ function closeNavigation(){
     popLengthOverwriteAll();
     document.getElementById("navigation-button").classList.add("navigation-button-collapsed");
     isNavigationCollapsed = true;
+    getMain().setAttribute("is-open", "false");
 }
 
 function openNavigation(){
@@ -184,6 +195,7 @@ function openNavigation(){
     }
     document.getElementById("navigation-button").classList.remove("navigation-button-collapsed");
     isNavigationCollapsed = false;
+    getMain().setAttribute("is-open", "true");
 }
 
 // ------------------------------------------------------------------------------------------------>

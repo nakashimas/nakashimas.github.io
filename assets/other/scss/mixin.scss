@@ -53,6 +53,8 @@ html, body {
 }
 
 body{
+    position: relative;
+    z-index: -2;
     overflow: hidden;
     font-family: var(--bs-gradient);
 }

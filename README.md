@@ -70,7 +70,7 @@ cd docs
 git add -A
 git commit -m "publish update"
 cd ..
-git push -u origin gh-pages
+git push origin gh-pages
 ```
 
 ローカル環境でのテスト
