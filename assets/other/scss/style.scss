@@ -61,7 +61,7 @@ article#page-99 #portfolio-background {
             overflow: hidden;
             position: absolute;
             right: 0;
-            width: calc(var(--container-line-x-weight) * 4 - var(--grid-gutter) * 4) !important;
+            width: calc(var(--container-line-x-weight) * 4 - var(--container-hidden-weight) + var(--container-ribbon-weight));
             height: calc(var(--container-line-y-weight) * 2);
             border-left: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
             border-bottom: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
@@ -77,7 +77,7 @@ article#page-99 #portfolio-background {
         &>div{
             position: absolute;
             left: 0;
-            width: calc(var(--container-line-x-weight) * 4 - var(--grid-gutter) * 4) !important;
+            width: calc(var(--container-line-x-weight) * 4 - var(--container-hidden-weight) + var(--container-ribbon-weight));
             height: calc(var(--container-line-y-weight) * 2);
             border-top: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
             border-right: calc(var(--grid-gutter) * 2) solid var(--bs-dark);
@@ -118,7 +118,7 @@ article#page-99 #portfolio-background {
         
         &>span{
             position: absolute;
-            bottom: calc(var(--container-line-y-weight) + var(--container-ribbon-weight));
+            bottom: calc(var(--container-line-y-weight));
             left: -0.375em;
             
             color: var(--bs-dark);
@@ -147,7 +147,7 @@ article#page-99 #portfolio-background {
             bottom: 0;
             right: 0;
             width: calc(var(--grid-gutter) / 2);
-            height: calc(var(--container-line-y-weight) + var(--container-ribbon-weight));
+            height: calc(var(--container-line-y-weight));
           }
     }
 }
