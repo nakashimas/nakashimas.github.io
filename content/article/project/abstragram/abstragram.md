@@ -1,8 +1,8 @@
 ---
 title: "ABSTRAGRAM"
-date: 2023-06-31T00:00:00+09:00
+date: 2023-06-30T20:56:42+06:00
 type: work
-description: "Our discord bot"
+description: "Abstract of Images"
 category: ["BOT", "INSTAGRAM"]
 authors: 
   nakashimas:
