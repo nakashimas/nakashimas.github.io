@@ -26,7 +26,7 @@
     --container-line-y-count: 7;
     --container-line-x-weight: calc(100vw / var(--container-line-x-count));
     --container-line-y-weight: calc(var(--vh, 100vh) / var(--container-line-y-count));
-    --container-line-y-weight: calc(var(--vh, 100dvh) / var(--container-line-y-count));
+    --container-line-y-weight: calc(100dvh / var(--container-line-y-count));
     
     --container-hidden-weight: 1.5em;
     --container-ribbon-weight: calc(var(--container-line-y-weight) / 8);
