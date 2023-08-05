@@ -260,7 +260,11 @@ window.addEventListener('load', async function() {
     const searchParams = new URLSearchParams(window.location.search);
     await resetPage();
     onWindowResize();
-    if(searchParams.has('page')){
+	
+	if( !localStorage.getItem('privacy_concent') ) {
+		localStorage.setItem('privacy_concent', 'true');
+		await changePage(98);
+    } else if(searchParams.has('page')){
         const page = searchParams.get('page');
         if (page == '99') {
             await changePage(page);

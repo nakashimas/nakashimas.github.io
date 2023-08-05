@@ -1,15 +1,4 @@
 $(document).ready(function() {
-	if( !localStorage.getItem('disp_popup') ) {
-		// localStorage.setItem('disp_popup', 'on');
-		// $("body").addClass('first-time');
-
-		// applyPage(getPage("1"), (elm) => {
-		// 	elm.addEventListener("click", function() {
-		// 		showTutorialAbbr();
-		// 	});
-		// });
-	}
-
 	prepareBoxes();
 	VerovioUpdate(true);
 
