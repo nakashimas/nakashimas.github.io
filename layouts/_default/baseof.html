@@ -16,6 +16,10 @@
     {{ printf "* ============================================================ *" | safeHTML }}
     {{ printf "-->" | safeHTML }}
     <body class="bg-dark">
+        {{ "<!-- Google Tag Manager (noscript) -->" | safeHTML }}
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVZXH7FX"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
         {{- partial "header/header.html" . -}}
         <main id="main" data-page-number="1">
             {{- block "main" . }}{{- end }}

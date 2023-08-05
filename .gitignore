@@ -13,3 +13,7 @@ hugo.linux
 /_prototype/
 
 *.map
+
+# Krita cache
+*~
+*.kra

@@ -264,6 +264,8 @@ window.addEventListener('load', async function() {
         const page = searchParams.get('page');
         if (page == '99') {
             await changePage(page);
+        } else if (page == '98') {
+            await changePage(page);
         } else if(page == '0') {
             if(searchParams.has('content')){
                 const num = searchParams.get('content');
